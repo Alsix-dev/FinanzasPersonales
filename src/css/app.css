@@ -6,9 +6,12 @@
 
 html, body, #app, #root, .contenedor {
     width: 100%;
-    height: 100%;
+    height: 100dvh;
 }
 
-/* .contenedor {
+.contenedor {
     
-} */
+}
+
+
+/* ftr-PIE: footer PRESUPUESTO/INGRESO/EGRESO = NO OLVIDAR */
