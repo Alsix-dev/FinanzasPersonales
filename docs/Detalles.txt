@@ -1,0 +1,1 @@
+1) Quitar informacion de la tabla cuando es menor a 1023 y lo mismo a 768.
