@@ -68,7 +68,7 @@ header button > .material-symbols-outlined {
 
     .usuario {
         margin-right: 15px;
-    }    
+    }
 }
 
 @media (min-width: 1023px){
@@ -83,11 +83,11 @@ header button > .material-symbols-outlined {
         font-size: 16px;
     }
 
-    .ttl-App {
-        font-size: 2rem;
-    }
-
     .usuario {
         margin-right: 15px;
+    }
+
+    .ttl-App {
+        font-size: 2rem;
     }
 }

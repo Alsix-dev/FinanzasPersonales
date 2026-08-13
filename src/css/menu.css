@@ -1,0 +1,38 @@
+.sidebar {
+    margin-bottom: 12px;
+    border: 1px solid black;
+}
+
+nav {
+    width: 100%;
+    padding: 18px;
+}
+
+nav .sdbr-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+    justify-self: center;
+    
+    gap: 8px;
+    column-gap: 35px;
+    list-style-type: none;
+}
+
+.sdbr-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: black;
+    text-decoration: none;
+}
+
+.sdbr-menu li span {
+    color: grey;
+}
+
+.sdbr-menu li:hover {
+    padding: 2px 8px;
+    border-radius: 5px;
+    background-color: rgb(254, 198, 28);
+}
