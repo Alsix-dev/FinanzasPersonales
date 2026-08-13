@@ -1,5 +1,3 @@
-/* Usuario y button tiene font-size: 12px; */
-
 header {
     width: 100dvw;
     display: grid;
@@ -37,7 +35,7 @@ header button > .material-symbols-outlined {
 }
 
 .ttl-App {
-    font-size: clamp(1.25rem, 3vw, 5rem);
+    font-size: clamp(1.25rem, 3vw, 2rem);
     justify-self: center;
 }
 
@@ -57,4 +55,39 @@ header button > .material-symbols-outlined {
 .usuario .notificaciones {
     padding: 0px 8px 0px 0px;
     border-right: 1px solid white;
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .usuario, header button {
+        font-size: 14px;
+    }
+
+    .ttl-App {
+        font-size: 1.75rem;
+    }
+
+    .usuario {
+        margin-right: 15px;
+    }    
+}
+
+@media (min-width: 1023px){
+    header {
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "btn-Menu ttl-App usuario";
+    }
+
+    .usuario, header button {
+        font-size: 16px;
+    }
+
+    .ttl-App {
+        font-size: 2rem;
+    }
+
+    .usuario {
+        margin-right: 15px;
+    }
 }
