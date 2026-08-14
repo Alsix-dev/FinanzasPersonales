@@ -32,22 +32,22 @@ main .main-superior h2 {
     color: #343a40;
 }
 
-main h1 {
+.main-superior h1 {
     grid-row: 1/2;
     grid-column: 1/-1;
 }
 
-main .cartel-Presupuesto { 
+.main-superior .cartel-Presupuesto { 
     grid-row: 2/3;
     grid-column: 1/-1;
 }
 
-main .cartel-Ingreso { 
+.main-superior .cartel-Ingreso { 
     grid-row: 3/4;
     grid-column: 1/2;
 }
 
-main .cartel-Gasto {
+.main-superior .cartel-Gasto {
     grid-row: 3/4;
     grid-column: 2/3;
 }
@@ -120,17 +120,17 @@ main .cartel-Gasto {
         color: #343a40;
     }
 
-    main .cartel-Presupuesto { 
+    .main-superior .cartel-Presupuesto { 
         grid-row: 2/-1;
         grid-column: 1/2;
     }
 
-    main .cartel-Ingreso { 
+    .main-superior .cartel-Ingreso { 
         grid-row: 2/-1;
         grid-column: 2/3;
     }
 
-    main .cartel-Gasto {
+    .main-superior .cartel-Gasto {
         grid-row: 2/-1;
         grid-column: 3/4;
     }
@@ -149,17 +149,17 @@ main .cartel-Gasto {
         color: #343a40;
     }
 
-    main .cartel-Presupuesto { 
+    .main-superior .cartel-Presupuesto { 
         grid-row: 2/-1;
         grid-column: 1/2;
     }
 
-    main .cartel-Ingreso { 
+    .main-superior .cartel-Ingreso { 
         grid-row: 2/-1;
         grid-column: 2/3;
     }
 
-    main .cartel-Gasto {
+    .main-superior .cartel-Gasto {
         grid-row: 2/-1;
         grid-column: 3/4;
     }

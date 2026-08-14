@@ -5,3 +5,4 @@
 5) Ajustar colores declarados en el programa donde se diseño la app.
 6) Tantear si cambiar color del dinero del cartel-PIE ingresos a verde. Y el de egresos en rojo
 	y si tambien el de presupuesto en todo caso a un azul u otro.
+7) Los colores asignados por variables. Ver si hacer lo mismo con bordes y otros atributos.
