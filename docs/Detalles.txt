@@ -2,3 +2,6 @@
 ✅ -----------> 2) Quitar border inferior a sidebar cuando pasamos a 768 en adelante.
 ✅ -----------> 3) Ajustar que el sidebar pase a ser un display flex column cuando pasa de 768 en adelante.
 ✅ -----------> 4) Ajustar el header que al pasar a 768 tiene mucho espacio vertical.
+5) Ajustar colores declarados en el programa donde se diseño la app.
+6) Tantear si cambiar color del dinero del cartel-PIE ingresos a verde. Y el de egresos en rojo
+	y si tambien el de presupuesto en todo caso a un azul u otro.

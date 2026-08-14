@@ -1,0 +1,167 @@
+/* ==========================================================================
+   MAIN
+   ==========================================================================
+   • [>] CAPAS:
+        • MAIN
+        • MAIN - SUPERIOR
+        • MAIN - MEDIO
+        • MAIN - SIDEBAR
+        • MEDIA'S
+   ========================================================================== */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 12px 12px 12px;
+}
+
+/* ==========================================================================
+   MAIN - SUPERIOR
+   ========================================================================== */
+
+main .main-superior {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto auto;
+    gap: 12px;
+    color: #343a40;
+}
+
+main .main-superior h2 {
+    color: #343a40;
+}
+
+main h1 {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+}
+
+main .cartel-Presupuesto { 
+    grid-row: 2/3;
+    grid-column: 1/-1;
+}
+
+main .cartel-Ingreso { 
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+main .cartel-Gasto {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+/* ==========================================================================
+   MAIN - SUPERIOR - CARTEL P.I.E
+   ========================================================================== */
+
+.cartel-PIE {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2px;
+    padding: 8px;
+    gap: 12px;
+
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.cartel-PIE h2 {
+    align-self: flex-start;
+}
+
+.cartel-PIE .pie-Calculado {
+    align-self: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cartel-PIE .ftr-PIE {
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ftr-PIE .mes-Calculado {
+    color: #868e96;
+}
+
+.ftr-PIE .cmbr-mes-Calculado > button {
+    background-color: transparent;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   MAIN MEDIO
+   ========================================================================== */
+
+/* ==========================================================================
+   MAIN SIDEBAR
+   ========================================================================== */
+
+/* ==========================================================================
+   MEDIA'S
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    main {
+        justify-content: flex-start;
+    }
+
+    main .main-superior {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(3, auto);
+        color: #343a40;
+    }
+
+    main .cartel-Presupuesto { 
+        grid-row: 2/-1;
+        grid-column: 1/2;
+    }
+
+    main .cartel-Ingreso { 
+        grid-row: 2/-1;
+        grid-column: 2/3;
+    }
+
+    main .cartel-Gasto {
+        grid-row: 2/-1;
+        grid-column: 3/4;
+    }
+}
+
+
+@media (min-width: 1023px) {
+    main {
+        justify-content: flex-start;
+    }
+
+    main .main-superior {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(3, auto);
+        color: #343a40;
+    }
+
+    main .cartel-Presupuesto { 
+        grid-row: 2/-1;
+        grid-column: 1/2;
+    }
+
+    main .cartel-Ingreso { 
+        grid-row: 2/-1;
+        grid-column: 2/3;
+    }
+
+    main .cartel-Gasto {
+        grid-row: 2/-1;
+        grid-column: 3/4;
+    }
+
+}

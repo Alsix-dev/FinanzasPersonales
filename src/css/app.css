@@ -1,3 +1,13 @@
+/* ==========================================================================
+   APP
+   ==========================================================================
+   • [>] CAPAS:
+        • GENERAL
+        • CONTENEDOR
+        • FOOTER
+        • MEDIA'S
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,24 +19,39 @@ html, body, #app, #root, .contenedor {
     height: 100dvh;
 }
 
+h1 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+h2 {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+}
+
+/* ==========================================================================
+   CONTENEDOR
+   ========================================================================== */
+
 .contenedor {
     display: grid;
     grid-template-rows: repeat(2, auto) 1fr repeat(2, auto);
     grid-template-columns: 1fr;
 }
 
-main {
-    background-color: red;
-}
-
 section {
     background-color: aquamarine;
 }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 
 footer {
     background-color: violet;
 }
 
+/* ==========================================================================
+   MEDIA'S
+   ========================================================================== */
 
 @media (min-width: 768px) and (max-width: 1023px){
     .contenedor {
@@ -63,5 +88,4 @@ footer {
     main { grid-area: main; }
     section.stats-Categorias { grid-area: stats-Categorias }
     footer { grid-area: footer; }
-
 }
