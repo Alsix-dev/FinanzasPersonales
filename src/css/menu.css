@@ -1,6 +1,6 @@
 .sidebar {
     margin-bottom: 12px;
-    border: 1px solid black;
+    border: 1px solid grey;
 }
 
 nav {
@@ -35,4 +35,34 @@ nav .sdbr-menu {
     padding: 2px 8px;
     border-radius: 5px;
     background-color: rgb(254, 198, 28);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    nav .sdbr-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .sidebar {        
+        margin-bottom: 0;
+        border: none;
+        border-right: 1px solid grey;
+        border-bottom: 1px solid grey;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+@media (min-width: 1023px) {
+    nav .sdbr-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .sidebar {
+        margin-bottom: 0;
+        border: none;
+        height: 100%;
+    }
 }
