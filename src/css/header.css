@@ -10,7 +10,7 @@
    ========================================================================== */
 
 header {
-    width: 100dvw;
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(2, 1fr);

@@ -1,0 +1,24 @@
+1) Quitar informacion de la tabla cuando es menor a 1023 y lo mismo a 768.
+✅ -----------> 2) Quitar border inferior a sidebar cuando pasamos a 768 en adelante.
+✅ -----------> 3) Ajustar que el sidebar pase a ser un display flex column cuando pasa de 768 en adelante.
+✅ -----------> 4) Ajustar el header que al pasar a 768 tiene mucho espacio vertical.
+5) Ajustar colores declarados en el programa donde se diseño la app.
+6) Tantear si cambiar color del dinero del cartel-PIE ingresos a verde. Y el de egresos en rojo
+	y si tambien el de presupuesto en todo caso a un azul u otro.
+7) Los colores asignados por variables. Ver si hacer lo mismo con bordes y otros atributos.
+8) Cada icono dentro del menu debe tener su propio color que lo distinga y defina.
+9) El espacio del input y el boton de agregar no se separan correctamente y no ocupan
+	el espacio que deberian.
+
+10) cambiar el diseño. Cuando estemos entre 321 a 768px, el botn "+ añadir mov" Debe estar debajo
+	del input. Luego se ira acomodando a su costado.
+11) Al igual que el punto 10, el listado debera tener ahora el nombre del lugar
+	y abajo la categoria. No con la categoria en el centro.
+
+12) El sidebar no tiene border al crecer. Esto cuando tiene 1023++
+13) Aplicar un display: grid en este caso para acomodar los elementos, ya que el titulo
+	luego debe moverse de la parte superior a la inferior y estar fuera del div
+	complica mucho mas esa idea. Esto dentro de src-movimiento
+14) Cuando el sidebar desaparece al tener 1023px, todo el main ocupa todo y no deberia. Y
+	tiene mucha anchura. Ponerle un limite.
+15) Agregar un mayor padding al sidebar a medida que crece la pagina en width responsive.

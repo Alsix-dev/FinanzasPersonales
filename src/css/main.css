@@ -1,3 +1,7 @@
+/* ETIQUETAS
+    QUITAR
+*/
+
 /* ==========================================================================
    MAIN
    ==========================================================================
@@ -13,7 +17,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8px 12px 12px 12px;
+    padding: 8px;
+    margin: 2px;
 }
 
 /* ==========================================================================
@@ -100,6 +105,85 @@ main .main-superior h2 {
    MAIN MEDIO
    ========================================================================== */
 
+.main-medio, .op-movimientos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-medio {
+    margin: 15px 2px 2px 2px;
+    padding: 8px 32px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.main-medio .op-movimientos {
+    gap: 8px;
+}
+
+.op-movimientos button {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.main-medio .src-Movimiento {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "h2-Input h2-Input"
+    "label-Input agr-Movimiento";    
+    gap: 8px;
+}
+
+.src-Movimiento > h2 { grid-area: h2-Input; }
+.src-Movimiento > label { grid-area: label-Input; }
+.src-Movimiento .agr-Movimiento { grid-area: agr-Movimiento; }
+
+.src-Movimiento > label {
+    width: 80%;
+    position: relative;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+.src-Movimiento .agr-Movimiento { 
+    align-self: center;
+    justify-self: flex-end;
+    padding: 8px;
+    border: none;
+    background-color: #ffd43b;
+    color: white;
+}
+.src-Movimiento .agr-Movimiento > * { font-size: 13px; }
+
+.src-Movimiento .icono-Buscar {
+    position: absolute;
+    top: 5px;
+    left: 12px;
+}
+
+.src-Movimiento #src-mov-input {
+    width: 100%;
+    padding: 8px 8px 8px 42px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    outline: none;
+}
+
+.op-movimientos .btn-filtrar {
+    align-self: flex-start;
+    padding: 4px;
+    border: 1px solid #ced4da;
+    background-color: transparent;
+}
+
+.op-movimientos .btn-filtrar > * { 
+    font-size: 10px;
+}
+
 /* ==========================================================================
    MAIN SIDEBAR
    ========================================================================== */
@@ -107,6 +191,12 @@ main .main-superior h2 {
 /* ==========================================================================
    MEDIA'S
    ========================================================================== */
+
+/* 
+ . aumentar el padding del input al subir de pixeles de ancho
+ . Ajustar el ancho del input
+ . Ajustar el fontsize de buttons/iconos de buttons
+ */
 
 @media (min-width: 768px) and (max-width: 1023px) {
     main {
@@ -163,5 +253,19 @@ main .main-superior h2 {
         grid-row: 2/-1;
         grid-column: 3/4;
     }
+
+    .main-medio .src-Movimiento {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr auto;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "h2-Input label-Input agr-Movimiento";    
+        gap: 8px;
+    }
+
+    .src-Movimiento > h2 { grid-area: h2-Input; }
+    .src-Movimiento > label { grid-area: label-Input; }
+    .src-Movimiento .agr-Movimiento { grid-area: agr-Movimiento; }
+
 
 }
