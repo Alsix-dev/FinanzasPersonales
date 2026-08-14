@@ -1,1 +1,4 @@
 1) Se ha cambiado el titulo de main-medio de "Gastos recientes" por "Movimientos recientes".
+2) Se retira la columna de "ingreso/egreso" de los movimientos en cont-Movimientos.
+	Se reemplaza por colorear los datos de ingreso.
+	Si es un ingreso es $+xxx.xxx en verde | Si es un egreso es $-xxx.xxx en rojo

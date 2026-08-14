@@ -22,3 +22,9 @@
 14) Cuando el sidebar desaparece al tener 1023px, todo el main ocupa todo y no deberia. Y
 	tiene mucha anchura. Ponerle un limite.
 15) Agregar un mayor padding al sidebar a medida que crece la pagina en width responsive.
+16) Quitar la columna ingreso/egreso de cont-Movimientos
+	Se reemplaza por colorear los datos de ingreso.
+	Si es un ingreso es $+xxx.xxx en verde | Si es un egreso es $-xxx.xxx en rojo
+17) Cuando crezca el responsive, categoria debe quedar alineado a su icono horizontalmente.
+	Lo mismo fecha + precio.
+18) Agregar el icono respecto la categoria

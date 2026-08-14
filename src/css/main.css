@@ -9,7 +9,9 @@
         • MAIN
         • MAIN - SUPERIOR
         • MAIN - MEDIO
-        • MAIN - SIDEBAR
+            • MAIN - OPERACIONES
+            • MAIN - LISTA - MOVIMIENTOS
+            • MAIN - SIDEBAR
         • MEDIA'S
    ========================================================================== */
 
@@ -108,18 +110,25 @@ main .main-superior h2 {
 .main-medio, .op-movimientos {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: flex-start; */
 }
 
 .main-medio {
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+
     margin: 15px 2px 2px 2px;
-    padding: 8px 32px;
+    padding: 8px 18px;
     border: 1px solid #ced4da;
     border-radius: 5px;
 }
 
 .main-medio .op-movimientos {
     gap: 8px;
+    padding-bottom: 14px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid #ced4da;
 }
 
 .op-movimientos button {
@@ -185,7 +194,80 @@ main .main-superior h2 {
 }
 
 /* ==========================================================================
-   MAIN SIDEBAR
+   MAIN - LISTA - MOVIMIENTOS
+   ========================================================================== */
+
+.main-medio .cont-Movimientos {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    min-height: 0;
+    max-height: 720px;
+    margin-top: 14px;
+}
+
+.cont-Movimientos .movimientos-de-fecha {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #ffd43b;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+}
+
+.cont-Movimientos .movimientos-de-fecha > h2 {
+    align-items: flex-start;
+}
+
+.cont-Movimientos .movimientos-de-fecha .lista-mov-de-fecha {
+    list-style-type: none;
+    margin-top: 18px;
+}
+
+.movimientos-de-fecha .lista-mov-de-fecha > li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.lista-mov-de-fecha > li > p:first-child {
+    min-width: 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.lista-mov-de-fecha > li .categoria {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lista-mov-de-fecha li .extras {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.lista-mov-de-fecha li .ingreso-dinero { color: green; }
+.lista-mov-de-fecha li .egreso-dinero { color: red; }
+
+.main-medio #btn-inf-movimientos {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    background-color: transparent;
+}
+
+/* ==========================================================================
+   MAIN - SIDEBAR
    ========================================================================== */
 
 /* ==========================================================================
@@ -267,5 +349,14 @@ main .main-superior h2 {
     .src-Movimiento > label { grid-area: label-Input; }
     .src-Movimiento .agr-Movimiento { grid-area: agr-Movimiento; }
 
+    .movimientos-de-fecha .lista-mov-de-fecha > li {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lista-mov-de-fecha li .extras {
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 12px;
+    }
 
 }
