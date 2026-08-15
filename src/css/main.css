@@ -21,6 +21,7 @@ main {
     justify-content: center;
     padding: 8px;
     margin: 2px;
+    gap: 14px;
 }
 
 /* ==========================================================================
@@ -110,7 +111,6 @@ main .main-superior h2 {
 .main-medio, .op-movimientos {
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start; */
 }
 
 .main-medio {
@@ -204,6 +204,8 @@ main .main-superior h2 {
     min-height: 0;
     max-height: 720px;
     margin-top: 14px;
+    padding: 8px;
+    border-bottom: 1px solid #ced4da;
 }
 
 .cont-Movimientos .movimientos-de-fecha {
@@ -254,12 +256,15 @@ main .main-superior h2 {
 .lista-mov-de-fecha li .ingreso-dinero { color: green; }
 .lista-mov-de-fecha li .egreso-dinero { color: red; }
 
-.main-medio #btn-inf-movimientos {
+.main-medio .btns-movimientos {
     align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.main-medio #btn-inf-movimientos {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 8px;
     padding: 2px 8px;
     border-radius: 5px;
     border: 1px solid #ced4da;
@@ -270,15 +275,63 @@ main .main-superior h2 {
    MAIN - SIDEBAR
    ========================================================================== */
 
+.main-sidebar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "Titulo-sidebar Boton-sidebar"
+    "Estadisticas Estadisticas";
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.main-sidebar .ttl-main-sidebar { grid-area: Titulo-sidebar; }
+.main-sidebar .stdsticas-main-sidebar { grid-area: Estadisticas; }
+.main-sidebar .btn-sidebar-main { grid-area: Boton-sidebar; }
+
+.ttl-main-sidebar {
+    align-self: center;
+    justify-self: center;
+    margin-left: 30px;
+}
+
+.stdsticas-main-sidebar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.stdsticas-main-sidebar > div {
+    padding: 8px;
+    margin: 2px;
+}
+
+.stdsticas-main-sidebar > div .ttl-clasf-stat {
+    color: #868e96;
+}
+
+.stdsticas-main-sidebar > div p {
+    margin-bottom: 8px;
+}
+
+.stdsticas-main-sidebar > div p:last-child {
+    text-align: center;
+}
+
+.main-sidebar .btn-sidebar-main > button {
+    background-color: transparent;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+}
+
 /* ==========================================================================
    MEDIA'S
    ========================================================================== */
-
-/* 
- . aumentar el padding del input al subir de pixeles de ancho
- . Ajustar el ancho del input
- . Ajustar el fontsize de buttons/iconos de buttons
- */
 
 @media (min-width: 768px) and (max-width: 1023px) {
     main {
@@ -308,11 +361,19 @@ main .main-superior h2 {
     }
 }
 
-
 @media (min-width: 1023px) {
     main {
-        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+        ". main-superior"
+        "main-sidebar main-medio";
     }
+
+    .main-superior { grid-area: main-superior; }
+    .main-medio { grid-area: main-medio; }
+    .main-sidebar { grid-area: main-sidebar; }
 
     main .main-superior {
         display: grid;
@@ -334,6 +395,15 @@ main .main-superior h2 {
     .main-superior .cartel-Gasto {
         grid-row: 2/-1;
         grid-column: 3/4;
+    }
+
+    .main-medio {
+        display: grid;
+
+    }
+
+    .main-medio .btns-movimientos {
+        align-self: center;
     }
 
     .main-medio .src-Movimiento {
@@ -359,4 +429,30 @@ main .main-superior h2 {
         gap: 12px;
     }
 
+    .main-sidebar {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "Titulo-sidebar"
+        "Estadisticas"
+        "Boton-sidebar";
+        margin-top: 15px;
+        margin-bottom: 2px;
+        gap: 28px;
+    }
+
+    .main-sidebar .ttl-main-sidebar { 
+        grid-area: Titulo-sidebar; 
+        margin-left: 0;
+    }
+    .main-sidebar .stdsticas-main-sidebar { grid-area: Estadisticas; }
+    .main-sidebar .btn-sidebar-main { 
+        grid-area: Boton-sidebar;
+        justify-self: center;
+    }
+
+    .stdsticas-main-sidebar {
+        flex-direction: column;
+    }
 }

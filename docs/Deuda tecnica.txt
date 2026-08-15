@@ -27,4 +27,16 @@
 	Si es un ingreso es $+xxx.xxx en verde | Si es un egreso es $-xxx.xxx en rojo
 17) Cuando crezca el responsive, categoria debe quedar alineado a su icono horizontalmente.
 	Lo mismo fecha + precio.
-18) Agregar el icono respecto la categoria
+18) Agregar el icono respecto la categoria.
+19) En 768 el sidebar de main debe ser vertical cuando no esta el menu abierto, caso contrario
+	es horizontal y cambia su posicion.
+20) Probar que en los section que contienen una fecha distinta, salga la barra amarrilla cuando
+	haya solamente fechas diferentes en el listado. Y que salga segun del lado que corresponda.
+	Asi evitamos los bordes extras e innecesarios.
+21) El boton filtrar de "movimientos recientes" debe quedar debajo del buscador cuando se extiende
+	el responsive. Probar ponerlo en el mismo div/label del buscador, asi siempre
+	lo acompaña.
+
+22) Los botones de main se les debe agregar el cursor pointer.
+23) Ajustar el menu para que este mas centrado o quede ocupando mas espacio entre elementos.
+24) Ajustar que cuando el menu se abra, el sidebar de main se achique como en el borrador.
