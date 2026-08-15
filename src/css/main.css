@@ -12,6 +12,7 @@
             • MAIN - OPERACIONES
             • MAIN - LISTA - MOVIMIENTOS
             • MAIN - SIDEBAR
+            • MAIN - CATEGORIAS
         • MEDIA'S
    ========================================================================== */
 
@@ -131,7 +132,8 @@ main .main-superior h2 {
     border-bottom: 1px solid #ced4da;
 }
 
-.op-movimientos button {
+.op-movimientos button,
+.main-inferior button {
     display: flex;
     align-items: center;
     border-radius: 5px;
@@ -182,14 +184,16 @@ main .main-superior h2 {
     outline: none;
 }
 
-.op-movimientos .btn-filtrar {
+.op-movimientos .btn-filtrar,
+.main-inferior .btn-filtrar {
     align-self: flex-start;
     padding: 4px;
     border: 1px solid #ced4da;
     background-color: transparent;
 }
 
-.op-movimientos .btn-filtrar > * { 
+.op-movimientos .btn-filtrar > *,
+.main-inferior .btn-filtrar > * { 
     font-size: 10px;
 }
 
@@ -261,7 +265,8 @@ main .main-superior h2 {
     justify-self: flex-end;
 }
 
-.main-medio #btn-inf-movimientos {
+.main-medio .btn-inf-movimientos,
+.main-inferior .btn-inf-movimientos {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -330,6 +335,73 @@ main .main-superior h2 {
 }
 
 /* ==========================================================================
+   MAIN - CATEGORIAS
+   ========================================================================== 
+   • [!] Los botones de movimientos y filtrar se tocan en la parte superior de main.
+   ========================================================================== */
+
+.main-inferior {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.main-inferior .cartel-data-cat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.cartel-data-cat .data-categoria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cartel-data-cat .grfc-ing-cat {
+    height: 150px;
+    width: 150px;
+    margin: 8px 8px 8px 0;
+    background-color: #ffd43b;
+}
+
+.data-categoria .item-grfc-ing-cat {
+    list-style-type: none;
+    margin-left: auto;
+}
+
+.item-grfc-ing-cat > li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.cartel-data-cat .mes-Calculado {
+    color: #868e96;
+}
+
+.cartel-data-cat .btns-grfc-ing-cat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.btns-grfc-ing-cat .btn-filtrar {
+    align-self: center;
+}
+
+/* ==========================================================================
    MEDIA'S
    ========================================================================== */
 
@@ -361,63 +433,72 @@ main .main-superior h2 {
     }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
+    /* 1. CONTENEDOR PRINCIPAL */
     main {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 220px minmax(500px, 1023px) minmax(300px, 480px); 
         grid-template-rows: auto 1fr;
         grid-template-areas: 
-        ". main-superior"
-        "main-sidebar main-medio";
+        ". main-superior ."
+        "main-sidebar main-medio main-inferior";
+        column-gap: 80px;
+        align-items: start; /* CRUCIAL: Evita que los recuadros se estiren hacia abajo */
+        margin: 0 15px;
     }
 
     .main-superior { grid-area: main-superior; }
     .main-medio { grid-area: main-medio; }
     .main-sidebar { grid-area: main-sidebar; }
+    section.main-inferior { grid-area: main-inferior; }
 
+    /* 2. MAIN SUPERIOR (Resumen) */
     main .main-superior {
         display: grid;
         grid-template-rows: repeat(2, auto);
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 1fr); /* 1fr asegura que midan exactamente lo mismo */
+        gap: 15px;
         color: #343a40;
+        margin-bottom: 10px;
     }
 
-    .main-superior .cartel-Presupuesto { 
-        grid-row: 2/-1;
-        grid-column: 1/2;
+    .main-superior h1 { 
+        grid-row: 1 / 2; 
+        grid-column: 1 / -1; 
     }
 
-    .main-superior .cartel-Ingreso { 
-        grid-row: 2/-1;
-        grid-column: 2/3;
-    }
+    /* Reordenamos según el diseño del wireframe: Ingresos -> Egresos -> Presupuesto */
+    .main-superior .cartel-Ingreso { grid-row: 2 / 3; grid-column: 1 / 2; }
+    .main-superior .cartel-Gasto { grid-row: 2 / 3; grid-column: 2 / 3; }
+    .main-superior .cartel-Presupuesto { grid-row: 2 / 3; grid-column: 3 / 4; }
 
-    .main-superior .cartel-Gasto {
-        grid-row: 2/-1;
-        grid-column: 3/4;
-    }
-
+    /* 3. MAIN MEDIO (Gastos recientes) */
     .main-medio {
-        display: grid;
-
+        display: flex;
+        flex-direction: column;
+        margin: 0; /* Removemos el margen que heredaba de mobile */
     }
 
     .main-medio .btns-movimientos {
-        align-self: center;
+        align-self: flex-end;
     }
 
+    /* Cambiamos el header del buscador a flex para controlar mejor su tamaño */
     .main-medio .src-Movimiento {
-        display: grid;
-        grid-template-columns: 0.7fr 1fr auto;
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-        "h2-Input label-Input agr-Movimiento";    
-        gap: 8px;
+        display: flex; 
+        align-items: center;
+        gap: 15px;
     }
 
-    .src-Movimiento > h2 { grid-area: h2-Input; }
-    .src-Movimiento > label { grid-area: label-Input; }
-    .src-Movimiento .agr-Movimiento { grid-area: agr-Movimiento; }
+    .src-Movimiento > h2 { margin: 0; }
+    
+    .src-Movimiento > label { 
+        flex: 1; 
+        max-width: 320px; /* Controla que el buscador no se vuelva infinitamente largo */
+        margin: 0;
+    }
+    
+    .src-Movimiento .agr-Movimiento { margin-left: auto; }
 
     .movimientos-de-fecha .lista-mov-de-fecha > li {
         grid-template-columns: repeat(3, 1fr);
@@ -429,30 +510,39 @@ main .main-superior h2 {
         gap: 12px;
     }
 
+    /* 4. MAIN SIDEBAR (Estadísticas) */
     .main-sidebar {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 
-        "Titulo-sidebar"
-        "Estadisticas"
-        "Boton-sidebar";
-        margin-top: 15px;
-        margin-bottom: 2px;
-        gap: 28px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 20px;
     }
 
     .main-sidebar .ttl-main-sidebar { 
-        grid-area: Titulo-sidebar; 
         margin-left: 0;
+        align-self: flex-start;
     }
-    .main-sidebar .stdsticas-main-sidebar { grid-area: Estadisticas; }
+
     .main-sidebar .btn-sidebar-main { 
-        grid-area: Boton-sidebar;
-        justify-self: center;
+        align-self: flex-start;
+        order: 3; /* Envía el icono del ojo al fondo del bloque */
     }
 
     .stdsticas-main-sidebar {
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* 5. MAIN INFERIOR (Categorías) */
+    .main-inferior {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 20px; /* Espacio exacto entre Ingresos por Categoria y Gastos por Categoria */
+        margin: 0;
     }
 }

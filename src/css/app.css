@@ -38,10 +38,6 @@ h2 {
     grid-template-columns: 1fr;
 }
 
-.contenedor > section {
-    background-color: aquamarine;
-}
-
 /* ==========================================================================
    FOOTER
    ========================================================================== */
@@ -62,31 +58,28 @@ footer {
         grid-template-areas:
         "header header"
         "sidebar main"
-        ". stats-Categorias"
         "footer footer";
     }
 
     header { grid-area: header; }
     aside.sidebar { grid-area: sidebar }
     main { grid-area: main; }
-    section.stats-Categorias { grid-area: stats-Categorias }
     footer { grid-area: footer; }
 }
 
-@media (min-width: 1023px){
+@media (min-width: 1024px){
     .contenedor {
         display: grid;
         grid-template-rows: auto 1fr auto;
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: auto minmax(0, 1fr);
         grid-template-areas:
-        "header header header"
-        "sidebar main stats-Categorias"
-        "footer footer footer";
+        "header header"
+        "sidebar main"
+        "footer footer";
     }
 
     header { grid-area: header; }
     aside.sidebar { grid-area: sidebar }
     main { grid-area: main; }
-    section.stats-Categorias { grid-area: stats-Categorias }
     footer { grid-area: footer; }
 }

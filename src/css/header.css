@@ -97,7 +97,7 @@ header button > .material-symbols-outlined {
     }
 }
 
-@media (min-width: 1023px){
+@media (min-width: 1024px){
     header {
         grid-template-columns: auto 1fr auto;
         grid-template-rows: 1fr;

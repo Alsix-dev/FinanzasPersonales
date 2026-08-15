@@ -40,3 +40,4 @@
 22) Los botones de main se les debe agregar el cursor pointer.
 23) Ajustar el menu para que este mas centrado o quede ocupando mas espacio entre elementos.
 24) Ajustar que cuando el menu se abra, el sidebar de main se achique como en el borrador.
+25) Mover la seccion "categorias" dentro del main.

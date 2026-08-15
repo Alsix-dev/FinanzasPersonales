@@ -74,7 +74,7 @@ nav .sdbr-menu {
     }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
     nav .sdbr-menu {
         display: flex;
         flex-direction: column;
