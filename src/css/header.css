@@ -6,10 +6,13 @@
 :root {
     --h1-Responsive: clamp(1.25rem, 3vw, 1.8rem);
     --h2-Responsive: clamp(1.125rem, 3vw, 1.5rem);
-    --text-Normal: clamp(0.650rem, 3vw, 1.2rem);
+    --text-Normal: clamp(0.650rem, 3vw, 1.1rem);
     --icon-Normal: clamp(0.875rem, 3vw, 1.8rem);
 
     --border-Items: #ced4da;
+
+    --shadow-dark: #b8bcc3;
+    --shadow-light: #ffffff;
 }
 
 /* ==========================================================================
@@ -33,7 +36,15 @@ header {
     "ttl-App ttl-App"
     "btn-Menu usuario";
 
+    overflow: hidden;
     background-color: #232529;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 
+        10px 10px 22px var(--shadow-dark),
+        -10px -10px 22px var(--shadow-light);
+
+    margin-bottom: 8px;
     padding: 8px 14px;
     gap: 8px;
 }
@@ -68,9 +79,6 @@ header .usuario {
     align-self: center;
     justify-self: flex-end;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
 }
 
 /* ==========================================================================
@@ -88,14 +96,36 @@ header .usuario {
    NOTIFICACIONES - USUARIO 
    ========================================================================== */
 
-.usuario #btn-notificacion {
-    border-right: 1px solid var(--border-Items);
-    padding-right: 8px;
+.usuario .divider {
+    background-color: var(--border-Items);
+    height: 20px;
+    width: 1px;
+    margin: 4px 7px;
 }
+
+.usuario .datos-Usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 4px;
+}
+
 
 /* ==========================================================================
    MEDIA'S
    ========================================================================== */
+
+@media (min-width: 480px) and (max-width: 1023px){
+    .usuario .datos-Usuario {
+        margin-left: 6px;
+    }
+
+    .usuario .divider {
+        height: 25px;
+        margin: 6px 12px;
+    }
+}
 
 @media (min-width: 1024px){
     header {
@@ -107,4 +137,13 @@ header .usuario {
     header .ttl-App { grid-area: ttl-App; }
     header #btn-Menu { grid-area: btn-Menu; }
     header .usuario { grid-area: usuario; }
+
+    .usuario .datos-Usuario {
+        margin-left: 8px;
+    }
+
+    .usuario .divider {
+        height: 30px;
+        margin: 8px 15px;
+    }
 }
