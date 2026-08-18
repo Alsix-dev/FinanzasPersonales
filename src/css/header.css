@@ -1,0 +1,110 @@
+/* ETIQUETAS
+    HACER GENERICO
+
+*/
+
+:root {
+    --h1-Responsive: clamp(1.25rem, 3vw, 1.8rem);
+    --h2-Responsive: clamp(1.125rem, 3vw, 1.5rem);
+    --text-Normal: clamp(0.650rem, 3vw, 1.2rem);
+    --icon-Normal: clamp(0.875rem, 3vw, 1.8rem);
+
+    --border-Items: #ced4da;
+}
+
+/* ==========================================================================
+   HEADER
+   ==========================================================================
+   • [>] CAPAS:
+        • Header
+        • TITULO - BOTON MENU
+        • NOTIFICACIONES - USUARIO
+        • MEDIA'S
+   ========================================================================== */
+
+header {
+    width: 100%;
+    max-height: 120px;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "ttl-App ttl-App"
+    "btn-Menu usuario";
+
+    background-color: #232529;
+    padding: 8px 14px;
+    gap: 8px;
+}
+
+header .ttl-App { grid-area: ttl-App; }
+header #btn-Menu { grid-area: btn-Menu; }
+header .usuario { grid-area: usuario; }
+
+
+header, 
+header button {
+    color: white;
+    font-size: var(--text-Normal);
+}
+
+header .material-symbols-outlined {
+    font-size: var(--icon-Normal);
+}
+
+header .ttl-App {
+    align-self: center;
+    justify-self: center;
+}
+
+header #btn-Menu {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+header .usuario {
+    align-self: center;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   TITULO - BOTON MENU 
+   ========================================================================== */
+
+.ttl-App h1 {
+    /* HACER GENERICO */
+    font-size: var(--h1-Responsive);
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================================================
+   NOTIFICACIONES - USUARIO 
+   ========================================================================== */
+
+.usuario #btn-notificacion {
+    border-right: 1px solid var(--border-Items);
+    padding-right: 8px;
+}
+
+/* ==========================================================================
+   MEDIA'S
+   ========================================================================== */
+
+@media (min-width: 1024px){
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 34px;
+    }
+
+    header .ttl-App { grid-area: ttl-App; }
+    header #btn-Menu { grid-area: btn-Menu; }
+    header .usuario { grid-area: usuario; }
+}

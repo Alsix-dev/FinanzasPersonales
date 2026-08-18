@@ -1,0 +1,29 @@
+/* ==========================================================================
+   APP
+   ==========================================================================
+   • [>] CAPAS:
+        • GENERAL
+        • CONTENEDOR
+        • FOOTER
+        • MEDIA'S
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #app, #root, .contenedor {
+    width: 100%;
+    height: 100dvh;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
