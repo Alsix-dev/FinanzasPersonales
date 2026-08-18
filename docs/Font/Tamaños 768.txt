@@ -1,0 +1,8 @@
+| Elemento         |      `rem` | px aprox. | Uso                         |
+| ---------------- | ---------: | --------: | --------------------------- |
+| Texto general    |     `1rem` |  **16px** | Párrafos, labels, contenido |
+| Botón            |     `1rem` |  **16px** | Texto del botón             |
+| Texto secundario | `0.875rem` |  **14px** | Información auxiliar        |
+| `h1`             |   `1.5rem` |  **24px** | Título principal            |
+| `h2`             |  `1.25rem` |  **20px** | Subtítulo                   |
+| `h3`             | `1.125rem` |  **18px** | Título pequeño              |
