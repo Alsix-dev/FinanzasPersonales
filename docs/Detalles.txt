@@ -2,3 +2,6 @@
 2) Se retira la columna de "ingreso/egreso" de los movimientos en cont-Movimientos.
 	Se reemplaza por colorear los datos de ingreso.
 	Si es un ingreso es $+xxx.xxx en verde | Si es un egreso es $-xxx.xxx en rojo
+
+3) No olvidar que al ser el ultimo li en la lista, no debe aparecer el
+divisor <div class="divider"></div>

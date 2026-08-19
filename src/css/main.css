@@ -79,21 +79,28 @@ main .ttl-Resumen {
 
 main .main-movimientos {
     margin: 4px;
+    margin-top: 25px;
     padding: 8px 16px;
     border: 1px solid var(--border-Items);
     border-radius: var(--border-Radius-Items);
+    box-shadow:
+      10px 10px 50px var(--shadow-dark),
+      -10px -10px 22px var(--shadow-light);
 }
 
-.main-movimientos .movimientos-superior {
+.main-movimientos .mov-interaccion {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid var(--border-Items);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 
-.movimientos-superior > h2 {
+.mov-interaccion > h2 {
     margin: 8px 1px 12px 1px;
 }
 
-.movimientos-superior .mov-sup-Controles {
+.mov-interaccion .mov-sup-Controles {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -142,12 +149,198 @@ main .main-movimientos {
     border-radius: var(--border-Radius-Items);
 }
 
+/* ==========================================================================
+   MAIN - LISTA - MOVIMIENTOS
+   ========================================================================== */
+
+main .mov-transacciones {
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.mov-transacciones ul {
+    list-style-type: none;
+}
+
+.mov-transacciones .listado-fechas,
+.fecha-transacciones .mov-en-fecha {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mov-transacciones .listado-fechas {
+    min-height: 0;
+    max-height: 520px;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+.listado-fechas .divider {
+    background-color: #ffd43b;
+    height: 1px;
+    width: 100%;
+    margin: 12px 4px;
+}
+
+.fecha-transacciones > h4 {
+    margin-bottom: 12px;
+}
+
+.fecha-transacciones .mov-en-fecha {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mov-en-fecha .isTransaccion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-right: 18px;
+}
+
+.isTransaccion .ttl-transaccion {
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+.isTransaccion .cat-transccion,
+.isTransaccion .extras-transaccion {
+    gap: 6px;
+}
+
+.isTransaccion .cat-transccion {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.isTransaccion .extras-transaccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-movimientos .mov-expandir {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 8px;
+    padding: 16px 8px 8px 8px;
+    border-top: 1px solid var(--border-Items);
+}
+
+.mov-expandir .btn-inf-movimientos {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-Radius-Items);
+}
+
+/* ==========================================================================
+   MAIN - SIDEBAR
+   ========================================================================== */
+
+/* .main-sidebar {
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    padding: 16px 24px;
+    gap: 12px;
+    border: 1px solid var(--border-Items);
+    border-radius: var(--border-Radius-Items);
+    box-shadow:
+      10px 10px 50px var(--shadow-dark),
+      -10px -10px 22px var(--shadow-light);
+}
+
+.main-sidebar .main-sidebar-superior {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.main-sidebar-superior > h2 {
+    justify-self: center;
+}
+
+.main-sidebar-superior > #show-sidebar-main {
+    justify-self: flex-end;
+}
+
+.main-sidebar .lista-estadisticas {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.lista-estadisticas > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.lista-estadisticas h3 {
+    color: var(--text-mes-Items);
+}
+
+.lista-estadisticas .cantidad {
+    padding: 6px;
+    border: 1px solid var(--border-Items);
+    border-radius: var(--border-Radius-Items);
+    box-shadow:
+      inset 2px 2px 5px rgba(0,0,0,.3),
+      inset -2px -2px 5px rgba(255,255,255,.15),
+      6px 6px 14px var(--shadow-dark);
+    font-weight: bold;
+} */
 
 /* ==========================================================================
    MEDIA'S
    ========================================================================== */
 
 @media (min-width: 480px) and (max-width: 1023px){
+    /* main {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        ". ttl-Resumen"
+        "main-estadisticas main-estadisticas"
+        "main-sidebar main-movimientos";
+    }
+
+    main .ttl-Resumen {
+        grid-area: ttl-Resumen;
+    }
+
+    main .main-estadisticas {
+        grid-area: main-estadisticas;
+    }
+
+    main .main-movimientos {
+        grid-area: main-movimientos;
+    }
+
+    main .main-sidebar {
+        margin-top: 25px;
+        grid-area: main-sidebar;
+    } */
+
     .cartel-PIE {
         margin: 12px;
         padding: 12px;
@@ -172,7 +365,7 @@ main .main-movimientos {
         padding: 4px 4px 4px 8px;
     }
 
-    .mov-sup-Buscar .btn-filtrar p,
+    .mov-sup-Buscar .btn-filtrar span.btn-span,
     .btn-filtrar span.material-symbols-outlined {
         font-size: 12px;
     }
@@ -189,13 +382,13 @@ main .main-movimientos {
         padding: 30px 40px 12px 40px;
     }
 
-    .main-movimientos .movimientos-superior {
+    .main-movimientos .mov-interaccion {
         display: grid;
         grid-template-columns: 0.4fr 1fr;
         gap: 8px;
     }
 
-    .movimientos-superior .mov-sup-Controles {
+    .mov-interaccion .mov-sup-Controles {
         flex-wrap: nowrap;
     }
 
@@ -206,6 +399,7 @@ main .main-movimientos {
     }
 
     .mov-sup-Buscar #src-mov-input {
+        width: 80%;
         padding: 12px 40px;
     }
 
@@ -213,8 +407,18 @@ main .main-movimientos {
         padding: 4px 4px 4px 8px;
     }
 
-    .mov-sup-Buscar .btn-filtrar p,
+    .mov-sup-Buscar .btn-filtrar span.btn-span,
     .btn-filtrar span.material-symbols-outlined {
         font-size: 14px;
+    }
+
+    .fecha-transacciones .mov-en-fecha {
+        gap: 25px;
+    }
+
+    .isTransaccion .extras-transaccion {
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
