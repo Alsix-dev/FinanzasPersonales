@@ -607,6 +607,13 @@ main .main-categorias {
         padding: 30px;
     }
 
+    .isTransaccion .extras-transaccion {
+        flex: 1;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 12px;
+    }
+
     .main-sidebar {
         flex-direction: column;
         margin: 0.15rem;
@@ -664,5 +671,4 @@ main .main-categorias {
         height: 140px;
         width: 140px;
     }
-
 }

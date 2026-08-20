@@ -9,3 +9,13 @@ V ----------------> 6) Revisar porque al contenedor aplicarle un flex o grid, de
 V ----------------> 7) Eliminar los tamaños predefinidos para iconos y botones. Definir segun
 		       sea requerido.
 8) Menu con sticky para que solo acompañe, si y solo si el alto del main genera un scroll
+9) Crear el menu
+10) Hacer que al apretar el boton de estadisticas, se comprima dejando
+	solamente los numeros. Ver si poner iconos que lo representen
+	Y esto debe dar mas espacio al main.
+11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro,
+	los movimientos en general.
+12) Mejorar el diseño de ser posible o efectos.
+13) Revisar que al agregar un titulo muuy largo en lista-movimientos
+	este empuja en algun momento, estirando incluso toda la pagina
+	ensanchando al main .mov-transacciones
