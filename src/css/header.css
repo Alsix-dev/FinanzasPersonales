@@ -22,9 +22,7 @@ header {
     background-color: #232529;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    box-shadow: 
-        10px 10px 22px var(--shadow-dark),
-        -10px -10px 22px var(--shadow-light);
+    box-shadow: 10px 10px 22px var(--shadow-dark);
 
     margin-bottom: 8px;
     padding: 8px 14px;
@@ -52,9 +50,10 @@ header .ttl-App {
 }
 
 header #btn-Menu {
-    display: flex;
     align-self: center;
     justify-self: flex-start;
+    display: flex;
+    align-items: center;
 }
 
 header .usuario {
@@ -68,18 +67,20 @@ header .usuario {
    ========================================================================== */
 
 .usuario .divider {
-    background-color: var(--border-Items);
+    background-color: var(--border-color); /*border-Items*/
     height: 20px;
     width: 1px;
-    margin: 4px 7px;
+    margin: auto 14px;
 }
 
 .usuario .datos-Usuario {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     margin-left: 4px;
+}
+
+.datos-Usuario > span {
+    text-align: start;
 }
 
 
@@ -87,22 +88,22 @@ header .usuario {
    MEDIA'S
    ========================================================================== */
 
-@media (min-width: 480px) and (max-width: 1023px){
+@container body-first (min-width: 768px) and (max-width: 1023px){
     .usuario .datos-Usuario {
         margin-left: 6px;
     }
 
     .usuario .divider {
         height: 25px;
-        margin: 6px 12px;
+        margin: auto 16px;
     }
 }
 
-@media (min-width: 1024px){
+@container body-first (min-width: 1024px){
     header {
         display: flex;
         justify-content: space-between;
-        padding: 8px 34px;
+        padding: 12px 34px;
     }
 
     header .ttl-App { grid-area: ttl-App; }
@@ -115,6 +116,6 @@ header .usuario {
 
     .usuario .divider {
         height: 30px;
-        margin: 8px 15px;
+        margin: auto 18px;
     }
 }

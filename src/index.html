@@ -19,7 +19,7 @@
                 <header>
                     <button id="btn-Menu">
                         <span class="material-symbols-outlined">menu</span>
-                        <span class="text-span">Menu</span>
+                        <span class="text-button-header">Menu</span>
                     </button>
 
                     <div class="ttl-App">
@@ -36,21 +36,68 @@
                         <button id="cnt-usuario">
                             <span class="material-symbols-outlined">account_circle</span>
                             <div class="datos-Usuario">
-                                <p class="nmbr-Usuario">Nombre de usuario</p>
-                                <p class="crg-Usuario">Cargo de usuario</p>
+                                <span class="text-Normal nmbr-Usuario">Nombre de usuario</span>
+                                <span class="text-Normal crg-Usuario">Cargo de usuario</span>
                             </div>
                         </button>
                     </div>
                 </header>
+
+                <nav class="">
+                    <ul class="sdbr-menu">
+                        <li id="btn-menu-resumen">
+                            <a href="#">
+                                <span class="material-symbols-outlined">resume</span>
+                                <span class="text-button-header">Resumen</span>
+                            </a>
+                        </li>
+                        <li id="btn-menu-gastos">
+                            <a href="#">
+                                <span class="material-symbols-outlined">wallet</span>
+                                <span class="text-button-header">Gastos</span>
+                            </a>
+                        </li>
+                        <li id="btn-menu-ingresos">
+                            <a href="#">
+                                <span class="material-symbols-outlined">credit_card</span>
+                                <span class="text-button-header">Ingresos</span>
+                            </a>
+                        </li>
+                        <li id="btn-menu-presupuesto">
+                            <a href="#">
+                                <span class="material-symbols-outlined">finance</span>
+                                <span class="text-button-header">Presupuesto</span>
+                            </a>
+                        </li>
+                        <li id="btn-menu-categorias">
+                            <a href="#">
+                                <span class="material-symbols-outlined">category</span>
+                                <span class="text-button-header">Categorias</span>
+                            </a>
+                        </li>
+                        <li id="btn-menu-report">
+                            <a href="#">
+                                <span class="material-symbols-outlined">finance_mode</span>
+                                <span class="text-button-header">Reportes</span>
+                            </a>
+                        </li>
+                        <li id="btn-menu-config">
+                            <a href="#">
+                                <span class="material-symbols-outlined">settings</span>
+                                <span class="text-button-header">Configuracion</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
                 <main>
                     <h1 class="ttl-Resumen">Resumen</h1>
                     <div class="main-estadisticas">
                         <div class="cartel-PIE cartel-Presupuesto">
                             <h2>Presupuesto</h2>
-                            <p class="pie-Calculado">$xxx.xxx.xxx</p>
+                            <span class="pie-Calculado">$xxx.xxx.xxx</span>
                             <div class="ftr-PIE">
-                                <p class="mes-Calculado">en agosto</p>
+                                <span class="text-Normal">en agosto</span>
                                 <div class="cmbr-mes-Calculado">
                                     <button class="btn-next-Mes">
                                         <span class="material-symbols-outlined">keyboard_arrow_left</span>
@@ -64,9 +111,9 @@
 
                         <div class="cartel-PIE cartel-Ingreso">
                             <h2>Ingreso</h2>
-                            <p class="pie-Calculado">$xxx.xxx.xxx</p>
+                            <span class="pie-Calculado">$xxx.xxx.xxx</span>
                             <div class="ftr-PIE">
-                                <p class="mes-Calculado">en agosto</p>
+                                <span class="text-Normal">en agosto</span>
                                 <div class="cmbr-mes-Calculado">
                                     <button class="btn-next-Mes">
                                         <span class="material-symbols-outlined">keyboard_arrow_left</span>
@@ -80,9 +127,9 @@
 
                         <div class="cartel-PIE cartel-Gasto">
                             <h2>Egreso</h2>
-                            <p class="pie-Calculado">$xxx.xxx.xxx</p>
+                            <span class="pie-Calculado">$xxx.xxx.xxx</span>
                             <div class="ftr-PIE">
-                                <p class="mes-Calculado">en agosto</p>
+                                <span class="text-Normal">en agosto</span>
                                 <div class="cmbr-mes-Calculado">
                                     <button class="btn-next-Mes">
                                         <span class="material-symbols-outlined">keyboard_arrow_left</span>
@@ -102,17 +149,17 @@
                                 <div class="mov-sup-Buscar">
                                     <label>
                                         <span class="material-symbols-outlined">search</span>
-                                        <input type="text" id="src-mov-input" placeholder="Buscar">
+                                        <input type="text" class="text-Listado" id="src-mov-input" placeholder="Buscar">
                                     </label>
                                     <button class="btn-filtrar">
-                                        <span class="text-span">Filtrar</span>
+                                        <span class="text-Listado">Filtrar</span>
                                         <span class="material-symbols-outlined">filter_alt</span>
                                     </button>
                                 </div>
 
                                 <button id="btn-Add">
                                     <span class="material-symbols-outlined">add</span>
-                                    <span class="text-span">Añadir gasto</span>
+                                    <span class="text-Listado">Añadir gasto</span>
                                 </button>
                             </div>
                         </div>
@@ -123,36 +170,36 @@
                                     <h4>7 de agosto</h4>
                                     <ul class="mov-en-fecha">
                                         <li class="isTransaccion">
-                                            <span class="text-span ttl-transaccion">Mercado AAAAAAAAAAAAAAAAAA</span>
+                                            <span class="text-Listado ttl-transaccion">Mercado AAAAAAAAAAAAAAAAAA</span>
                                             <div class="cat-transccion">
                                                 <span class="material-symbols-outlined">add_reaction</span>
-                                                <span class="text-span">Categoria</span>
+                                                <span class="text-Listado">Categoria</span>
                                             </div>
                                             <div class="extras-transaccion">
-                                                <span class="text-span egreso-dinero">$xxx.xxx</span>
-                                                <span class="text-span">hh:mm</span>
+                                                <span class="text-Listado egreso-dinero">$xxx.xxx</span>
+                                                <span class="text-Listado">hh:mm</span>
                                             </div>
                                         </li>
                                         <li class="isTransaccion">
-                                            <span class="text-span ttl-transaccion">Mercado MMM</span>
+                                            <span class="text-Listado ttl-transaccion">Mercado MMM</span>
                                             <div class="cat-transccion">
                                                 <span class="material-symbols-outlined">add_reaction</span>
-                                                <span class="text-span">Categoria</span>
+                                                <span class="text-Listado">Categoria</span>
                                             </div>
                                             <div class="extras-transaccion">
-                                                <span class="text-span egreso-dinero">$xxx.xxx</span>
-                                                <span class="text-span">hh:mm</span>
+                                                <span class="text-Listado egreso-dinero">$xxx.xxx</span>
+                                                <span class="text-Listado">hh:mm</span>
                                             </div>
                                         </li>
                                         <li class="isTransaccion">
-                                            <span class="text-span ttl-transaccion">Mercado SSS</span>
+                                            <span class="text-Listado ttl-transaccion">Mercado SSS</span>
                                             <div class="cat-transccion">
                                                 <span class="material-symbols-outlined">add_reaction</span>
-                                                <span class="text-span">Categoria</span>
+                                                <span class="text-Listado">Categoria</span>
                                             </div>
                                             <div class="extras-transaccion">
-                                                <span class="text-span egreso-dinero">$xxx.xxx</span>
-                                                <span class="text-span">hh:mm</span>
+                                                <span class="text-Listado egreso-dinero">$xxx.xxx</span>
+                                                <span class="text-Listado">hh:mm</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -162,36 +209,36 @@
                                     <h4>6 de agosto</h4>
                                     <ul class="mov-en-fecha">
                                         <li class="isTransaccion">
-                                            <span class="text-span ttl-transaccion">Mercado IAN</span>
+                                            <span class="text-Listado ttl-transaccion">Mercado IAN</span>
                                             <div class="cat-transccion">
                                                 <span class="material-symbols-outlined">add_reaction</span>
-                                                <span class="text-span">Categoria</span>
+                                                <span class="text-Listado">Categoria</span>
                                             </div>
                                             <div class="extras-transaccion">
-                                                <span class="text-span egreso-dinero">$xxx.xxx</span>
-                                                <span class="text-span">hh:mm</span>
+                                                <span class="text-Listado egreso-dinero">$xxx.xxx</span>
+                                                <span class="text-Listado">hh:mm</span>
                                             </div>
                                         </li>
                                         <li class="isTransaccion">
-                                            <span class="text-span ttl-transaccion">Mercado MMM</span>
+                                            <span class="text-Listado ttl-transaccion">Mercado MMM</span>
                                             <div class="cat-transccion">
                                                 <span class="material-symbols-outlined">add_reaction</span>
-                                                <span class="text-span">Categoria</span>
+                                                <span class="text-Listado">Categoria</span>
                                             </div>
                                             <div class="extras-transaccion">
-                                                <span class="text-span egreso-dinero">$xxx.xxx</span>
-                                                <span class="text-span">hh:mm</span>
+                                                <span class="text-Listado egreso-dinero">$xxx.xxx</span>
+                                                <span class="text-Listado">hh:mm</span>
                                             </div>
                                         </li>
                                         <li class="isTransaccion">
-                                            <span class="text-span ttl-transaccion">Mercado SSS</span>
+                                            <span class="text-Listado ttl-transaccion">Mercado SSS</span>
                                             <div class="cat-transccion">
                                                 <span class="material-symbols-outlined">add_reaction</span>
-                                                <span class="text-span">Categoria</span>
+                                                <span class="text-Listado">Categoria</span>
                                             </div>
                                             <div class="extras-transaccion">
-                                                <span class="text-span egreso-dinero">$xxx.xxx</span>
-                                                <span class="text-span">hh:mm</span>
+                                                <span class="text-Listado egreso-dinero">$xxx.xxx</span>
+                                                <span class="text-Listado">hh:mm</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -201,36 +248,36 @@
                                     <h4>5 de agosto</h4>
                                     <ul class="mov-en-fecha">
                                         <li class="isTransaccion">
-                                            <span class="text-span ttl-transaccion">Mercado IAN</span>
+                                            <span class="text-Listado ttl-transaccion">Mercado IAN</span>
                                             <div class="cat-transccion">
                                                 <span class="material-symbols-outlined">add_reaction</span>
-                                                <span class="text-span">Categoria</span>
+                                                <span class="text-Listado">Categoria</span>
                                             </div>
                                             <div class="extras-transaccion">
-                                                <span class="text-span egreso-dinero">$xxx.xxx</span>
-                                                <span class="text-span">hh:mm</span>
+                                                <span class="text-Listado egreso-dinero">$xxx.xxx</span>
+                                                <span class="text-Listado">hh:mm</span>
                                             </div>
                                         </li>
                                         <li class="isTransaccion">
-                                            <span class="text-span ttl-transaccion">Mercado MMM</span>
+                                            <span class="text-Listado ttl-transaccion">Mercado MMM</span>
                                             <div class="cat-transccion">
                                                 <span class="material-symbols-outlined">add_reaction</span>
-                                                <span class="text-span">Categoria</span>
+                                                <span class="text-Listado">Categoria</span>
                                             </div>
                                             <div class="extras-transaccion">
-                                                <span class="text-span egreso-dinero">$xxx.xxx</span>
-                                                <span class="text-span">hh:mm</span>
+                                                <span class="text-Listado egreso-dinero">$xxx.xxx</span>
+                                                <span class="text-Listado">hh:mm</span>
                                             </div>
                                         </li>
                                         <li class="isTransaccion">
-                                            <span class="text-span ttl-transaccion">Mercado SSS</span>
+                                            <span class="text-Listado ttl-transaccion">Mercado SSS</span>
                                             <div class="cat-transccion">
                                                 <span class="material-symbols-outlined">add_reaction</span>
-                                                <span class="text-span">Categoria</span>
+                                                <span class="text-Listado">Categoria</span>
                                             </div>
                                             <div class="extras-transaccion">
-                                                <span class="text-span egreso-dinero">$xxx.xxx</span>
-                                                <span class="text-span">hh:mm</span>
+                                                <span class="text-Listado egreso-dinero">$xxx.xxx</span>
+                                                <span class="text-Listado">hh:mm</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -240,7 +287,7 @@
 
                         <div class="mov-expandir">
                             <button class="btn-inf-movimientos">
-                                <span class="text-span">Expandir movimientos</span>
+                                <span class="text-Listado">Expandir movimientos</span>
                                 <span class="material-symbols-outlined">expand_content</span>
                             </button>
                         </div>
@@ -256,28 +303,154 @@
                         <div class="divider"></div>
                         <ul class="lista-estadisticas">
                             <li>
-                                <h3>Cant. Total ingresos</h3>
-                                <span class="text-span cantidad">14021</span>
+                                <h4>Cantidad Total ingresos</h4>
+                                <span class="text-Listado cantidad">14021</span>
                             </li>
                             <li>
-                                <h3>Cant. Total egresos</h3>
-                                <span class="text-span cantidad">14021</span>
+                                <h4>Cantidad Total egresos</h4>
+                                <span class="text-Listado cantidad">14021</span>
                             </li>
                             <li>
-                                <h3>Cant. mes ingresos</h3>
-                                <span class="text-span cantidad">14021</span>
+                                <h4>Cantidad mes ingresos</h4>
+                                <span class="text-Listado cantidad">14021</span>
                             </li>
                             <li>
-                                <h3>Cant. mes ingresos</h3>
-                                <span class="text-span cantidad">14021</span>
+                                <h4>Cantidad mes ingresos</h4>
+                                <span class="text-Listado cantidad">14021</span>
                             </li>
                         </ul>
                     </aside>
 
-                    <!-- <div class="main-categorias"></div> -->
+                    <section class="main-categorias">
+                        <div class="cartel-categoria cartel-cat-ingresos">
+                            <div class="cartel-sup-cat">
+                                <h2>Ingresos por categoria</h2>
+                                <span class="text-Normal">en agosto</span>
+                            </div>
+
+                            <div class="datos-cat">
+                                <div class="grafica-cat" id="grafica-cat-ingresos">
+                                    Grafica
+                                </div>
+                                <ul class="items-cat">
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="cat-interaccion">
+                                <button class="btn-filtrar">
+                                    <span class="text-Listado">Filtrar</span>
+                                    <span class="material-symbols-outlined">filter_alt</span>
+                                </button>
+                                <button class="btn-inf-movimientos">
+                                    <span class="text-Listado">Expandir movimientos</span>
+                                    <span class="material-symbols-outlined">expand_content</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="cartel-categoria cartel-cat-egresos">
+                            <div class="cartel-sup-cat">
+                                <h2>Egresos por categoria</h2>
+                                <span class="text-Normal">en agosto</span>
+                            </div>
+
+                            <div class="datos-cat">
+                                <div class="grafica-cat" id="grafica-cat-egresos">
+                                    Grafica
+                                </div>
+                                <ul class="items-cat">
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                   <li>
+                                        <span class="material-symbols-outlined">add_reaction</span>
+                                        <div class="cat-porcentaje">
+                                            <span class="text-Listado">Categoria A</span>
+                                            <span class="text-Listado">xxx%</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="cat-interaccion">
+                                <button class="btn-filtrar">
+                                    <span class="text-Listado">Filtrar</span>
+                                    <span class="material-symbols-outlined">filter_alt</span>
+                                </button>
+                                <button class="btn-inf-movimientos">
+                                    <span class="text-Listado">Expandir movimientos</span>
+                                    <span class="material-symbols-outlined">expand_content</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
                 </main>
 
-                <footer></footer>
+                <footer>Hola</footer>
             </div>
         </div>
     </div>

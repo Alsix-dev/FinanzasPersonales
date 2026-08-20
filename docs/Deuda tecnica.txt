@@ -1,3 +1,11 @@
-1) Dividir .contenedor (padre de todo el body) en grid.
-2) Los botones "filtrar" debo hacerlo mas genericos, es decir, que sea en una sola definicion y no que siempre
-	deba repetirlo en cada responsive.
+X -------- No fue necesario --------> 1) Dividir .contenedor (padre de todo el body) en grid.
+X -------- No fue necesario --------> 2) Los botones "filtrar" debo hacerlo mas genericos, es decir, que sea en una sola definicion y no que siempre 
+					 deba repetirlo en cada responsive.
+V -------- Revisado y modificado --------> 3) Revisar los <p>
+		Modificacion: Se cambiaron por <span> y se les dio dimensiones especificas.
+V ----------------> 4) Ajustar el color de los meses en datos de categorias.
+V ----------------> 5) Revisar el main-estadisticas cuando llega a 1023 no ocupa tanto espacio y queda apretado.
+V ----------------> 6) Revisar porque al contenedor aplicarle un flex o grid, desaparece el header wtf
+V ----------------> 7) Eliminar los tamaños predefinidos para iconos y botones. Definir segun
+		       sea requerido.
+8) Menu con sticky para que solo acompañe, si y solo si el alto del main genera un scroll
