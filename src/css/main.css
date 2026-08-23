@@ -248,12 +248,14 @@ main .mov-transacciones {
    MAIN - SIDEBAR
    ========================================================================== */
 
-.main-sidebar .full {
-    display: block;
+.main-sidebar h2, 
+.main-sidebar h4,
+.main-sidebar .material-symbols-outlined {
+    display: none;
 }
 
-.main-sidebar h2, .main-sidebar h4 {
-    display: none;
+.main-sidebar .full {
+    display: block;
 }
 
 .main-sidebar {
@@ -484,6 +486,7 @@ main .main-categorias {
         "main-estadisticas main-estadisticas"
         "main-sidebar main-movimientos"
         ". main-categorias";
+        column-gap: 20px;
     }
 
     main .ttl-Resumen { grid-area: ttl-Resumen; }

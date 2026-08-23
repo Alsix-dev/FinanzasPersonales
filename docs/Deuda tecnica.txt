@@ -8,27 +8,23 @@ V ----------------> 5) Revisar el main-estadisticas cuando llega a 1023 no ocupa
 V ----------------> 6) Revisar porque al contenedor aplicarle un flex o grid, desaparece el header wtf
 V ----------------> 7) Eliminar los tamaños predefinidos para iconos y botones. Definir segun
 		       sea requerido.
-8) Menu con sticky para que solo acompañe, si y solo si el alto del main genera un scroll
-9) Crear el menu
+V ----------------> 8) Menu con sticky para que solo acompañe, si y solo si el alto del main genera un scroll
+V ----------------> 9) Crear el menu
 10) Hacer que al apretar el boton de estadisticas, se comprima dejando
 	solamente los numeros. Ver si poner iconos que lo representen
 	Y esto debe dar mas espacio al main.
 11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro,
 	los movimientos en general.
 12) Mejorar el diseño de ser posible o efectos.
-13) Revisar que al agregar un titulo muuy largo en lista-movimientos
+V ----------------> 13) Revisar que al agregar un titulo muuy largo en lista-movimientos
 	este empuja en algun momento, estirando incluso toda la pagina
 	ensanchando al main .mov-transacciones
 
-14) Cuando se haga click en "ocultar" del estadisticas, hacer que
-	.cantidad se abrevie para dar un tamaño acorde a la barra vertical.
-	Si se apreta el boton, la barra vertical debe tener una
-	cantidad que se abrevie solo a los primeros 3 digitos de cada
-	item.
-
-15) Si se abre el menu, el sidebar de estadisticas debe comprimirse tambien
+14) Si se abre el menu, el sidebar de estadisticas debe comprimirse tambien
 	como si se activara su boton.
 
-16) El menu debe tener una posicion sticky para acompañar al navegador.
-17) Agregar en ingresos/egresos por categoria que al ser 321 o menos, el titulo de
+15) Agregar en ingresos/egresos por categoria que al ser 321 o menos, el titulo de
 	categoria sea column junto a su porcentaje.
+
+16) En el tamaño de 768 a 1023, al abrir el menu, debe abrirse lateralmente enviando al
+	sidebar de estadisticas abajo como si fuese en un 321 a 768
