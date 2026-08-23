@@ -5,3 +5,27 @@
 
 3) No olvidar que al ser el ultimo li en la lista, no debe aparecer el
 divisor <div class="divider"></div>
+
+4) Cambio en sidebar-main:
+	i) Cantidad total ingresos --> Total ingresos anual.
+		En lugar de mostrar una cantidad de veces, muestro
+		el total por año
+	ii) Cantidad total egresos --> Total egresos anual.
+	iii) Cantidad total mes ingreso --> Ahorro neto.
+		En lugar de mostrar una cantidad de veces, muestro
+		el ahorro neto mensual
+	iv) Cantidad total mes egresos --> Movimientos mes.
+		Preferible mostrar la cantidad total de movimientos en
+		el mes, ya sea egresos/ingresos. Esto puede detallarse
+		en tal caso en una pestaña/page diferente.
+
+5) Aplicar 
+
+    max-width: 3.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+en .cantidad cuando se aprete el boton para achicar la barra. Deberia
+usar un .toggle de evento ya que es alternar entre titulo y icono en
+estadisticas.

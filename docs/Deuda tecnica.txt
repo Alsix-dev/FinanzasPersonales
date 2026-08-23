@@ -19,3 +19,16 @@ V ----------------> 7) Eliminar los tamaños predefinidos para iconos y botones.
 13) Revisar que al agregar un titulo muuy largo en lista-movimientos
 	este empuja en algun momento, estirando incluso toda la pagina
 	ensanchando al main .mov-transacciones
+
+14) Cuando se haga click en "ocultar" del estadisticas, hacer que
+	.cantidad se abrevie para dar un tamaño acorde a la barra vertical.
+	Si se apreta el boton, la barra vertical debe tener una
+	cantidad que se abrevie solo a los primeros 3 digitos de cada
+	item.
+
+15) Si se abre el menu, el sidebar de estadisticas debe comprimirse tambien
+	como si se activara su boton.
+
+16) El menu debe tener una posicion sticky para acompañar al navegador.
+17) Agregar en ingresos/egresos por categoria que al ser 321 o menos, el titulo de
+	categoria sea column junto a su porcentaje.

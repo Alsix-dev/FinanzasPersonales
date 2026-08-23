@@ -50,7 +50,6 @@ html, body, #app, #root, .contenedor {
 }
 
 .contenedor {
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 12px;

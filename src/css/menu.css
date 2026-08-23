@@ -5,3 +5,35 @@ nav {
 nav.active-Nav {
     display: block;
 }
+
+nav {
+    width: 100%;
+    min-height: 0;
+    background-color: #232529;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .lista-items-menu {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+    padding: 1rem;
+    gap: 8px;
+    column-gap: 36px;
+}
+
+.lista-items-menu > li {
+    align-self: center;
+}
+
+.lista-items-menu > li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
