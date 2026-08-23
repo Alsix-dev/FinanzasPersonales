@@ -287,6 +287,10 @@ main .mov-transacciones {
     justify-self: center;
 }
 
+.main-sidebar-superior > #show-sidebar-main {
+    justify-self: flex-end;
+}
+
 .main-sidebar .lista-estadisticas {
     list-style-type: none;
     display: flex;

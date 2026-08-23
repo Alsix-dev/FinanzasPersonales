@@ -28,3 +28,6 @@ V ----------------> 13) Revisar que al agregar un titulo muuy largo en lista-mov
 
 16) En el tamaño de 768 a 1023, al abrir el menu, debe abrirse lateralmente enviando al
 	sidebar de estadisticas abajo como si fuese en un 321 a 768
+
+17) Aplicar una base de datos para guardar esos precios de estadisticas, asi las abreviaciones son
+	solo visuales al achicar el menu.

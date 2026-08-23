@@ -6,7 +6,6 @@ const alternarMenu = () => {
 }
 
 header.addEventListener('click', (event) => {
-    // Si no clickea un boton, anula.
     if(!event.target.closest('button')) return
 
     if(event.target.closest('#btn-Menu')){
