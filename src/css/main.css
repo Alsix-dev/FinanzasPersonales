@@ -279,17 +279,22 @@ main .mov-transacciones {
 }
 
 .main-sidebar .main-sidebar-superior {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    /* display: grid;
+    grid-template-columns: 1fr auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 8px;
 }
 
-.main-sidebar-superior > h2 {
+/* .main-sidebar-superior > h2 {
     justify-self: center;
 }
 
 .main-sidebar-superior > #show-sidebar-main {
     justify-self: flex-end;
-}
+} */
 
 .main-sidebar .lista-estadisticas {
     list-style-type: none;
@@ -481,6 +486,7 @@ main .main-categorias {
 }
 
 @container body-first (min-width: 767px) and (max-width: 1023px) {
+
     main {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -491,6 +497,15 @@ main .main-categorias {
         "main-sidebar main-movimientos"
         ". main-categorias";
         column-gap: 20px;
+    }
+
+    nav.active-Nav + main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.2rem;
+        margin: 0 auto;
+        background-color: transparent;
     }
 
     main .ttl-Resumen { grid-area: ttl-Resumen; }
@@ -534,6 +549,16 @@ main .main-categorias {
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: nowrap;
+    }
+
+    nav.active-Nav + main > .main-sidebar > .lista-estadisticas {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     .main-sidebar .main-sidebar-superior {

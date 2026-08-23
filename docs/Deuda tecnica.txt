@@ -10,7 +10,7 @@ V ----------------> 7) Eliminar los tamaños predefinidos para iconos y botones.
 		       sea requerido.
 V ----------------> 8) Menu con sticky para que solo acompañe, si y solo si el alto del main genera un scroll
 V ----------------> 9) Crear el menu
-10) Hacer que al apretar el boton de estadisticas, se comprima dejando
+V ----------------> 110) Hacer que al apretar el boton de estadisticas, se comprima dejando
 	solamente los numeros. Ver si poner iconos que lo representen
 	Y esto debe dar mas espacio al main.
 11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro,
@@ -20,14 +20,20 @@ V ----------------> 13) Revisar que al agregar un titulo muuy largo en lista-mov
 	este empuja en algun momento, estirando incluso toda la pagina
 	ensanchando al main .mov-transacciones
 
-14) Si se abre el menu, el sidebar de estadisticas debe comprimirse tambien
+V ----------------> 14) Si se abre el menu, el sidebar de estadisticas debe comprimirse tambien
 	como si se activara su boton.
 
 15) Agregar en ingresos/egresos por categoria que al ser 321 o menos, el titulo de
 	categoria sea column junto a su porcentaje.
 
-16) En el tamaño de 768 a 1023, al abrir el menu, debe abrirse lateralmente enviando al
+V ----------------> 16) En el tamaño de 768 a 1023, al abrir el menu, debe abrirse lateralmente enviando al
 	sidebar de estadisticas abajo como si fuese en un 321 a 768
 
 17) Aplicar una base de datos para guardar esos precios de estadisticas, asi las abreviaciones son
 	solo visuales al achicar el menu.
+
+V ----------------> 18) Hacer el menu horizontal antes de habilitar el desplazamiento de sidebar cuando se abre/cierra
+	No hace falta usar js, puede hacerse con solo css.
+
+19) Quitar el margin-bottom de header y ponerlo en main como top.
+	Quitar el gap de filas de contenedor al ser mayor de 767px.

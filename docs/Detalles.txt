@@ -29,3 +29,6 @@ divisor <div class="divider"></div>
 en .cantidad cuando se aprete el boton para achicar la barra. Deberia
 usar un .toggle de evento ya que es alternar entre titulo y icono en
 estadisticas.
+
+6) Sea de 321px a 1023px++ se deja centrada la parte superior y evitamos el uso de display grid
+	para darle lugar en un extremo al boton. Pero el codigo que tenia, queda comentado.

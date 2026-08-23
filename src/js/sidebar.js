@@ -56,23 +56,35 @@ const deshabilitar_iconos = (hijos) => {
 
 const preciosActuales = {}; // hasta no tener base de datos o local.
 
+function recuperarElementos(elemento){
+    const h2 = elemento.querySelector('.ttl-Stats');
+    const h4s = elemento.querySelectorAll('.lista-estadisticas h4');
+    const iconos = elemento.querySelectorAll('.lista-estadisticas .material-symbols-outlined');
+    const cantidades = elemento.querySelectorAll('.lista-estadisticas span.cantidad');
+    return { h2, h4s, iconos, cantidades }
+}
+
+function comprimirSidebar(main_sidebar){
+    const { h2, h4s, iconos, cantidades } = recuperarElementos(main_sidebar);
+    deshabilitar_h2(h2);
+    deshabilitar_h4(h4s);
+    habilitar_iconos(iconos);
+    abreviarDinero(cantidades);
+}
+
+function expandirSidebar(main_sidebar){
+    const { h2, h4s, iconos, cantidades } = recuperarElementos(main_sidebar);
+    habilitar_h2(h2);
+    habilitar_h4(h4s);
+    deshabilitar_iconos(iconos);
+    quitarAbreviacionDinero(cantidades);
+}
+
 function alternar_sideBar(main_sidebar){
-    const h2 = main_sidebar.querySelector('.ttl-Stats');
-    const h4s = main_sidebar.querySelectorAll('.lista-estadisticas h4');
-    const iconos = main_sidebar.querySelectorAll('.lista-estadisticas .material-symbols-outlined');
-    const cantidades = main_sidebar.querySelectorAll('.lista-estadisticas span.cantidad');
-
-    if(h2.classList.contains('full')){
-        deshabilitar_h2(h2);
-        deshabilitar_h4(h4s);
-        habilitar_iconos(iconos);
-        abreviarDinero(cantidades);
-
+    if(main_sidebar.querySelector('.ttl-Stats').classList.contains('full')){
+        comprimirSidebar(main_sidebar);
     } else {
-        habilitar_h2(h2);
-        habilitar_h4(h4s);
-        deshabilitar_iconos(iconos);
-        quitarAbreviacionDinero(cantidades);
+        expandirSidebar(main_sidebar);
     }
 }
 
@@ -127,3 +139,8 @@ show_sidebar_main.addEventListener('click', () => {
     const main_sidebar = document.querySelector('aside.main-sidebar');
     alternar_sideBar(main_sidebar);
 });
+
+export {
+    expandirSidebar,
+    comprimirSidebar
+}

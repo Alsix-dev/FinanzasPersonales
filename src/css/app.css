@@ -101,3 +101,22 @@ span.text-Listado {
 main span.material-symbols-outlined {
     font-size: var(--icon-Normal-Main);
 }
+
+
+@media (min-width: 768px){
+
+    .contenedor {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: 
+        "header header"
+        "nav main"
+        "footer footer";
+    }
+
+    nav { grid-area: nav }
+    header { grid-area: header; }
+    main { grid-area: main; }
+    footer { grid-area: footer; }
+}
