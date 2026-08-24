@@ -10,7 +10,7 @@
     --text-Button-Header: clamp(0.550rem, 3vw, 1.1rem);
     --text-Normal: clamp(0.650rem, 3vw, 0.875rem);
     --text-Importante: clamp(0.750rem, 3vw, 1.3rem);
-    --text-Listado: clamp(0.550rem, 3vw, 0.800rem);
+    --text-Listado: clamp(0.550rem, 3vw, 0.750rem);
 
     --border-Radius-Items: 5px;
     --border-color: #ced4da;

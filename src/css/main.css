@@ -375,48 +375,41 @@ main .main-categorias {
 .cartel-categoria .datos-cat {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .datos-cat .items-cat {
     flex: 1;
     list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
 }
 
 .items-cat > li {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 0.8rem;
-    gap: 4px;
+    gap: 6px;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .items-cat > li .cat-porcentaje {
+    width: 60%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 28px;
-}
- 
-.cat-porcentaje > .text-Normal {
-    min-width: 0;
-    overflow: hidden;
-    overflow-wrap: break-word;
-    white-space: normal;
-    text-overflow: ellipsis;
 }
 
 .cartel-categoria .cat-interaccion {
     display: flex;
     justify-content: space-between;
     padding: 6px 2px;
+    gap: 6px;
 }
 
 .datos-cat .grafica-cat {
-    height: 105px;
-    width: 125px;
-    margin-left: 0.2rem;
+    height: clamp(100px, 30vw, 140px);
+    width: clamp(100px, 30vw, 140px);
+    margin: 0.2rem 0 0.5rem 0.2rem;
     background-color: #ffd43b;
 }
 
@@ -451,7 +444,7 @@ main .main-categorias {
     }
 }
 
-@container body-first (min-width: 479px) and (max-width: 767px) {
+@container body-first (min-width: 480px) and (max-width: 767px) {
     .cartel-PIE {
         padding: 0.5rem;
     }
@@ -477,15 +470,9 @@ main .main-categorias {
     .datos-cat .items-cat {
         align-items: end;
     }
-
-    .datos-cat .grafica-cat {
-        height: 135px;
-        width: 135px;
-    }
-
 }
 
-@container body-first (min-width: 767px) and (max-width: 1023px) {
+@container body-first (min-width: 768px) and (max-width: 1023px) {
 
     main {
         display: grid;
@@ -578,10 +565,6 @@ main .main-categorias {
         align-items: end;
     }
 
-    .datos-cat .grafica-cat {
-        height: 140px;
-        width: 140px;
-    }
 }
 
 @container body-first (min-width: 1023px){
@@ -611,6 +594,11 @@ main .main-categorias {
         margin: 0.6rem 0;
     }
 
+    main .main-movimientos {
+        align-self: flex-start;
+        padding: 30px;
+    }
+
     .main-movimientos .mov-interaccion {
         display: grid;
         grid-template-columns: 0.4fr 1fr;
@@ -637,10 +625,6 @@ main .main-categorias {
 
     .mov-sup-Controles #btn-Add {
         padding: 0.8rem;
-    }
-
-    main .main-movimientos {
-        padding: 30px;
     }
 
     .isTransaccion .extras-transaccion {
@@ -681,7 +665,7 @@ main .main-categorias {
     }
 
     main .main-categorias {
-        width: auto;
+        align-self: flex-start;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -702,9 +686,17 @@ main .main-categorias {
     .datos-cat .items-cat {
         align-items: end;
     }
-
-    .datos-cat .grafica-cat {
-        height: 140px;
-        width: 140px;
+    
+    .items-cat > li {
+        justify-content: flex-start;
     }
+
+    .items-cat > li .cat-porcentaje {
+        width: 100%;
+    }
+
+    /* .datos-cat .grafica-cat {
+        height: 135px;
+        width: 135px;
+    } */
 }

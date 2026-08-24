@@ -2,7 +2,10 @@ X -------- No fue necesario --------> 1) Dividir .contenedor (padre de todo el b
 X -------- No fue necesario --------> 2) Los botones "filtrar" debo hacerlo mas genericos, es decir, que sea en una sola definicion y no que siempre 
 					 deba repetirlo en cada responsive.
 V -------- Revisado y modificado --------> 3) Revisar los <p>
-		Modificacion: Se cambiaron por <span> y se les dio dimensiones especificas.
+		Modificacion: 
+		Se cambiaron por <span> y se 
+		les dio dimensiones especificas.
+
 V ----------------> 4) Ajustar el color de los meses en datos de categorias.
 V ----------------> 5) Revisar el main-estadisticas cuando llega a 1023 no ocupa tanto espacio y queda apretado.
 V ----------------> 6) Revisar porque al contenedor aplicarle un flex o grid, desaparece el header wtf
@@ -11,23 +14,27 @@ V ----------------> 7) Eliminar los tamaños predefinidos para iconos y botones.
 V ----------------> 8) Menu con sticky para que solo acompañe, si y solo si el alto del main genera un scroll
 V ----------------> 9) Crear el menu
 V ----------------> 110) Hacer que al apretar el boton de estadisticas, se comprima dejando
-	solamente los numeros. Ver si poner iconos que lo representen
-	Y esto debe dar mas espacio al main.
+			 solamente los numeros. Ver si poner iconos que lo representen
+			 Y esto debe dar mas espacio al main.
 11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro,
-	los movimientos en general.
+los movimientos en general.
 12) Mejorar el diseño de ser posible o efectos.
 V ----------------> 13) Revisar que al agregar un titulo muuy largo en lista-movimientos
-	este empuja en algun momento, estirando incluso toda la pagina
-	ensanchando al main .mov-transacciones
+			este empuja en algun momento, estirando incluso toda la pagina
+			ensanchando al main .mov-transacciones
 
 V ----------------> 14) Si se abre el menu, el sidebar de estadisticas debe comprimirse tambien
-	como si se activara su boton.
+			como si se activara su boton.
 
-15) Agregar en ingresos/egresos por categoria que al ser 321 o menos, el titulo de
-	categoria sea column junto a su porcentaje.
+V ------- Revisado y modificado ---------> 15) Agregar en ingresos/egresos por categoria que al ser 321px o menos, el titulo de
+	  Modificacion:	        	       		categoria sea column junto a su porcentaje.
+	  Se quito el flex-wrap puesto como solucion
+	  y en su lugar se ajusto el tamaño del texto 
+	  'texto-listado' junto a un space-between
+	  y un centrado del <li> con un ancho del 60%.
 
 V ----------------> 16) En el tamaño de 768 a 1023, al abrir el menu, debe abrirse lateralmente enviando al
-	sidebar de estadisticas abajo como si fuese en un 321 a 768
+			sidebar de estadisticas abajo como si fuese en un 321 a 768
 
 17) Aplicar una base de datos para guardar esos precios de estadisticas, asi las abreviaciones son
 	solo visuales al achicar el menu.
