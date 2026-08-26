@@ -208,12 +208,12 @@ main .mov-transacciones {
     text-overflow: ellipsis;
     font-weight: bold;
 }
-.isTransaccion .cat-transccion,
+.isTransaccion .cat-transaccion,
 .isTransaccion .extras-transaccion {
     gap: 4px;
 }
 
-.isTransaccion .cat-transccion {
+.isTransaccion .cat-transaccion {
     flex: 1;
     min-width: 0;
     display: flex;

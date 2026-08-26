@@ -50,7 +50,7 @@ V ----------------> 19) Quitar el margin-bottom de header y ponerlo en main como
 	Crear estados para esto, asi se coordina mejor el estado de abierto y cerrado.
 
 21) Cuando se haga el expandir movimientos en main-movimientos ingresar como nueva columna
-	cual fue el metodo de pago.
+	cual fue el metodo de pago y tipo de transaccion.
 
 V ----------------> 22) Inicialmente se crea el item, gestionar que cuando no exista ese dia en ese mes, en ese año
 			se debe agregar el ul que tenga esa fecha.
@@ -60,9 +60,18 @@ V ----------------> 22) Inicialmente se crea el item, gestionar que cuando no ex
 
 23) Cuando el importe es muy grande, empuja la categoria. Arreglar
 
-24) Poner colores a los iconos y si queda bien tambien al texto. Segun cada categoria tiene un color.
+V ----------------> 24) Poner colores a los iconos y si queda bien tambien al texto. Segun cada categoria tiene un color.
 
-25) Pasar los meses de numeros a nombre. Para ello, debo modificar el metodo 'verificarExisteDia'
+V ----------------> 25) Pasar los meses de numeros a nombre. Para ello, debo modificar el metodo 'verificarExisteDia'
 
-26) Gestionar que verifique si existe esos dias solo en ese mes, que no busque fuera de ese rango
-	asi evita cargar todos los li de la lista.
+V ----------------> 26) Gestionar que verifique si existe esos dias solo en ese mes, que no busque fuera de ese rango
+			asi evita cargar todos los li de la lista.
+
+27) Fusionar la rama de newUI con la main, ya los arreglos de UI fueron finalizados.
+
+28) Optimizar codigo de crear transaccion y crear fecha
+
+29) Colores a ingreso (verde) y egreso (rojo)
+
+30) Los ingresos y igresos deben acumularte en estadisticas. Lo mismo el movimiento que aumenta
+	cada vez que se ingresa una transaccion.

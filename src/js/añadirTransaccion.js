@@ -46,232 +46,277 @@ const tipo = document.getElementById("tipo-transaccion");
 const categorias = {
     egreso: [
         {
-            value: "alimentacion",
+            value: "Alimentacion",
             categoria: "Alimentación",
-            icono: "restaurant"
+            icono: "restaurant",
+            color: "#FF7043"
         },
         {
-            value: "supermercado",
+            value: "Supermercado",
             categoria: "Supermercado",
-            icono: "shopping_cart"
+            icono: "shopping_cart",
+            color: "#66BB6A"
         },
         {
-            value: "transporte",
+            value: "Transporte",
             categoria: "Transporte",
-            icono: "directions_car"
+            icono: "directions_car",
+            color: "#42A5F5"
         },
         {
-            value: "combustible",
+            value: "Combustible",
             categoria: "Combustible",
-            icono: "local_gas_station"
+            icono: "local_gas_station",
+            color: "#FFA726"
         },
         {
-            value: "vivienda",
+            value: "Vivienda",
             categoria: "Vivienda",
-            icono: "home"
+            icono: "home",
+            color: "#8D6E63"
         },
         {
-            value: "alquiler",
+            value: "Alquiler",
             categoria: "Alquiler",
-            icono: "house"
+            icono: "house",
+            color: "#A1887F"
         },
         {
-            value: "servicios",
+            value: "Servicios",
             categoria: "Servicios",
-            icono: "bolt"
+            icono: "bolt",
+            color: "#FDD835"
         },
         {
-            value: "internet",
+            value: "Internet",
             categoria: "Internet",
-            icono: "wifi"
+            icono: "wifi",
+            color: "#29B6F6"
         },
         {
-            value: "telefonia",
+            value: "Telefonia",
             categoria: "Telefonía",
-            icono: "smartphone"
+            icono: "smartphone",
+            color: "#7E57C2"
         },
         {
-            value: "salud",
+            value: "Salud",
             categoria: "Salud",
-            icono: "medical_services"
+            icono: "medical_services",
+            color: "#EF5350"
         },
         {
-            value: "educacion",
+            value: "Educacion",
             categoria: "Educación",
-            icono: "school"
+            icono: "school",
+            color: "#5C6BC0"
         },
         {
-            value: "ropa",
+            value: "Ropa",
             categoria: "Ropa",
-            icono: "checkroom"
+            icono: "checkroom",
+            color: "#EC407A"
         },
         {
-            value: "entretenimiento",
+            value: "Entretenimiento",
             categoria: "Entretenimiento",
-            icono: "movie"
+            icono: "movie",
+            color: "#AB47BC"
         },
         {
-            value: "suscripciones",
+            value: "Suscripciones",
             categoria: "Suscripciones",
-            icono: "subscriptions"
+            icono: "subscriptions",
+            color: "#7E57C2"
         },
         {
-            value: "tecnologia",
+            value: "Tecnologia",
             categoria: "Tecnología",
-            icono: "devices"
+            icono: "devices",
+            color: "#78909C"
         },
         {
-            value: "restaurantes",
+            value: "Restaurantes",
             categoria: "Restaurantes",
-            icono: "local_dining"
+            icono: "local_dining",
+            color: "#FF5722"
         },
         {
-            value: "viajes",
+            value: "Viajes",
             categoria: "Viajes",
-            icono: "flight"
+            icono: "flight",
+            color: "#26A69A"
         },
         {
-            value: "compras",
+            value: "Compras",
             categoria: "Compras",
-            icono: "shopping_bag"
+            icono: "shopping_bag",
+            color: "#FF4081"
         },
         {
-            value: "mascotas",
+            value: "Mascotas",
             categoria: "Mascotas",
-            icono: "pets"
+            icono: "pets",
+            color: "#8D6E63"
         },
         {
-            value: "deudas",
+            value: "Deudas",
             categoria: "Deudas",
-            icono: "credit_card"
+            icono: "credit_card",
+            color: "#D32F2F"
         },
         {
-            value: "prestamos",
+            value: "Prestamos",
             categoria: "Préstamos",
-            icono: "request_quote"
+            icono: "request_quote",
+            color: "#E53935"
         },
         {
-            value: "impuestos",
+            value: "Impuestos",
             categoria: "Impuestos",
-            icono: "account_balance"
+            icono: "account_balance",
+            color: "#546E7A"
         },
         {
-            value: "seguros",
+            value: "Seguros",
             categoria: "Seguros",
-            icono: "shield"
+            icono: "shield",
+            color: "#5C6BC0"
         },
         {
-            value: "regalos",
+            value: "Regalos",
             categoria: "Regalos",
-            icono: "redeem"
+            icono: "redeem",
+            color: "#E91E63"
         },
         {
-            value: "donaciones",
+            value: "Donaciones",
             categoria: "Donaciones",
-            icono: "volunteer_activism"
+            icono: "volunteer_activism",
+            color: "#26A69A"
         },
         {
-            value: "inversiones",
+            value: "Inversiones",
             categoria: "Inversiones",
-            icono: "trending_up"
+            icono: "trending_up",
+            color: "#00897B"
         },
         {
-            value: "ahorro",
+            value: "Ahorro",
             categoria: "Ahorro",
-            icono: "savings"
+            icono: "savings",
+            color: "#43A047"
         },
         {
-            value: "otros",
+            value: "Otros",
             categoria: "Otros",
-            icono: "more_horiz"
+            icono: "more_horiz",
+            color: "#90A4AE"
         }
     ],
 
     ingreso: [
         {
-            value: "salario",
+            value: "Salario",
             categoria: "Salario",
-            icono: "payments"
+            icono: "payments",
+            color: "#2E7D32"
         },
         {
-            value: "trabajo_independiente",
+            value: "Trabajo independiente",
             categoria: "Trabajo independiente",
-            icono: "work"
+            icono: "work",
+            color: "#388E3C"
         },
         {
-            value: "freelance",
+            value: "Freelance",
             categoria: "Freelance",
-            icono: "computer"
+            icono: "computer",
+            color: "#43A047"
         },
         {
-            value: "negocio",
+            value: "Negocio",
             categoria: "Negocio",
-            icono: "store"
+            icono: "store",
+            color: "#00897B"
         },
         {
-            value: "ventas",
+            value: "Ventas",
             categoria: "Ventas",
-            icono: "sell"
+            icono: "sell",
+            color: "#00A86B"
         },
         {
-            value: "inversiones",
+            value: "Inversiones",
             categoria: "Inversiones",
-            icono: "trending_up"
+            icono: "trending_up",
+            color: "#00796B"
         },
         {
-            value: "intereses",
+            value: "Intereses",
             categoria: "Intereses",
-            icono: "percent"
+            icono: "percent",
+            color: "#689F38"
         },
         {
-            value: "dividendos",
+            value: "Dividendos",
             categoria: "Dividendos",
-            icono: "paid"
+            icono: "paid",
+            color: "#558B2F"
         },
         {
-            value: "alquileres_cobrados",
+            value: "Alquileres cobrados",
             categoria: "Alquileres cobrados",
-            icono: "real_estate_agent"
+            icono: "real_estate_agent",
+            color: "#00695C"
         },
         {
-            value: "bonificacion",
+            value: "Bonificacion",
             categoria: "Bonificación",
-            icono: "card_giftcard"
+            icono: "card_giftcard",
+            color: "#7CB342"
         },
         {
-            value: "comision",
+            value: "Comision",
             categoria: "Comisión",
-            icono: "price_check"
+            icono: "price_check",
+            color: "#009688"
         },
         {
-            value: "reembolso",
+            value: "Reembolso",
             categoria: "Reembolso",
-            icono: "currency_exchange"
+            icono: "currency_exchange",
+            color: "#26A69A"
         },
         {
-            value: "regalo_recibido",
+            value: "Regalo recibido",
             categoria: "Regalo recibido",
-            icono: "redeem"
+            icono: "redeem",
+            color: "#AB47BC"
         },
         {
-            value: "premio",
+            value: "Premio",
             categoria: "Premio",
-            icono: "emoji_events"
+            icono: "emoji_events",
+            color: "#F9A825"
         },
         {
-            value: "venta_bienes",
+            value: "Venta de bienes",
             categoria: "Venta de bienes",
-            icono: "sell"
+            icono: "sell",
+            color: "#2E7D32"
         },
         {
-            value: "transferencia_recibida",
+            value: "Transferencia recibida",
             categoria: "Transferencia recibida",
-            icono: "account_balance"
+            icono: "account_balance",
+            color: "#1565C0"
         },
         {
-            value: "otros",
+            value: "Otros",
             categoria: "Otros",
-            icono: "more_horiz"
+            icono: "more_horiz",
+            color: "#78909C"
         }
     ]
 };
@@ -312,12 +357,21 @@ const leerFormTransaccion = () => {
     }
 }
 
+function pasarMesATexto(mes){
+    const mesTexto = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+    return mesTexto[mes-1];
+}
+
 const verificarExisteDia = (hoy) => {
     const diaActual = hoy.getDate();
     const mesActual = hoy.getMonth() + 1;
-    let fechaActual = diaActual + ' de ' + mesActual;
+    const anio = hoy.getFullYear();
+    let fechaActual = diaActual + ' de ' + pasarMesATexto(mesActual);
 
-    const listado = document.querySelectorAll('.fecha-transacciones');
+    const listado = document.querySelectorAll(`
+        .fecha-transacciones[data-mes="${mesActual}"][data-anio="${anio}"]
+    `);
+    console.log(listado);
     const flag = {
         siExiste: false,
         fecha: null
@@ -366,14 +420,15 @@ function capitalizarTexto(texto){
     return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
-const buscarIconoCat = (transaccion, categoria) => {
+const buscarCategoria = (transaccion, categoria) => {
     return categorias[transaccion].find(cat => cat.value === categoria);
 }
 
 function crearFecha(nuevaTransaccion, hoy){
     const dd = hoy.getDate();
     const mes = hoy.getMonth() + 1;
-    let diaMes = dd + ' de ' + mes;
+    const aa = hoy.getFullYear();
+    let diaMes = dd + ' de ' + pasarMesATexto(mes);
 
     const li = document.createElement('li');
     li.className = 'fecha-transacciones';
@@ -385,6 +440,8 @@ function crearFecha(nuevaTransaccion, hoy){
     `;
 
     li.querySelector('.mov-en-fecha').appendChild(nuevaTransaccion);
+    li.dataset.mes = String(mes);
+    li.dataset.anio = String(aa);
 
     return li;
 }
@@ -394,7 +451,9 @@ function crearTransaccion(items, hoy){
     let transaccion = items.leerTipoTransc;
     let categoria = items.leerTipoCatTransc;
     let importe = items.leerImporteTransc;
-    let icono = buscarIconoCat(transaccion, categoria).icono;
+    const nuevaCategoria = buscarCategoria(transaccion, categoria);
+    let icono = nuevaCategoria.icono;
+    let color = nuevaCategoria.color;
 
     const hh = hoy.getHours();
     const mm = hoy.getMinutes();
@@ -404,15 +463,17 @@ function crearTransaccion(items, hoy){
     li.className = "isTransaccion";
     li.innerHTML = `
         <span class="text-Listado ttl-transaccion">${name}</span>
-        <div class="cat-transccion">
-        <span class="material-symbols-outlined">${icono}</span>
-        <span class="text-Listado">${categoria}</span>
+        <div class="cat-transaccion"">
+            <span class="material-symbols-outlined">${icono}</span>
+            <span class="text-Listado">${categoria}</span>
         </div>
         <div class="extras-transaccion">
         <span class="text-Listado egreso-dinero">$${importe}</span>
         <span class="text-Listado">${horario}</span>
         </div>
     `;
+
+    li.querySelector('.cat-transaccion').style.color = color;
     return li;
 }
 
