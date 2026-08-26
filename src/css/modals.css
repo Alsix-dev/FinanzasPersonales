@@ -1,0 +1,84 @@
+/* 
+    active-overlay
+    active-modal
+*/
+
+#overlays {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: .25s;
+    background: rgba(0,0,0,.3);
+    backdrop-filter: blur(5px);
+}
+
+#overlays.active-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#overlays .modal-add-transaccion {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: white;
+    border: none;
+    border-radius: var(--border-Radius-Items);
+}
+
+.modal-add-transaccion .divider {
+    background-color: var(--border-color);
+    height: 1px;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.modal-add-transaccion .cabezal-transaccion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.modal-add-transaccion .centro-transaccion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.centro-transaccion > div h2 {
+    margin-bottom: 0.5rem;
+}
+
+.centro-transaccion > div input,
+.centro-transaccion > div select {
+    color: gray;
+    width: 100%;
+    padding: 0.3rem;
+    outline: none;
+    border-radius: var(--border-Radius-Items);
+    border: 1px solid var(--border-color);
+}
+
+.centro-transaccion .crear-transaccion {
+    align-self: center;
+    margin: 0.5rem 0;
+}
+
+.crear-transaccion #btn-transaccion {
+    color: white;
+    background-color: rgba(39, 229, 166, 0.875);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-Radius-Items);
+    padding: 0.5rem;
+}

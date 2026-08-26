@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../src/css/header.css">
     <link rel="stylesheet" href="../src/css/menu.css">
     <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/modals.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
@@ -159,7 +160,7 @@
 
                                 <button id="btn-Add">
                                     <span class="material-symbols-outlined">add</span>
-                                    <span class="text-Listado">Añadir gasto</span>
+                                    <span class="text-Listado">Añadir transaccion</span>
                                 </button>
                             </div>
                         </div>
@@ -455,6 +456,54 @@
                 </main>
 
                 <footer>Hola</footer>
+
+                <section id="overlays" class="">
+                    <div class="modal-add-transaccion">
+                        <div class="cabezal-transaccion">
+                            <h1>Agregar nueva transaccion</h1>
+                            <button class="btn-closet">
+                                <span class="material-symbols-outlined">close</span>
+                            </button>
+                        </div>
+
+                        <form action="#" id="f-añadir-transaccion">
+                            <div class="divider"></div>
+                            <div class="centro-transaccion">
+                                <div class="nombre-Transaccion">
+                                    <h2>Nombre transaccion</h2>
+                                    <input 
+                                        type="text" id="i-name-transaccion"
+                                        placeholder="Ingresar nombre de transaccion">
+                                </div>
+
+                                <div class="tipo-transaccion">
+                                    <h2>Tipo transaccion</h2>
+                                    <select id="tipo-transaccion">
+                                        <option value="ingreso">Ingreso</option>
+                                        <option value="egreso">Egreso</option>
+                                    </select>
+                                </div>
+
+                                <div class="tipo-categoria">
+                                    <h2>Categoria</h2>
+                                    <select id="tipo-categoria"></select>
+                                </div>
+
+                                <div class="importe">
+                                    <h2>Importe</h2>
+                                    <input 
+                                        type="number"
+                                        id="i-importe-transaccion"
+                                        placeholder="Ingresa un importe">
+                                </div>
+
+                                <div class="crear-transaccion">
+                                    <button type="submit" id="btn-transaccion">Crear transaccion</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
@@ -462,5 +511,6 @@
     <script type="module" src="../src/js/menu.js"></script>
     <script type="module" src="../src/js/sidebar.js"></script>
     <script type="module" src="../src/js/menu.js"></script>
+    <script type="module" src="../src/js/añadirTransaccion.js"></script>
 </body>
 </html>

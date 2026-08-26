@@ -26,6 +26,3 @@ header.addEventListener('click', (event) => {
 
     }
 });
-
-// hacer en un js aparte que el sidebar se comprima y expanda para luego exportar su funcion en este .js
-// y usarlo cuando se activa el menu.

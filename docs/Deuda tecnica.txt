@@ -16,8 +16,9 @@ V ----------------> 9) Crear el menu
 V ----------------> 110) Hacer que al apretar el boton de estadisticas, se comprima dejando
 			 solamente los numeros. Ver si poner iconos que lo representen
 			 Y esto debe dar mas espacio al main.
-11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro,
-los movimientos en general.
+11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro, los movimientos en general.
+	Crear un modal para esto.
+
 12) Mejorar el diseño de ser posible o efectos.
 V ----------------> 13) Revisar que al agregar un titulo muuy largo en lista-movimientos
 			este empuja en algun momento, estirando incluso toda la pagina
@@ -42,5 +43,26 @@ V ----------------> 16) En el tamaño de 768 a 1023, al abrir el menu, debe abri
 V ----------------> 18) Hacer el menu horizontal antes de habilitar el desplazamiento de sidebar cuando se abre/cierra
 	No hace falta usar js, puede hacerse con solo css.
 
-19) Quitar el margin-bottom de header y ponerlo en main como top.
-	Quitar el gap de filas de contenedor al ser mayor de 767px.
+V ----------------> 19) Quitar el margin-bottom de header y ponerlo en main como top.
+			Quitar el gap de filas de contenedor al ser mayor de 767px.
+
+20) Si sidebar esta cerrado, entonces que se mantenga cerrado aun si se abre/cierra el menu.
+	Crear estados para esto, asi se coordina mejor el estado de abierto y cerrado.
+
+21) Cuando se haga el expandir movimientos en main-movimientos ingresar como nueva columna
+	cual fue el metodo de pago.
+
+V ----------------> 22) Inicialmente se crea el item, gestionar que cuando no exista ese dia en ese mes, en ese año
+			se debe agregar el ul que tenga esa fecha.
+			No olvidar gestionar el mes tambien para comparar. Y el año. 
+			En todo caso gestionar que estemos en el año actual
+			junto al mes actual.
+
+23) Cuando el importe es muy grande, empuja la categoria. Arreglar
+
+24) Poner colores a los iconos y si queda bien tambien al texto. Segun cada categoria tiene un color.
+
+25) Pasar los meses de numeros a nombre. Para ello, debo modificar el metodo 'verificarExisteDia'
+
+26) Gestionar que verifique si existe esos dias solo en ese mes, que no busque fuera de ese rango
+	asi evita cargar todos los li de la lista.

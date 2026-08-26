@@ -20,11 +20,8 @@ header {
 
     overflow: hidden;
     background-color: #232529;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
     box-shadow: 10px 10px 22px var(--shadow-dark);
 
-    margin-bottom: 8px;
     padding: 8px 14px;
     gap: 8px;
 }

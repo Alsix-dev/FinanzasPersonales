@@ -14,12 +14,12 @@
    ========================================================================== */
 
 main {
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0.2rem;
     margin: 0 auto;
+    margin-top: 12px;
     background-color: transparent;
 }
 
@@ -229,7 +229,7 @@ main .mov-transacciones {
 
 .main-movimientos .mov-expandir {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
     margin-top: 0.5rem;
     padding: 10px 4px 4px 4px;
@@ -279,22 +279,12 @@ main .mov-transacciones {
 }
 
 .main-sidebar .main-sidebar-superior {
-    /* display: grid;
-    grid-template-columns: 1fr auto; */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.5rem 0;
     gap: 8px;
 }
-
-/* .main-sidebar-superior > h2 {
-    justify-self: center;
-}
-
-.main-sidebar-superior > #show-sidebar-main {
-    justify-self: flex-end;
-} */
 
 .main-sidebar .lista-estadisticas {
     list-style-type: none;
@@ -397,6 +387,7 @@ main .main-categorias {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .cartel-categoria .cat-interaccion {
@@ -577,7 +568,7 @@ main .main-categorias {
         ". main-estadisticas ."
         "main-sidebar main-movimientos main-categorias";
         column-gap: 25px;
-        margin: 0 25px;
+        margin: 12px 25px 0 25px;
     }
 
     main .ttl-Resumen { grid-area: ttl-Resumen; }
@@ -596,7 +587,7 @@ main .main-categorias {
 
     main .main-movimientos {
         align-self: flex-start;
-        padding: 30px;
+        padding: 30px 30px 12px 30px;
     }
 
     .main-movimientos .mov-interaccion {
@@ -676,7 +667,7 @@ main .main-categorias {
     }
 
     .main-categorias .cartel-categoria {
-        padding: 1rem;
+        padding: 16px 16px 6px 16px;
     }
 
     .cartel-categoria .datos-cat {
@@ -694,9 +685,4 @@ main .main-categorias {
     .items-cat > li .cat-porcentaje {
         width: 100%;
     }
-
-    /* .datos-cat .grafica-cat {
-        height: 135px;
-        width: 135px;
-    } */
 }

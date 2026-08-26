@@ -32,3 +32,5 @@ estadisticas.
 
 6) Sea de 321px a 1023px++ se deja centrada la parte superior y evitamos el uso de display grid
 	para darle lugar en un extremo al boton. Pero el codigo que tenia, queda comentado.
+
+7) En el menu de agregar transaccion se agrega la opcion de "ingreso/egreso"

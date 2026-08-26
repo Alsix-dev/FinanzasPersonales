@@ -4,7 +4,7 @@
     --h3-Responsive: clamp(0.750rem, 3vw, 0.9rem);
     --h4-Responsive: clamp(0.625rem, 3vw, 0.875rem);
 
-    --icon-Normal-Header: clamp(0.550rem, 3vw, 1.5rem);
+    --icon-Normal-Header: clamp(1rem, 3vw, 1.5rem);
     --icon-Normal-Main: clamp(0.675rem, 3vw, 1.2rem);
 
     --text-Button-Header: clamp(0.550rem, 3vw, 1.1rem);
@@ -50,9 +50,9 @@ html, body, #app, #root, .contenedor {
 }
 
 .contenedor {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 12px;
     container-type: inline-size;
     container-name: body-first;
 }
@@ -86,7 +86,8 @@ h4 {
     font-size: var(--text-Button-Header);
 }
 
-header span.material-symbols-outlined {
+header span.material-symbols-outlined,
+#overlays .cabezal-transaccion span.material-symbols-outlined {
     font-size: var(--icon-Normal-Header);
 }
 
