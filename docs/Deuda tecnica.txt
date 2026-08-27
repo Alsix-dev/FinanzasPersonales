@@ -58,7 +58,7 @@ V ----------------> 22) Inicialmente se crea el item, gestionar que cuando no ex
 			En todo caso gestionar que estemos en el año actual
 			junto al mes actual.
 
-23) Cuando el importe es muy grande, empuja la categoria. Arreglar
+V ----------------> 23) Cuando el importe es muy grande, empuja la categoria. Arreglar
 
 V ----------------> 24) Poner colores a los iconos y si queda bien tambien al texto. Segun cada categoria tiene un color.
 

@@ -227,6 +227,15 @@ main .mov-transacciones {
     justify-content: center;
 }
 
+.extras-transaccion .importe {
+    width: 0;
+    flex: 1;
+    overflow: hidden;
+    /* overflow-wrap: break-word; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .main-movimientos .mov-expandir {
     display: flex;
     align-items: flex-end;
