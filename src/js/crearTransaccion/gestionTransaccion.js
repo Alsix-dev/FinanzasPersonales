@@ -1,12 +1,9 @@
-import { categorias } from "../crearTransaccion/gestionFormulario.js";
-
 /* ==========================================================================
    GESTION TRANSACCION
    ==========================================================================
    • [!] CAPAS:
         • ABRIR MENU
         • CERRAR MENU
-        • SELECT - TIPO CATEGORIA
    ========================================================================== */
 const overlays = document.getElementById('overlays');
 
@@ -37,22 +34,3 @@ overlays.addEventListener('click', (event) => {
         cerrarMenu(overlays);
     }
 });
-
-/* ==========================================================================
-   SELECT - TIPO CATEGORIA
-   ========================================================================== */
-const tipo = document.getElementById("tipo-transaccion");
-
-function esTipoCategoria(){
-    const categoria = document.getElementById("tipo-categoria");
-    categoria.innerHTML = "";
-    categorias[tipo.value].forEach(cat => {
-        const nuevaOpcion = document.createElement('option');
-        nuevaOpcion.value = cat.value;
-        nuevaOpcion.textContent = cat.categoria;
-        categoria.appendChild(nuevaOpcion);
-    });
-}
-
-tipo.addEventListener("change", esTipoCategoria);
-esTipoCategoria();

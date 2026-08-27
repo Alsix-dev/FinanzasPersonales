@@ -1,15 +1,21 @@
 import { capitalizarTexto } from "../genericas.js";
-import { buscarCategoria } from "../crearTransaccion/gestionFormulario.js";
+import { 
+    buscarCategoria,
+    buscarColorTransaccion
+} from "../crearTransaccion/gestionFormulario.js";
 
 export function crearTransaccion(items, hoy){
     let name = capitalizarTexto(items.leerNameTransc);
     let transaccion = items.leerTipoTransc;
     let categoria = items.leerTipoCatTransc;
     let importe = items.leerImporteTransc;
+    
+    const colorTransaccion = buscarColorTransaccion(transaccion);
     const nuevaCategoria = buscarCategoria(transaccion, categoria);
+    console.log(colorTransaccion, nuevaCategoria)
     let icono = nuevaCategoria.icono;
-    let color = nuevaCategoria.color;
-
+    let colorCategoria = nuevaCategoria.color;
+    
     const hh = hoy.getHours();
     const mm = hoy.getMinutes();
     let horario = hh + ':' + mm;
@@ -23,11 +29,12 @@ export function crearTransaccion(items, hoy){
             <span class="text-Listado">${categoria}</span>
         </div>
         <div class="extras-transaccion">
-        <span class="text-Listado egreso-dinero">$${importe}</span>
+        <span class="text-Listado importe">$${importe}</span>
         <span class="text-Listado">${horario}</span>
         </div>
     `;
 
-    li.querySelector('.cat-transaccion').style.color = color;
+    li.querySelector('.cat-transaccion').style.color = colorCategoria;
+    li.querySelector('.importe').style.color = colorTransaccion;
     return li;
 }
