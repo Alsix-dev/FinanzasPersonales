@@ -11,7 +11,21 @@ function convertirPrecioNumerico(valor){
     return Number(valorNuevo);
 }
 
+function capitalizarTexto(texto){
+    return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+function pasarMesATexto(mes){
+    const mesTexto = [
+        "enero","febrero","marzo","abril","mayo","junio","julio",
+        "agosto","septiembre","octubre","noviembre","diciembre"
+    ];
+    return mesTexto[mes-1];
+}
+
 export {
     quitarCaracteresPrecio,
-    convertirPrecioNumerico
+    convertirPrecioNumerico,
+    capitalizarTexto,
+    pasarMesATexto
 }

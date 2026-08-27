@@ -1,48 +1,13 @@
+import { pasarMesATexto } from "../genericas.js";
+
 /* ==========================================================================
-   AÑADIR TRANSACCION
+   GESTION TRANSACCION
    ==========================================================================
    • [!] CAPAS:
-        • CERRAR MENU
-        • ABRIR MENU
-        • SELECT - TIPO CATEGORIA
-        • GESTIONAR - INPUTS
-        • CREAR = TRANSACCION
+        • LEER - FORMULARIO
+        • VERIFICAR - DATOS
+        • BUSCAR - DATOS
    ========================================================================== */
-const overlays = document.getElementById('overlays');
-
-/* ==========================================================================
-   CERRAR MENU
-   ========================================================================== */
-const cerrarMenu = (element) => {
-    element.classList.remove('active-overlay');
-}
-
-overlays.addEventListener('click', (event) => {
-    const btn_closet = event.target.closest('.btn-closet');
-    const isOverlays = event.target;
-    if(btn_closet || isOverlays === overlays){
-        cerrarMenu(overlays);
-    }
-});
-
-/* ==========================================================================
-   ABRIR MENU
-   ========================================================================== */
-const abrirMenu = (element) => {
-    element.classList.add('active-overlay');
-}
-
-document.addEventListener('click', (event) => {
-    if(event.target.closest('#btn-Add')){
-        abrirMenu(overlays);
-    }
-});
-
-/* ==========================================================================
-   SELECT - TIPO CATEGORIA
-   ========================================================================== */
-const tipo = document.getElementById("tipo-transaccion");
-
 const categorias = {
     egreso: [
         {
@@ -319,27 +284,11 @@ const categorias = {
             color: "#78909C"
         }
     ]
-};
-
-function esTipoCategoria(){
-    const categoria = document.getElementById("tipo-categoria");
-    categoria.innerHTML = "";
-    categorias[tipo.value].forEach(cat => {
-        const nuevaOpcion = document.createElement('option');
-        nuevaOpcion.value = cat.value;
-        nuevaOpcion.textContent = cat.categoria;
-        categoria.appendChild(nuevaOpcion);
-    });
-}
-
-tipo.addEventListener("change", esTipoCategoria);
-esTipoCategoria();
+}; 
 
 /* ==========================================================================
-   GESTIONAR - INPUTS
+   LEER - FORMULARIO
    ========================================================================== */
-const listado_fechas = document.querySelector('.listado-fechas');
-
 const formConfTransccion = {
     obtenerFormTransc: document.getElementById('f-añadir-transaccion'),
     obtenerNameTransc: document.getElementById('i-name-transaccion'),
@@ -357,11 +306,9 @@ const leerFormTransaccion = () => {
     }
 }
 
-function pasarMesATexto(mes){
-    const mesTexto = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
-    return mesTexto[mes-1];
-}
-
+/* ==========================================================================
+   VERIFICAR - DATOS
+   ========================================================================== */
 const verificarExisteDia = (hoy) => {
     const diaActual = hoy.getDate();
     const mesActual = hoy.getMonth() + 1;
@@ -371,7 +318,6 @@ const verificarExisteDia = (hoy) => {
     const listado = document.querySelectorAll(`
         .fecha-transacciones[data-mes="${mesActual}"][data-anio="${anio}"]
     `);
-    console.log(listado);
     const flag = {
         siExiste: false,
         fecha: null
@@ -391,90 +337,17 @@ const verificarExisteDia = (hoy) => {
     return flag;
 }
 
-function generarTransaccion(event){
-    event.preventDefault();
-    const hoy = new Date();
-
-    const {
-        siExiste,
-        fecha
-    } = verificarExisteDia(hoy);
-
-    let valoresInputs = leerFormTransaccion();
-    const nuevaTransaccion = crearTransaccion(valoresInputs, hoy);
-    
-    if(siExiste){
-        const mov_en_fecha = fecha.querySelector('.mov-en-fecha');
-        mov_en_fecha.prepend(nuevaTransaccion);
-    } else {
-        const nuevaFecha = crearFecha(nuevaTransaccion, hoy);
-        listado_fechas.prepend(nuevaFecha);
-    }
-}
-
 /* ==========================================================================
-   CREAR = TRANSACCION
+   BUSCAR - DATOS
    ========================================================================== */
-
-function capitalizarTexto(texto){
-    return texto.charAt(0).toUpperCase() + texto.slice(1);
-}
-
 const buscarCategoria = (transaccion, categoria) => {
     return categorias[transaccion].find(cat => cat.value === categoria);
 }
 
-function crearFecha(nuevaTransaccion, hoy){
-    const dd = hoy.getDate();
-    const mes = hoy.getMonth() + 1;
-    const aa = hoy.getFullYear();
-    let diaMes = dd + ' de ' + pasarMesATexto(mes);
-
-    const li = document.createElement('li');
-    li.className = 'fecha-transacciones';
-
-    li.innerHTML = `
-        <h4>${diaMes}</h4>
-        <ul class="mov-en-fecha"></ul>
-        <div class="divider"></div>
-    `;
-
-    li.querySelector('.mov-en-fecha').appendChild(nuevaTransaccion);
-    li.dataset.mes = String(mes);
-    li.dataset.anio = String(aa);
-
-    return li;
+export {
+    buscarCategoria,
+    verificarExisteDia,
+    leerFormTransaccion,
+    formConfTransccion,
+    categorias
 }
-
-function crearTransaccion(items, hoy){
-    let name = capitalizarTexto(items.leerNameTransc);
-    let transaccion = items.leerTipoTransc;
-    let categoria = items.leerTipoCatTransc;
-    let importe = items.leerImporteTransc;
-    const nuevaCategoria = buscarCategoria(transaccion, categoria);
-    let icono = nuevaCategoria.icono;
-    let color = nuevaCategoria.color;
-
-    const hh = hoy.getHours();
-    const mm = hoy.getMinutes();
-    let horario = hh + ':' + mm;
-
-    const li = document.createElement('li');
-    li.className = "isTransaccion";
-    li.innerHTML = `
-        <span class="text-Listado ttl-transaccion">${name}</span>
-        <div class="cat-transaccion"">
-            <span class="material-symbols-outlined">${icono}</span>
-            <span class="text-Listado">${categoria}</span>
-        </div>
-        <div class="extras-transaccion">
-        <span class="text-Listado egreso-dinero">$${importe}</span>
-        <span class="text-Listado">${horario}</span>
-        </div>
-    `;
-
-    li.querySelector('.cat-transaccion').style.color = color;
-    return li;
-}
-
-formConfTransccion.obtenerFormTransc.addEventListener('submit', generarTransaccion);
