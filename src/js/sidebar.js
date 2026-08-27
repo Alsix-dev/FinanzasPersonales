@@ -11,8 +11,8 @@ import {
         . FUNCIONES
         . EVENTOS
    ========================================================================== */
-
 const show_sidebar_main = document.getElementById('show-sidebar-main');
+
 
 /* ==========================================================================
     FUNCIONES - DESHABILITAR
@@ -53,15 +53,23 @@ const deshabilitar_iconos = (hijos) => {
 /* ==========================================================================
     FUNCIONES
    ========================================================================== */
-
 const preciosActuales = {}; // hasta no tener base de datos o local.
+const sidebar = {
+    estado: false
+};
 
-function recuperarElementos(elemento){
-    const h2 = elemento.querySelector('.ttl-Stats');
-    const h4s = elemento.querySelectorAll('.lista-estadisticas h4');
-    const iconos = elemento.querySelectorAll('.lista-estadisticas .material-symbols-outlined');
-    const cantidades = elemento.querySelectorAll('.lista-estadisticas span.cantidad');
-    return { h2, h4s, iconos, cantidades }
+function recuperarEstado(){
+    return sidebar.estado;
+}
+
+function alternar_sideBar(main_sidebar){
+    if(main_sidebar.querySelector('.ttl-Stats').classList.contains('full')){
+        comprimirSidebar(main_sidebar);
+        sidebar.estado = false;
+    } else {
+        expandirSidebar(main_sidebar);
+        sidebar.estado = true;
+    }
 }
 
 function comprimirSidebar(main_sidebar){
@@ -80,12 +88,12 @@ function expandirSidebar(main_sidebar){
     quitarAbreviacionDinero(cantidades);
 }
 
-function alternar_sideBar(main_sidebar){
-    if(main_sidebar.querySelector('.ttl-Stats').classList.contains('full')){
-        comprimirSidebar(main_sidebar);
-    } else {
-        expandirSidebar(main_sidebar);
-    }
+function recuperarElementos(elemento){
+    const h2 = elemento.querySelector('.ttl-Stats');
+    const h4s = elemento.querySelectorAll('.lista-estadisticas h4');
+    const iconos = elemento.querySelectorAll('.lista-estadisticas .material-symbols-outlined');
+    const cantidades = elemento.querySelectorAll('.lista-estadisticas span.cantidad');
+    return { h2, h4s, iconos, cantidades }
 }
 
 function guardarDatos(cantidad){
@@ -142,5 +150,6 @@ show_sidebar_main.addEventListener('click', () => {
 
 export {
     expandirSidebar,
-    comprimirSidebar
+    comprimirSidebar,
+    recuperarEstado
 }

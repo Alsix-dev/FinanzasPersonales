@@ -1,6 +1,7 @@
 import {
     expandirSidebar,
-    comprimirSidebar
+    comprimirSidebar,
+    recuperarEstado
 } from "../js/sidebar.js"
 
 const header = document.querySelector('header');
@@ -8,13 +9,16 @@ const header = document.querySelector('header');
 const alternarMenu = () => {
     const contenedor = document.querySelector('.menu-principal');
     const main_sidebar = document.querySelector('aside.main-sidebar');
+    let estadoSidebar = recuperarEstado();
 
     if(contenedor.classList.contains('active-Nav')){
-        expandirSidebar(main_sidebar);
         contenedor.classList.remove('active-Nav');
+        if(estadoSidebar){
+            expandirSidebar(main_sidebar);
+        }
     } else {
-        comprimirSidebar(main_sidebar);
         contenedor.classList.add('active-Nav');
+        comprimirSidebar(main_sidebar);
     }
 }
 

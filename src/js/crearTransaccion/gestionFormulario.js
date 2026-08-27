@@ -297,9 +297,9 @@ const tipoCatTransc = {
    SELECT - TIPO
    ========================================================================== */
 const tipo = document.getElementById("tipo-transaccion");
+const categoria = document.getElementById("tipo-categoria");
 
 function esTipoCategoria(){
-    const categoria = document.getElementById("tipo-categoria");
     categoria.innerHTML = "";
     tipoCatTransc[tipo.value].categoria.forEach(cat => {
         const nuevaOpcion = document.createElement('option');

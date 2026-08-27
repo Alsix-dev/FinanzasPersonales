@@ -46,8 +46,8 @@ V ----------------> 18) Hacer el menu horizontal antes de habilitar el desplazam
 V ----------------> 19) Quitar el margin-bottom de header y ponerlo en main como top.
 			Quitar el gap de filas de contenedor al ser mayor de 767px.
 
-20) Si sidebar esta cerrado, entonces que se mantenga cerrado aun si se abre/cierra el menu.
-	Crear estados para esto, asi se coordina mejor el estado de abierto y cerrado.
+V ----------------> 20) Si sidebar esta cerrado, entonces que se mantenga cerrado aun si se abre/cierra el menu.
+			Crear estados para esto, asi se coordina mejor el estado de abierto y cerrado.
 
 21) Cuando se haga el expandir movimientos en main-movimientos ingresar como nueva columna
 	cual fue el metodo de pago y tipo de transaccion.
@@ -80,8 +80,8 @@ V ----------------> 29) Colores a ingreso (verde) y egreso (rojo)
 	quien devuelva la categoria. Lo mismo si creamos esTipoTransaccion para devolver
 	el color. Tal vez asi pueda simplificarse el codigo.
 
-32) Deberian cargarse los colores solo cuando se crean? O podria cargarlos cuando la pagina carga
-	Tal vez asi, pueda quitar esa dependencia del codigo crearTransaccion.
+X ----------------> 32) Deberian cargarse los colores solo cuando se crean? O podria cargarlos cuando la pagina carga
+			Tal vez asi, pueda quitar esa dependencia del codigo crearTransaccion.
 
 33) Podria agregarse un boton de minimizacion a los movimientos de una fecha/un dia, asi si son varios
 	pero cuando queremos scrollear e ir a otra fecha, para evitar este nos ocupe espacio
