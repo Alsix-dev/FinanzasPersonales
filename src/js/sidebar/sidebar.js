@@ -1,6 +1,6 @@
 import { 
     convertirPrecioNumerico,
-} from "../js/genericas.js";
+} from "../genericas.js";
 
 /* ==========================================================================
     SIDEBAR
@@ -55,7 +55,7 @@ const deshabilitar_iconos = (hijos) => {
    ========================================================================== */
 const preciosActuales = {}; // hasta no tener base de datos o local.
 const sidebar = {
-    estado: false
+    estado: true
 };
 
 function recuperarEstado(){
@@ -104,10 +104,19 @@ function guardarDatos(cantidad){
 
 function abreviarDinero(cantidades){
     const unidades = [
-        { valor: 1e12,  simbolo: "T" },
-        { valor: 1e9,   simbolo: "B"},
-        { valor: 1e6,   simbolo: "M"},
-        { valor: 1e3,   simbolo: "K"}
+        { valor: 1e39, simbolo: "Dd" },
+        { valor: 1e36, simbolo: "Ud" },
+        { valor: 1e33, simbolo: "Dc" },
+        { valor: 1e30, simbolo: "No" },
+        { valor: 1e27, simbolo: "Oc" },
+        { valor: 1e24, simbolo: "Sp" },
+        { valor: 1e21, simbolo: "Sx" },
+        { valor: 1e18, simbolo: "Qi" },
+        { valor: 1e15, simbolo: "Q" },
+        { valor: 1e12, simbolo: "T" },
+        { valor: 1e9, simbolo: "B" },
+        { valor: 1e6, simbolo: "M" },
+        { valor: 1e3, simbolo: "K" }
     ];
 
     cantidades.forEach(cantidad => {
@@ -119,7 +128,7 @@ function abreviarDinero(cantidades){
                 const resultado = numero/unidad.valor;
 
                 const devolver = `
-                ${resultado.toFixed(2)
+                ${resultado.toPrecision(3)
                     .replace(/\.00/, "")
                     .replace(/(\.\d)0$/, "")
                 }${unidad.simbolo}
@@ -151,5 +160,8 @@ show_sidebar_main.addEventListener('click', () => {
 export {
     expandirSidebar,
     comprimirSidebar,
-    recuperarEstado
+    recuperarEstado,
+    abreviarDinero,
+    recuperarElementos,
+    sidebar
 }

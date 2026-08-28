@@ -16,6 +16,7 @@ V ----------------> 9) Crear el menu
 V ----------------> 110) Hacer que al apretar el boton de estadisticas, se comprima dejando
 			 solamente los numeros. Ver si poner iconos que lo representen
 			 Y esto debe dar mas espacio al main.
+
 11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro, los movimientos en general.
 	Crear un modal para esto.
 
@@ -73,7 +74,7 @@ V ----------------> 26) Gestionar que verifique si existe esos dias solo en ese 
 
 V ----------------> 29) Colores a ingreso (verde) y egreso (rojo)
 
-30) Los ingresos y igresos deben acumularte en estadisticas. Lo mismo el movimiento que aumenta
+30) Los ingresos y egresos deben acumularse en estadisticas. Lo mismo el movimiento que aumenta
 	cada vez que se ingresa una transaccion.
 
 31) Revisar si esTipoCategoria en gestionFormulario.js deberia ser directamente
@@ -88,3 +89,14 @@ X ----------------> 32) Deberian cargarse los colores solo cuando se crean? O po
 	solo se minimiza y se facilita la visualizacion de la lista.
 
 34) Podria agregarse un boton de minimizacion a los carteles de ingresos/egresos por categoria.
+
+
+35) El ahorro es (por ahora) la diferencia del presupuesto inicial - el final. Lo que sobre, es lo
+	ahorrado.
+
+36) En los totales y ahorro, al ser un numero muy grande, este ensancha el sidebar.
+	Es decir, no corta bien el numero dejando solo los primeros tres digitos.
+	Si deja el simbolo.
+
+37) Cuando el sidebar esta cerrado y se agrega una transaccion, al abrir el sidebar, este
+	borra los valores. Solo funciona bien si se agrega cuando esta abierto.

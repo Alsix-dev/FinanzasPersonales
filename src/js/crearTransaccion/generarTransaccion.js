@@ -4,6 +4,8 @@ import {
     verificarExisteDia
 } from "../crearTransaccion/gestionFormulario.js";
 
+import { actualizarEstadisticas } from "../sidebar/gestionDatosSidebar.js";
+
 /* ==========================================================================
    AÑADIR TRANSACCION
    ==========================================================================
@@ -35,6 +37,8 @@ function generarTransaccion(event){
         const nuevaFecha = crearFecha(nuevaTransaccion, hoy);
         listado_fechas.prepend(nuevaFecha);
     }
+
+    actualizarEstadisticas(valoresInputs.leerTipoTransc, valoresInputs.leerImporteTransc);
 }
 
 formConfTransccion.obtenerFormTransc.addEventListener('submit', generarTransaccion);

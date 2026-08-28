@@ -12,7 +12,6 @@ export function crearTransaccion(items, hoy){
     
     const colorTransaccion = buscarColorTransaccion(transaccion);
     const nuevaCategoria = buscarCategoria(transaccion, categoria);
-    console.log(colorTransaccion, nuevaCategoria)
     let icono = nuevaCategoria.icono;
     let colorCategoria = nuevaCategoria.color;
     

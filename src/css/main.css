@@ -231,7 +231,6 @@ main .mov-transacciones {
     width: 0;
     flex: 1;
     overflow: hidden;
-    /* overflow-wrap: break-word; */
     white-space: nowrap;
     text-overflow: ellipsis;
 }
@@ -268,6 +267,8 @@ main .mov-transacciones {
 }
 
 .main-sidebar {
+    min-width: 70px;
+    max-width: 200px;
     display: flex;
     flex-direction: column;
     margin: 0.25rem;
@@ -296,6 +297,7 @@ main .mov-transacciones {
 }
 
 .main-sidebar .lista-estadisticas {
+    width: 100%;
     list-style-type: none;
     display: flex;
     justify-content: center;
