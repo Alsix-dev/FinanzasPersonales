@@ -102,3 +102,16 @@ V ----------------> 37) Cuando el sidebar esta cerrado y se agrega una transacci
 			borra los valores. Solo funciona bien si se agrega cuando esta abierto.
 
 38) En el menu o en alguna parte, agregar el boton para agregar presupuesto.
+
+39) El buscador debe buscar por nombre, categoria, fecha. Y se puede hacer una combinacion
+	Por ej: "mercado IAN 7 agosto". Inicialmente hacer por nombre.
+
+40) El boton filtrar en movimientos recientes debe filtrar por categoria, por tipo de transaccion y por mes.
+
+41) El boton filtrar en ingresos/egresos por categoria deben filtrar por mes
+	(solamente elegir un mes) y por tipo de categoria 
+	(digamos comida, entonces busca en el ultimo año y crea una grafica para ese año por esa cat.)
+	Inicialmente se filtrara por mes.
+
+V ----------------> 42) Los botones de los carteles deben pasar al mes siguiente y anterior, segun corresponda.
+			Solo dentro de ese mismo año.
