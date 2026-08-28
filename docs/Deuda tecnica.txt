@@ -107,11 +107,15 @@ V ----------------> 37) Cuando el sidebar esta cerrado y se agrega una transacci
 	Por ej: "mercado IAN 7 agosto". Inicialmente hacer por nombre.
 
 40) El boton filtrar en movimientos recientes debe filtrar por categoria, por tipo de transaccion y por mes.
+	Ver si en lugar de mes, poner el año, es decir dd/mm/aa, si no se pone aa que ponga
+	todas las transacciones del mes de ese año.
 
 41) El boton filtrar en ingresos/egresos por categoria deben filtrar por mes
 	(solamente elegir un mes) y por tipo de categoria 
 	(digamos comida, entonces busca en el ultimo año y crea una grafica para ese año por esa cat.)
 	Inicialmente se filtrara por mes.
+	A diferencia de movimientos recientes, hacer en el addEventListener que se oculte el filtrar
+		por tipo de transaccion asi evitamos crear dos modals diferentes para un mismo objetivo.
 
 V ----------------> 42) Los botones de los carteles deben pasar al mes siguiente y anterior, segun corresponda.
 			Solo dentro de ese mismo año.

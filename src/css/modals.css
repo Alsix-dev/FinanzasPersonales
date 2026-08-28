@@ -1,8 +1,14 @@
-/* 
-    active-overlay
-    active-modal
-*/
-
+/* ==========================================================================
+   MODALS
+   ==========================================================================
+   • [>] CAPAS:
+        • OVERLAYS
+        • MODAL - TRANSACCION
+        • MODAL - FILTRAR
+   • [!] ACTVIDADORES:
+        • active-overlay
+        • active-modal
+   ========================================================================== */
 #overlays {
     position: fixed;
     inset: 0;
@@ -27,7 +33,14 @@
     pointer-events: auto;
 }
 
+/* ==========================================================================
+   MODAL - TRANSACCION
+   ========================================================================== */
 #overlays .modal-add-transaccion {
+    display: none;
+}
+
+#overlays .modal-add-transaccion.active-modal {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -76,6 +89,71 @@
 }
 
 .crear-transaccion #btn-transaccion {
+    color: white;
+    background-color: rgba(39, 229, 166, 0.875);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-Radius-Items);
+    padding: 0.5rem;
+}
+
+/* ==========================================================================
+   MODAL - FILTRAR
+   ========================================================================== */
+#overlays .modal-filtrar {
+    display: none;
+}
+
+#overlays .modal-filtrar.active-modal {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: white;
+    border: none;
+    border-radius: var(--border-Radius-Items);
+}
+
+.modal-filtrar .divider {
+    background-color: var(--border-color);
+    height: 1px;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.modal-filtrar .cabezal-filtrar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.modal-filtrar .centro-filtrar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.centro-filtrar > div h2 {
+    margin-bottom: 0.5rem;
+}
+
+.centro-filtrar > div input,
+.centro-filtrar > div select {
+    color: gray;
+    width: 100%;
+    padding: 0.3rem;
+    outline: none;
+    border-radius: var(--border-Radius-Items);
+    border: 1px solid var(--border-color);
+}
+
+.centro-filtrar .filtrar-seleccion {
+    align-self: center;
+    margin: 0.5rem 0;
+}
+
+.filtrar-seleccion #i-btn-filtrar {
     color: white;
     background-color: rgba(39, 229, 166, 0.875);
     border: 1px solid var(--border-color);

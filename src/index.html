@@ -387,18 +387,59 @@
                             </div>
                         </form>
                     </div>
+
+                    <div class="modal-filtrar">
+                        <div class="cabezal-filtrar">
+                            <h1>Filtrar</h1>
+                            <button class="btn-closet">
+                                <span class="material-symbols-outlined">close</span>
+                            </button>
+                        </div>
+
+                        <form action="#" class="centro-filtrar" id="f-filtrar">
+                            <div class="divider"></div>
+
+                            <div class="tipo-transaccion">
+                                <h2>Tipo transaccion</h2>
+                                <select id="i-filtrar-transaccion">
+                                    <option value="ingreso">Ingreso</option>
+                                    <option value="egreso">Egreso</option>
+                                </select>
+                            </div>
+
+                            <div class="tipo-categoria">
+                                <h2>Tipo categoria</h2>
+                                <select id="i-filtrar-categoria"></select>
+                            </div>
+
+                            <div class="filtrar_fecha">
+                                <h2>Fecha</h2>
+                                <input 
+                                    type="date"
+                                    id="i-filtrar-importe">
+                            </div>
+
+                            <div class="filtrar-seleccion">
+                                <button type="submit" id="i-btn-filtrar">Filtrar</button>
+                            </div>
+                        </form>
+                    </div>
                 </section>
             </div>
         </div>
     </div>
 
     <script type="module" src="../src/js/menu.js"></script>
+
     <script type="module" src="../src/js/sidebar/sidebar.js"></script>
     <script type="module" src="../src/js/sidebar/gestionDatosSidebar.js"></script>
-    <script type="module" src="../src/js/carteles/carteles.js"></script>
-    <script type="module" src="../src/js/carteles/pasarMes.js"></script>
 
     <script type="module" src="../src/js/crearTransaccion/gestionTransaccion.js"></script>
     <script type="module" src="../src/js/crearTransaccion/generarTransaccion.js"></script>
+
+    <script type="module" src="../src/js/carteles/carteles.js"></script>
+    <script type="module" src="../src/js/carteles/pasarMes.js"></script>
+
+    <script type="module" src="../src/js/Filtraciones/filtrarTransacciones.js"></script>
 </body>
 </html>

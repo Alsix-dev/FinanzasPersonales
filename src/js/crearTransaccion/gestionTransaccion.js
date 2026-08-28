@@ -12,6 +12,7 @@ const overlays = document.getElementById('overlays');
    ========================================================================== */
 const abrirMenu = (element) => {
     element.classList.add('active-overlay');
+    element.querySelector('.modal-add-transaccion').classList.add('active-modal');
 }
 
 document.addEventListener('click', (event) => {
@@ -25,6 +26,7 @@ document.addEventListener('click', (event) => {
    ========================================================================== */
 const cerrarMenu = (element) => {
     element.classList.remove('active-overlay');
+    element.querySelector('.modal-add-transaccion').classList.remove('active-modal');
 }
 
 overlays.addEventListener('click', (event) => {
