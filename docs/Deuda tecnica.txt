@@ -74,8 +74,8 @@ V ----------------> 26) Gestionar que verifique si existe esos dias solo en ese 
 
 V ----------------> 29) Colores a ingreso (verde) y egreso (rojo)
 
-30) Los ingresos y egresos deben acumularse en estadisticas. Lo mismo el movimiento que aumenta
-	cada vez que se ingresa una transaccion.
+V ----------------> 30) Los ingresos y egresos deben acumularse en estadisticas. Lo mismo el movimiento que aumenta
+			cada vez que se ingresa una transaccion.
 
 31) Revisar si esTipoCategoria en gestionFormulario.js deberia ser directamente
 	quien devuelva la categoria. Lo mismo si creamos esTipoTransaccion para devolver
@@ -94,9 +94,9 @@ X ----------------> 32) Deberian cargarse los colores solo cuando se crean? O po
 35) El ahorro es (por ahora) la diferencia del presupuesto inicial - el final. Lo que sobre, es lo
 	ahorrado.
 
-36) En los totales y ahorro, al ser un numero muy grande, este ensancha el sidebar.
-	Es decir, no corta bien el numero dejando solo los primeros tres digitos.
-	Si deja el simbolo.
+V ----------------> 36) En los totales y ahorro, al ser un numero muy grande, este ensancha el sidebar.
+			Es decir, no corta bien el numero dejando solo los primeros tres digitos.
+			Si deja el simbolo.
 
-37) Cuando el sidebar esta cerrado y se agrega una transaccion, al abrir el sidebar, este
-	borra los valores. Solo funciona bien si se agrega cuando esta abierto.
+V ----------------> 37) Cuando el sidebar esta cerrado y se agrega una transaccion, al abrir el sidebar, este
+			borra los valores. Solo funciona bien si se agrega cuando esta abierto.
