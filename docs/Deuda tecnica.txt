@@ -100,3 +100,5 @@ V ----------------> 36) En los totales y ahorro, al ser un numero muy grande, es
 
 V ----------------> 37) Cuando el sidebar esta cerrado y se agrega una transaccion, al abrir el sidebar, este
 			borra los valores. Solo funciona bien si se agrega cuando esta abierto.
+
+38) En el menu o en alguna parte, agregar el boton para agregar presupuesto.

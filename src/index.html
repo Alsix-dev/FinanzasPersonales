@@ -96,7 +96,7 @@
                     <div class="main-estadisticas">
                         <div class="cartel-PIE cartel-Presupuesto">
                             <h2>Presupuesto</h2>
-                            <span class="pie-Calculado">$xxx.xxx.xxx</span>
+                            <span class="pie-Calculado" id="cartel-presupuesto">$0</span>
                             <div class="ftr-PIE">
                                 <span class="text-Normal">en agosto</span>
                                 <div class="cmbr-mes-Calculado">
@@ -112,7 +112,7 @@
 
                         <div class="cartel-PIE cartel-Ingreso">
                             <h2>Ingreso</h2>
-                            <span class="pie-Calculado">$xxx.xxx.xxx</span>
+                            <span class="pie-Calculado" id="cartel-ingreso">$0</span>
                             <div class="ftr-PIE">
                                 <span class="text-Normal">en agosto</span>
                                 <div class="cmbr-mes-Calculado">
@@ -128,7 +128,7 @@
 
                         <div class="cartel-PIE cartel-Gasto">
                             <h2>Egreso</h2>
-                            <span class="pie-Calculado">$xxx.xxx.xxx</span>
+                            <span class="pie-Calculado" id="cartel-egreso">$0</span>
                             <div class="ftr-PIE">
                                 <span class="text-Normal">en agosto</span>
                                 <div class="cmbr-mes-Calculado">
@@ -395,6 +395,7 @@
     <script type="module" src="../src/js/menu.js"></script>
     <script type="module" src="../src/js/sidebar/sidebar.js"></script>
     <script type="module" src="../src/js/sidebar/gestionDatosSidebar.js"></script>
+    <script type="module" src="../src/js/carteles/carteles.js"></script>
 
     <script type="module" src="../src/js/crearTransaccion/gestionTransaccion.js"></script>
     <script type="module" src="../src/js/crearTransaccion/generarTransaccion.js"></script>

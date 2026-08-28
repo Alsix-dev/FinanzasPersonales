@@ -5,6 +5,7 @@ import {
 } from "../crearTransaccion/gestionFormulario.js";
 
 import { actualizarEstadisticas } from "../sidebar/gestionDatosSidebar.js";
+import { actualizarCarteles } from "../carteles/carteles.js";
 
 /* ==========================================================================
    AÑADIR TRANSACCION
@@ -39,6 +40,7 @@ function generarTransaccion(event){
     }
 
     actualizarEstadisticas(valoresInputs.leerTipoTransc, valoresInputs.leerImporteTransc);
+    actualizarCarteles(valoresInputs.leerTipoTransc, valoresInputs.leerImporteTransc);
 }
 
 formConfTransccion.obtenerFormTransc.addEventListener('submit', generarTransaccion);
