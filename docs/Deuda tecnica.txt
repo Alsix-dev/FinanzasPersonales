@@ -1,43 +1,123 @@
-1) Quitar informacion de la tabla cuando es menor a 1023 y lo mismo a 768.
-✅ -----------> 2) Quitar border inferior a sidebar cuando pasamos a 768 en adelante.
-✅ -----------> 3) Ajustar que el sidebar pase a ser un display flex column cuando pasa de 768 en adelante.
-✅ -----------> 4) Ajustar el header que al pasar a 768 tiene mucho espacio vertical.
-5) Ajustar colores declarados en el programa donde se diseño la app.
-6) Tantear si cambiar color del dinero del cartel-PIE ingresos a verde. Y el de egresos en rojo
-	y si tambien el de presupuesto en todo caso a un azul u otro.
-7) Los colores asignados por variables. Ver si hacer lo mismo con bordes y otros atributos.
-8) Cada icono dentro del menu debe tener su propio color que lo distinga y defina.
-9) El espacio del input y el boton de agregar no se separan correctamente y no ocupan
-	el espacio que deberian.
+X -------- No fue necesario --------> 1) Dividir .contenedor (padre de todo el body) en grid.
+X -------- No fue necesario --------> 2) Los botones "filtrar" debo hacerlo mas genericos, es decir, que sea en una sola definicion y no que siempre 
+					 deba repetirlo en cada responsive.
+V -------- Revisado y modificado --------> 3) Revisar los <p>
+		Modificacion: 
+		Se cambiaron por <span> y se 
+		les dio dimensiones especificas.
 
-10) cambiar el diseño. Cuando estemos entre 321 a 768px, el botn "+ añadir mov" Debe estar debajo
-	del input. Luego se ira acomodando a su costado.
-11) Al igual que el punto 10, el listado debera tener ahora el nombre del lugar
-	y abajo la categoria. No con la categoria en el centro.
+V ----------------> 4) Ajustar el color de los meses en datos de categorias.
+V ----------------> 5) Revisar el main-estadisticas cuando llega a 1023 no ocupa tanto espacio y queda apretado.
+V ----------------> 6) Revisar porque al contenedor aplicarle un flex o grid, desaparece el header wtf
+V ----------------> 7) Eliminar los tamaños predefinidos para iconos y botones. Definir segun
+		       sea requerido.
+V ----------------> 8) Menu con sticky para que solo acompañe, si y solo si el alto del main genera un scroll
+V ----------------> 9) Crear el menu
+V ----------------> 110) Hacer que al apretar el boton de estadisticas, se comprima dejando
+			 solamente los numeros. Ver si poner iconos que lo representen
+			 Y esto debe dar mas espacio al main.
 
-12) El sidebar no tiene border al crecer. Esto cuando tiene 1023++
-13) Aplicar un display: grid en este caso para acomodar los elementos, ya que el titulo
-	luego debe moverse de la parte superior a la inferior y estar fuera del div
-	complica mucho mas esa idea. Esto dentro de src-movimiento
-14) Cuando el sidebar desaparece al tener 1023px, todo el main ocupa todo y no deberia. Y
-	tiene mucha anchura. Ponerle un limite.
-15) Agregar un mayor padding al sidebar a medida que crece la pagina en width responsive.
-16) Quitar la columna ingreso/egreso de cont-Movimientos
-	Se reemplaza por colorear los datos de ingreso.
-	Si es un ingreso es $+xxx.xxx en verde | Si es un egreso es $-xxx.xxx en rojo
-17) Cuando crezca el responsive, categoria debe quedar alineado a su icono horizontalmente.
-	Lo mismo fecha + precio.
-18) Agregar el icono respecto la categoria.
-19) En 768 el sidebar de main debe ser vertical cuando no esta el menu abierto, caso contrario
-	es horizontal y cambia su posicion.
-20) Probar que en los section que contienen una fecha distinta, salga la barra amarrilla cuando
-	haya solamente fechas diferentes en el listado. Y que salga segun del lado que corresponda.
-	Asi evitamos los bordes extras e innecesarios.
-21) El boton filtrar de "movimientos recientes" debe quedar debajo del buscador cuando se extiende
-	el responsive. Probar ponerlo en el mismo div/label del buscador, asi siempre
-	lo acompaña.
+11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro, los movimientos en general.
+	Crear un modal para esto.
 
-22) Los botones de main se les debe agregar el cursor pointer.
-23) Ajustar el menu para que este mas centrado o quede ocupando mas espacio entre elementos.
-24) Ajustar que cuando el menu se abra, el sidebar de main se achique como en el borrador.
-25) Mover la seccion "categorias" dentro del main.
+12) Mejorar el diseño de ser posible o efectos.
+V ----------------> 13) Revisar que al agregar un titulo muuy largo en lista-movimientos
+			este empuja en algun momento, estirando incluso toda la pagina
+			ensanchando al main .mov-transacciones
+
+V ----------------> 14) Si se abre el menu, el sidebar de estadisticas debe comprimirse tambien
+			como si se activara su boton.
+
+V ------- Revisado y modificado ---------> 15) Agregar en ingresos/egresos por categoria que al ser 321px o menos, el titulo de
+	  Modificacion:	        	       		categoria sea column junto a su porcentaje.
+	  Se quito el flex-wrap puesto como solucion
+	  y en su lugar se ajusto el tamaño del texto 
+	  'texto-listado' junto a un space-between
+	  y un centrado del <li> con un ancho del 60%.
+
+V ----------------> 16) En el tamaño de 768 a 1023, al abrir el menu, debe abrirse lateralmente enviando al
+			sidebar de estadisticas abajo como si fuese en un 321 a 768
+
+17) Aplicar una base de datos para guardar esos precios de estadisticas, asi las abreviaciones son
+	solo visuales al achicar el menu.
+
+V ----------------> 18) Hacer el menu horizontal antes de habilitar el desplazamiento de sidebar cuando se abre/cierra
+	No hace falta usar js, puede hacerse con solo css.
+
+V ----------------> 19) Quitar el margin-bottom de header y ponerlo en main como top.
+			Quitar el gap de filas de contenedor al ser mayor de 767px.
+
+V ----------------> 20) Si sidebar esta cerrado, entonces que se mantenga cerrado aun si se abre/cierra el menu.
+			Crear estados para esto, asi se coordina mejor el estado de abierto y cerrado.
+
+21) Cuando se haga el expandir movimientos en main-movimientos ingresar como nueva columna
+	cual fue el metodo de pago y tipo de transaccion.
+
+V ----------------> 22) Inicialmente se crea el item, gestionar que cuando no exista ese dia en ese mes, en ese año
+			se debe agregar el ul que tenga esa fecha.
+			No olvidar gestionar el mes tambien para comparar. Y el año. 
+			En todo caso gestionar que estemos en el año actual
+			junto al mes actual.
+
+V ----------------> 23) Cuando el importe es muy grande, empuja la categoria. Arreglar
+
+V ----------------> 24) Poner colores a los iconos y si queda bien tambien al texto. Segun cada categoria tiene un color.
+
+V ----------------> 25) Pasar los meses de numeros a nombre. Para ello, debo modificar el metodo 'verificarExisteDia'
+
+V ----------------> 26) Gestionar que verifique si existe esos dias solo en ese mes, que no busque fuera de ese rango
+			asi evita cargar todos los li de la lista.
+
+27) Fusionar la rama de newUI con la main, ya los arreglos de UI fueron finalizados.
+
+28) Optimizar codigo de crear transaccion y crear fecha
+
+V ----------------> 29) Colores a ingreso (verde) y egreso (rojo)
+
+V ----------------> 30) Los ingresos y egresos deben acumularse en estadisticas. Lo mismo el movimiento que aumenta
+			cada vez que se ingresa una transaccion.
+
+31) Revisar si esTipoCategoria en gestionFormulario.js deberia ser directamente
+	quien devuelva la categoria. Lo mismo si creamos esTipoTransaccion para devolver
+	el color. Tal vez asi pueda simplificarse el codigo.
+
+X ----------------> 32) Deberian cargarse los colores solo cuando se crean? O podria cargarlos cuando la pagina carga
+			Tal vez asi, pueda quitar esa dependencia del codigo crearTransaccion.
+
+33) Podria agregarse un boton de minimizacion a los movimientos de una fecha/un dia, asi si son varios
+	pero cuando queremos scrollear e ir a otra fecha, para evitar este nos ocupe espacio
+	solo se minimiza y se facilita la visualizacion de la lista.
+
+34) Podria agregarse un boton de minimizacion a los carteles de ingresos/egresos por categoria.
+
+
+35) El ahorro es (por ahora) la diferencia del presupuesto inicial - el final. Lo que sobre, es lo
+	ahorrado.
+
+V ----------------> 36) En los totales y ahorro, al ser un numero muy grande, este ensancha el sidebar.
+			Es decir, no corta bien el numero dejando solo los primeros tres digitos.
+			Si deja el simbolo.
+
+V ----------------> 37) Cuando el sidebar esta cerrado y se agrega una transaccion, al abrir el sidebar, este
+			borra los valores. Solo funciona bien si se agrega cuando esta abierto.
+
+38) En el menu o en alguna parte, agregar el boton para agregar presupuesto.
+
+39) El buscador debe buscar por nombre, categoria, fecha. Y se puede hacer una combinacion
+	Por ej: "mercado IAN 7 agosto". Inicialmente hacer por nombre.
+
+40) El boton filtrar en movimientos recientes debe filtrar por categoria, por tipo de transaccion y por mes.
+	Ver si en lugar de mes, poner el año, es decir dd/mm/aa, si no se pone aa que ponga
+	todas las transacciones del mes de ese año.
+
+41) El boton filtrar en ingresos/egresos por categoria deben filtrar por mes
+	(solamente elegir un mes) y por tipo de categoria 
+	(digamos comida, entonces busca en el ultimo año y crea una grafica para ese año por esa cat.)
+	Inicialmente se filtrara por mes.
+	A diferencia de movimientos recientes, hacer en el addEventListener que se oculte el filtrar
+		por tipo de transaccion asi evitamos crear dos modals diferentes para un mismo objetivo.
+
+V ----------------> 42) Los botones de los carteles deben pasar al mes siguiente y anterior, segun corresponda.
+			Solo dentro de ese mismo año.
+
+43) Completar filtrar, falta gestionar datos para poder filtrar los elementos con esos datos.

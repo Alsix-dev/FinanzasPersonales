@@ -1,18 +1,15 @@
-/* ETIQUETAS
-    QUITAR
-*/
-
 /* ==========================================================================
    MAIN
    ==========================================================================
    • [>] CAPAS:
         • MAIN
-        • MAIN - SUPERIOR
-        • MAIN - MEDIO
+        • MAIN - ESTADISTICAS
+            • MAIN - SUPERIOR - CARTEL P.I.E
+        • MAIN - MOVIMIENTOS
             • MAIN - OPERACIONES
             • MAIN - LISTA - MOVIMIENTOS
-            • MAIN - SIDEBAR
-            • MAIN - CATEGORIAS
+        • MAIN - SIDEBAR
+        • MAIN - CATEGORIAS
         • MEDIA'S
    ========================================================================== */
 
@@ -20,45 +17,19 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8px;
-    margin: 2px;
-    gap: 14px;
+    padding: 0.2rem;
+    margin: 0 auto;
+    margin-top: 12px;
+    background-color: transparent;
 }
 
-/* ==========================================================================
-   MAIN - SUPERIOR
-   ========================================================================== */
-
-main .main-superior {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: auto auto;
-    gap: 12px;
-    color: #343a40;
+main .ttl-Resumen {
+    margin-bottom: 0.8rem;
 }
 
-main .main-superior h2 {
-    color: #343a40;
-}
-
-.main-superior h1 {
-    grid-row: 1/2;
-    grid-column: 1/-1;
-}
-
-.main-superior .cartel-Presupuesto { 
-    grid-row: 2/3;
-    grid-column: 1/-1;
-}
-
-.main-superior .cartel-Ingreso { 
-    grid-row: 3/4;
-    grid-column: 1/2;
-}
-
-.main-superior .cartel-Gasto {
-    grid-row: 3/4;
-    grid-column: 2/3;
+main .main-estadisticas {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* ==========================================================================
@@ -66,483 +37,663 @@ main .main-superior h2 {
    ========================================================================== */
 
 .cartel-PIE {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 2px;
-    padding: 8px;
-    gap: 12px;
+    align-items: flex-start;
 
-    border-radius: 5px;
-    background-color: #f8f9fa;
+    margin: 0.25rem;
+    padding: 0.25rem;
+
+    border-radius: var(--border-Radius-Items);
+    background-color: var(--background-Items);
+
+    box-shadow:
+      10px 10px 50px var(--shadow-dark),
+      -10px -10px 22px var(--shadow-light);
 }
 
 .cartel-PIE h2 {
-    align-self: flex-start;
+    color: var(--title-h2-anyItems);
 }
 
 .cartel-PIE .pie-Calculado {
+    font-size: var(--text-Importante);
     align-self: center;
-    font-size: 18px;
-    font-weight: bold;
+    margin: 0.25rem;
+}
+
+.cartel-PIE .ftr-PIE,
+.cartel-PIE  .cmbr-mes-Calculado {
+    display: flex;
+    gap: 4px;
 }
 
 .cartel-PIE .ftr-PIE {
-    justify-self: flex-end;
-    display: flex;
-    flex-direction: row;
+    width: 100%;
     justify-content: space-between;
-}
-
-.ftr-PIE .mes-Calculado {
-    color: #868e96;
-}
-
-.ftr-PIE .cmbr-mes-Calculado > button {
-    background-color: transparent;
-    padding: 2px;
-    border: none;
-    cursor: pointer;
+    color: var(--text-mes-Items);
 }
 
 /* ==========================================================================
-   MAIN MEDIO
+   MAIN - OPERACIONES
    ========================================================================== */
 
-.main-medio, .op-movimientos {
+main .main-movimientos {
+    margin: 0.25rem;
+    margin-top: 1.21rem;
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-Radius-Items);
+    box-shadow:
+      10px 10px 50px var(--shadow-dark),
+      -10px -10px 22px var(--shadow-light);
+}
+
+.main-movimientos .mov-interaccion {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
-.main-medio {
-    height: auto;
-    min-height: 0;
-    overflow: hidden;
-
-    margin: 15px 2px 2px 2px;
-    padding: 8px 18px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
+.mov-interaccion > h2 {
+    margin: 8px 1px 12px 1px;
 }
 
-.main-medio .op-movimientos {
-    gap: 8px;
-    padding-bottom: 14px;
-    margin-bottom: 7px;
-    border-bottom: 1px solid #ced4da;
-}
-
-.op-movimientos button,
-.main-inferior button {
+.mov-interaccion .mov-sup-Controles {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    border-radius: 5px;
-}
-
-.main-medio .src-Movimiento {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: 
-    "h2-Input h2-Input"
-    "label-Input agr-Movimiento";    
+    justify-content: space-between;
     gap: 8px;
 }
 
-.src-Movimiento > h2 { grid-area: h2-Input; }
-.src-Movimiento > label { grid-area: label-Input; }
-.src-Movimiento .agr-Movimiento { grid-area: agr-Movimiento; }
-
-.src-Movimiento > label {
-    width: 80%;
-    position: relative;
-    align-self: center;
-    justify-self: flex-start;
-}
-
-.src-Movimiento .agr-Movimiento { 
-    align-self: center;
-    justify-self: flex-end;
-    padding: 8px;
-    border: none;
-    background-color: #ffd43b;
+.mov-sup-Controles #btn-Add {
+    align-self: flex-start;
+    padding: 0.5rem;
     color: white;
-}
-.src-Movimiento .agr-Movimiento > * { font-size: 13px; }
-
-.src-Movimiento .icono-Buscar {
-    position: absolute;
-    top: 5px;
-    left: 12px;
+    background-color: #ffd43b;
+    border-radius: var(--border-Radius-Items);
 }
 
-.src-Movimiento #src-mov-input {
+.mov-sup-Controles .mov-sup-Buscar {
     width: 100%;
-    padding: 8px 8px 8px 42px;
-    border-radius: 5px;
-    border: 1px solid #ced4da;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mov-sup-Buscar > label {
+    width: 100%;
+    position: relative;
+}
+
+.mov-sup-Buscar > label span:first-child {
+    position: absolute;
+    top: 22%;
+    left: 4%;
+}
+
+.mov-sup-Buscar #src-mov-input {
+    width: 100%;
+    padding: 4px 24px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-Radius-Items);
     outline: none;
 }
 
-.op-movimientos .btn-filtrar,
-.main-inferior .btn-filtrar {
+.btn-filtrar {
+    padding: 4px 4px 4px 6px;
     align-self: flex-start;
-    padding: 4px;
-    border: 1px solid #ced4da;
-    background-color: transparent;
-}
-
-.op-movimientos .btn-filtrar > *,
-.main-inferior .btn-filtrar > * { 
-    font-size: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-Radius-Items);
 }
 
 /* ==========================================================================
    MAIN - LISTA - MOVIMIENTOS
    ========================================================================== */
 
-.main-medio .cont-Movimientos {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+main .mov-transacciones {
+    width: 100%;
     min-height: 0;
-    max-height: 720px;
-    margin-top: 14px;
-    padding: 8px;
-    border-bottom: 1px solid #ced4da;
+    overflow: hidden;
 }
 
-.cont-Movimientos .movimientos-de-fecha {
+.mov-transacciones ul {
+    list-style-type: none;
+}
+
+.mov-transacciones .listado-fechas,
+.fecha-transacciones .mov-en-fecha {
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid #ffd43b;
-    padding-bottom: 14px;
-    margin-bottom: 14px;
+    gap: 8px;
 }
 
-.cont-Movimientos .movimientos-de-fecha > h2 {
-    align-items: flex-start;
+.mov-transacciones .listado-fechas {
+    min-height: 0;
+    max-height: 520px;
+    overflow-y: auto;
+    overflow-x:hidden;
 }
 
-.cont-Movimientos .movimientos-de-fecha .lista-mov-de-fecha {
-    list-style-type: none;
-    margin-top: 18px;
+.listado-fechas .divider {
+    background-color: #ffd43b;
+    height: 1px;
+    width: 100%;
+    margin: 12px 4px;
 }
 
-.movimientos-de-fecha .lista-mov-de-fecha > li {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+.fecha-transacciones > h4 {
+    margin-bottom: 0.75rem;
+}
+
+.mov-en-fecha .isTransaccion {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 18px;
-    margin-bottom: 18px;
+    justify-content: space-between;
+    gap: 8px;
+    padding-right: 1rem;
 }
 
-.lista-mov-de-fecha > li > p:first-child {
+.isTransaccion .ttl-transaccion {
     min-width: 0;
+    flex: 1;
     overflow: hidden;
     overflow-wrap: break-word;
     white-space: normal;
     text-overflow: ellipsis;
     font-weight: bold;
 }
+.isTransaccion .cat-transaccion,
+.isTransaccion .extras-transaccion {
+    gap: 4px;
+}
 
-.lista-mov-de-fecha > li .categoria {
+.isTransaccion .cat-transaccion {
+    flex: 1;
+    min-width: 0;
     display: flex;
     align-items: center;
-    gap: 8px;
+    overflow: hidden;
 }
 
-.lista-mov-de-fecha li .extras {
+.isTransaccion .extras-transaccion {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.lista-mov-de-fecha li .ingreso-dinero { color: green; }
-.lista-mov-de-fecha li .egreso-dinero { color: red; }
-
-.main-medio .btns-movimientos {
-    align-self: flex-end;
-    justify-self: flex-end;
+.extras-transaccion .importe {
+    width: 0;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.main-medio .btn-inf-movimientos,
-.main-inferior .btn-inf-movimientos {
+.main-movimientos .mov-expandir {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+    padding: 10px 4px 4px 4px;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-inf-movimientos {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 2px 8px;
-    border-radius: 5px;
+    padding: 3px 5px;
     border: 1px solid #ced4da;
-    background-color: transparent;
+    border-radius: var(--border-Radius-Items);
 }
 
 /* ==========================================================================
    MAIN - SIDEBAR
    ========================================================================== */
 
+.main-sidebar h2, 
+.main-sidebar h4,
+.main-sidebar .material-symbols-outlined {
+    display: none;
+}
+
+.main-sidebar .full {
+    display: block;
+}
+
 .main-sidebar {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "Titulo-sidebar Boton-sidebar"
-    "Estadisticas Estadisticas";
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ced4da;
-}
-
-.main-sidebar .ttl-main-sidebar { grid-area: Titulo-sidebar; }
-.main-sidebar .stdsticas-main-sidebar { grid-area: Estadisticas; }
-.main-sidebar .btn-sidebar-main { grid-area: Boton-sidebar; }
-
-.ttl-main-sidebar {
-    align-self: center;
-    justify-self: center;
-    margin-left: 30px;
-}
-
-.stdsticas-main-sidebar {
+    min-width: 70px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
+    flex-direction: column;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    gap: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-Radius-Items);
+    box-shadow:
+      10px 10px 50px var(--shadow-dark),
+      -10px -10px 22px var(--shadow-light);
 }
 
-.stdsticas-main-sidebar > div {
-    padding: 8px;
+.main-sidebar .divider {
+    background-color: var(--border-color);
+    height: 1px;
+    width: 100%;
     margin: 2px;
 }
 
-.stdsticas-main-sidebar > div .ttl-clasf-stat {
-    color: #868e96;
+.main-sidebar .main-sidebar-superior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 8px;
 }
 
-.stdsticas-main-sidebar > div p {
-    margin-bottom: 8px;
+.main-sidebar .lista-estadisticas {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.stdsticas-main-sidebar > div p:last-child {
+.lista-estadisticas > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.lista-estadisticas h4 {
+    min-width: 0;
+    max-width: 90px;
     text-align: center;
+    color: var(--text-mes-Items);
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-overflow: ellipsis;
 }
 
-.main-sidebar .btn-sidebar-main > button {
-    background-color: transparent;
-    padding: 2px;
-    border: none;
-    cursor: pointer;
+.lista-estadisticas .cantidad {
+    padding: 0.375rem;
+    font-weight: bold;
 }
 
 /* ==========================================================================
    MAIN - CATEGORIAS
-   ========================================================================== 
-   • [!] Los botones de movimientos y filtrar se tocan en la parte superior de main.
    ========================================================================== */
 
-.main-inferior {
+main .main-categorias {
+    width: 99%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    margin: 2px;
-    padding: 8px;
+    flex-wrap: wrap;
+    margin: 0.25rem;
+    gap: 6px;
 }
 
-.main-inferior .cartel-data-cat {
-    flex: 1;
+.main-categorias .cartel-categoria {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 12px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-Radius-Items);
+    box-shadow:
+      10px 10px 50px var(--shadow-dark),
+      -10px -10px 22px var(--shadow-light);
 }
 
-.cartel-data-cat .data-categoria {
+.cartel-categoria .cartel-sup-cat {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    padding-left: 0.25rem;
+    gap: 4px;
+    margin-bottom: 0.25rem;
 }
 
-.cartel-data-cat .grfc-ing-cat {
-    height: 150px;
-    width: 150px;
-    margin: 8px 8px 8px 0;
+.cartel-sup-cat > h2 {
+    align-self: flex-start;
+}
+
+.cartel-sup-cat > span {
+    color: var(--text-mes-Items);
+    align-self: flex-start;
+}
+
+.cartel-categoria .datos-cat {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.datos-cat .items-cat {
+    flex: 1;
+    list-style-type: none;
+}
+
+.items-cat > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.items-cat > li .cat-porcentaje {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cartel-categoria .cat-interaccion {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 2px;
+    gap: 6px;
+}
+
+.datos-cat .grafica-cat {
+    height: clamp(100px, 30vw, 140px);
+    width: clamp(100px, 30vw, 140px);
+    margin: 0.2rem 0 0.5rem 0.2rem;
     background-color: #ffd43b;
 }
 
-.data-categoria .item-grfc-ing-cat {
-    list-style-type: none;
-    margin-left: auto;
-}
-
-.item-grfc-ing-cat > li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 4px;
-}
-
-.cartel-data-cat .mes-Calculado {
-    color: #868e96;
-}
-
-.cartel-data-cat .btns-grfc-ing-cat {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 4px;
-}
-
-.btns-grfc-ing-cat .btn-filtrar {
-    align-self: center;
+.cartel-categoria .divider {
+    background-color: var(--border-color);
+    height: 1px;
+    width: 97%;
+    margin: 0.25rem;
 }
 
 /* ==========================================================================
    MEDIA'S
    ========================================================================== */
 
-@media (min-width: 768px) and (max-width: 1023px) {
-    main {
-        justify-content: flex-start;
+@container body-first (min-width: 321px) and (max-width: 479px) {
+    .mov-sup-Buscar > label span:first-child {
+        top: 20%;
+        left: 2%;
     }
 
-    main .main-superior {
-        display: grid;
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: repeat(3, auto);
-        color: #343a40;
+    .mov-sup-Buscar #src-mov-input {
+        padding: 4px 24px;
     }
 
-    .main-superior .cartel-Presupuesto { 
-        grid-row: 2/-1;
-        grid-column: 1/2;
+    .main-categorias .cartel-categoria > * {
+        margin: 0 auto;
+        width: 80%;
     }
 
-    .main-superior .cartel-Ingreso { 
-        grid-row: 2/-1;
-        grid-column: 2/3;
-    }
-
-    .main-superior .cartel-Gasto {
-        grid-row: 2/-1;
-        grid-column: 3/4;
+    .datos-cat .items-cat {
+        align-items: end;
     }
 }
 
-@media (min-width: 1024px) {
-    /* 1. CONTENEDOR PRINCIPAL */
+@container body-first (min-width: 480px) and (max-width: 767px) {
+    .cartel-PIE {
+        padding: 0.5rem;
+    }
+
+    main .main-movimientos {
+        padding: 8px 24px;
+    }
+
+    .mov-sup-Buscar > label span:first-child {
+        top: 15%;
+        left: 2%;
+    }
+
+    .mov-sup-Buscar #src-mov-input {
+        padding: 6px 40px;
+    }
+
+    .main-categorias .cartel-categoria > * {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .datos-cat .items-cat {
+        align-items: end;
+    }
+}
+
+@container body-first (min-width: 768px) and (max-width: 1023px) {
+
     main {
         display: grid;
-        grid-template-columns: 220px minmax(500px, 1023px) minmax(300px, 480px); 
-        grid-template-rows: auto 1fr;
-        grid-template-areas: 
-        ". main-superior ."
-        "main-sidebar main-medio main-inferior";
-        column-gap: 80px;
-        align-items: start; /* CRUCIAL: Evita que los recuadros se estiren hacia abajo */
-        margin: 0 15px;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(2, auto) 1fr 0.5fr;
+        grid-template-areas:
+        ". ttl-Resumen"
+        "main-estadisticas main-estadisticas"
+        "main-sidebar main-movimientos"
+        ". main-categorias";
+        column-gap: 20px;
     }
 
-    .main-superior { grid-area: main-superior; }
-    .main-medio { grid-area: main-medio; }
-    .main-sidebar { grid-area: main-sidebar; }
-    section.main-inferior { grid-area: main-inferior; }
-
-    /* 2. MAIN SUPERIOR (Resumen) */
-    main .main-superior {
-        display: grid;
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: repeat(3, 1fr); /* 1fr asegura que midan exactamente lo mismo */
-        gap: 15px;
-        color: #343a40;
-        margin-bottom: 10px;
-    }
-
-    .main-superior h1 { 
-        grid-row: 1 / 2; 
-        grid-column: 1 / -1; 
-    }
-
-    /* Reordenamos según el diseño del wireframe: Ingresos -> Egresos -> Presupuesto */
-    .main-superior .cartel-Ingreso { grid-row: 2 / 3; grid-column: 1 / 2; }
-    .main-superior .cartel-Gasto { grid-row: 2 / 3; grid-column: 2 / 3; }
-    .main-superior .cartel-Presupuesto { grid-row: 2 / 3; grid-column: 3 / 4; }
-
-    /* 3. MAIN MEDIO (Gastos recientes) */
-    .main-medio {
+    nav.active-Nav + main {
         display: flex;
         flex-direction: column;
-        margin: 0; /* Removemos el margen que heredaba de mobile */
+        justify-content: center;
+        padding: 0.2rem;
+        margin: 0 auto;
+        background-color: transparent;
     }
 
-    .main-medio .btns-movimientos {
-        align-self: flex-end;
+    main .ttl-Resumen { grid-area: ttl-Resumen; }
+    main .main-estadisticas { grid-area: main-estadisticas; }
+    main .main-movimientos { grid-area: main-movimientos; }
+    main .main-sidebar { grid-area: main-sidebar; }
+    main .main-categorias { grid-area: main-categorias; }
+
+    .cartel-PIE {
+        padding: 1rem;
     }
 
-    /* Cambiamos el header del buscador a flex para controlar mejor su tamaño */
-    .main-medio .src-Movimiento {
-        display: flex; 
+    .cartel-PIE .pie-Calculado {
+        margin: 0.6rem 0;
+    }
+
+    .mov-sup-Buscar > label span:first-child {
+        top: 15%;
+        left: 2%;
+    }
+
+    .mov-sup-Buscar #src-mov-input {
+        padding: 6px 40px;
+    }
+
+    main .main-movimientos {
+        padding: 8px 24px;
+    }
+
+    .main-sidebar {
+        flex-direction: column;
+        margin: 0.15rem;
+        margin-top: 1.2rem;
+        padding: 0.25rem;
+        gap: 6px;
+    }
+
+    .main-sidebar .lista-estadisticas {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
-        gap: 15px;
+        flex-wrap: nowrap;
     }
 
-    .src-Movimiento > h2 { margin: 0; }
-    
-    .src-Movimiento > label { 
-        flex: 1; 
-        max-width: 320px; /* Controla que el buscador no se vuelva infinitamente largo */
-        margin: 0;
-    }
-    
-    .src-Movimiento .agr-Movimiento { margin-left: auto; }
-
-    .movimientos-de-fecha .lista-mov-de-fecha > li {
-        grid-template-columns: repeat(3, 1fr);
+    nav.active-Nav + main > .main-sidebar > .lista-estadisticas {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
-    .lista-mov-de-fecha li .extras {
+    .main-sidebar .main-sidebar-superior {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0;
+        gap: 8px;
+    }
+
+    .main-categorias .cartel-categoria > * {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .datos-cat .items-cat {
+        align-items: end;
+    }
+
+}
+
+@container body-first (min-width: 1023px){
+    main {
+        display: grid;
+        grid-template-columns: auto 1fr 0.4fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        ". ttl-Resumen ."
+        ". main-estadisticas ."
+        "main-sidebar main-movimientos main-categorias";
+        column-gap: 25px;
+        margin: 12px 25px 0 25px;
+    }
+
+    main .ttl-Resumen { grid-area: ttl-Resumen; }
+    main .main-estadisticas { grid-area: main-estadisticas; }
+    main .main-movimientos { grid-area: main-movimientos; }
+    main .main-sidebar { grid-area: main-sidebar; }
+    main .main-categorias { grid-area: main-categorias; }
+
+    .cartel-PIE {
+        padding: 1rem;
+    }
+
+    .cartel-PIE .pie-Calculado {
+        margin: 0.6rem 0;
+    }
+
+    main .main-movimientos {
+        align-self: flex-start;
+        padding: 30px 30px 12px 30px;
+    }
+
+    .main-movimientos .mov-interaccion {
+        display: grid;
+        grid-template-columns: 0.4fr 1fr;
+        gap: 8px;
+    }
+
+    .mov-interaccion .mov-sup-Controles {
+        flex-wrap: nowrap;
+    }
+
+    .mov-sup-Buscar > label span:first-child {
+        top: 20%;
+        left: 12px;
+    }
+
+    .mov-sup-Buscar #src-mov-input {
+        width: 100%;
+        padding: 8px 40px;
+    }
+
+    .mov-sup-Controles .mov-sup-Buscar {
+        width: 70%;
+    }
+
+    .mov-sup-Controles #btn-Add {
+        padding: 0.8rem;
+    }
+
+    .isTransaccion .extras-transaccion {
+        flex: 1;
         justify-content: space-between;
         flex-direction: row;
         gap: 12px;
     }
 
-    /* 4. MAIN SIDEBAR (Estadísticas) */
     .main-sidebar {
+        max-width: 200px;
+        flex-direction: column;
+        margin: 0.15rem;
+        margin-top: 1.2rem;
+        padding: 0.5rem;
+        gap: 6px;
+    }
+
+    .lista-estadisticas h4 {
+        min-width: 0;
+        max-width: none;
+        text-align: center;
+    }
+
+    .main-sidebar .lista-estadisticas {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .main-sidebar .main-sidebar-superior {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0;
+        gap: 8px;
+    }
+
+    main .main-categorias {
+        align-self: flex-start;
         display: flex;
         flex-direction: column;
-        margin: 0;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin: 0.25rem;
+        margin-top: 1.2rem;
         gap: 20px;
     }
 
-    .main-sidebar .ttl-main-sidebar { 
-        margin-left: 0;
-        align-self: flex-start;
+    .main-categorias .cartel-categoria {
+        padding: 16px 16px 6px 16px;
     }
 
-    .main-sidebar .btn-sidebar-main { 
-        align-self: flex-start;
-        order: 3; /* Envía el icono del ojo al fondo del bloque */
+    .cartel-categoria .datos-cat {
+        gap: 8px;
     }
 
-    .stdsticas-main-sidebar {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+    .datos-cat .items-cat {
+        align-items: end;
     }
-
-    /* 5. MAIN INFERIOR (Categorías) */
-    .main-inferior {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: stretch;
+    
+    .items-cat > li {
         justify-content: flex-start;
-        gap: 20px; /* Espacio exacto entre Ingresos por Categoria y Gastos por Categoria */
-        margin: 0;
+    }
+
+    .items-cat > li .cat-porcentaje {
+        width: 100%;
     }
 }

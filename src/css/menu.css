@@ -1,89 +1,63 @@
-/* ==========================================================================
-   SLIDEBAR
-   ==========================================================================
-   • [>] CAPAS:
-        • SIDEBAR
-        • NAV
-        • MEDIA'S
-   ========================================================================== */
-
-.sidebar {
+nav {
     display: none;
-    margin-bottom: 12px;
-    border: 1px solid grey;
 }
 
-.sidebar.active-sideBar {
+nav.active-Nav {
     display: block;
 }
 
-/* ==========================================================================
-   NAV
-   ========================================================================== */
 nav {
     width: 100%;
-    padding: 18px;
+    min-height: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #232529;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
-nav .sdbr-menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-self: center;
-    justify-self: center;
-    
-    gap: 8px;
-    column-gap: 35px;
+nav .lista-items-menu {
     list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+    padding: 1rem;
+    gap: 8px;
+    column-gap: 36px;
 }
 
-.sdbr-menu li a {
+.lista-items-menu > li {
+    align-self: center;
+}
+
+.lista-items-menu > li a {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: black;
+    gap: 12px;
+    color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.sdbr-menu li span {
-    color: #343a40;
-}
 
-.sdbr-menu li:hover {
-    padding: 2px 8px;
-    border-radius: 5px;
-    background-color: rgb(254, 198, 28);
-}
+@container body-first (min-width: 767px) {
+    nav {
+        position: relative;
+    }
 
-/* ==========================================================================
-   MEDIA'S
-   ========================================================================== */
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    nav .sdbr-menu {
+    nav .lista-items-menu {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 20px;
+        padding-top: 1.5rem;
+
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
 
-    .sidebar {        
-        margin-bottom: 0;
-        border: none;
-        border-right: 1px solid grey;
-        border-bottom: 1px solid grey;
-        border-bottom-right-radius: 5px;
-    }
-}
-
-@media (min-width: 1024px) {
-    nav .sdbr-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .sidebar {
-        margin-bottom: 0;
-        border: none;
-        height: 100%;
+    .lista-items-menu > li {
+        align-self: flex-start;
     }
 }

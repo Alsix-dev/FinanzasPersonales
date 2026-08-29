@@ -2,118 +2,117 @@
    HEADER
    ==========================================================================
    • [>] CAPAS:
-        • Header
-        • TITULO
-        • MENU
-        • USUARIO
+        • HEADER
+        • NOTIFICACIONES - USUARIO
         • MEDIA'S
    ========================================================================== */
 
 header {
     width: 100%;
+    max-height: 120px;
+
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
     "ttl-App ttl-App"
     "btn-Menu usuario";
-    align-items: center;
 
-    padding: 8px 15px;
-    gap: 5px;
+    overflow: hidden;
     background-color: #232529;
-    color: white;
+    box-shadow: 10px 10px 22px var(--shadow-dark);
+
+    padding: 8px 14px;
+    gap: 8px;
 }
 
 header .ttl-App { grid-area: ttl-App; }
-header .btn-Menu { grid-area: btn-Menu; }
+header #btn-Menu { grid-area: btn-Menu; }
 header .usuario { grid-area: usuario; }
 
+
+header, 
 header button {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 12px;
     color: white;
+    font-size: var(--text-Normal);
 }
 
-header button > .material-symbols-outlined {
-    color: white;
-    cursor: pointer;
+header .material-symbols-outlined {
+    font-size: var(--icon-Normal);
 }
 
-/* ==========================================================================
-   TITULO
-   ========================================================================== */
-
-.ttl-App {
+header .ttl-App {
+    align-self: center;
     justify-self: center;
 }
 
-/* ==========================================================================
-   MENU
-   ========================================================================== */
-
-.btn-Menu {
-    gap: 8px;
+header #btn-Menu {
+    align-self: center;
     justify-self: flex-start;
-}
-
-/* ==========================================================================
-   USUARIO
-   ========================================================================== */
-
-.usuario {
-    justify-self: flex-end;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 12px;
 }
 
-.usuario .notificaciones {
-    padding: 0px 8px 0px 0px;
-    border-right: 1px solid white;
+header .usuario {
+    align-self: center;
+    justify-self: flex-end;
+    display: flex;
 }
+
+/* ==========================================================================
+   NOTIFICACIONES - USUARIO 
+   ========================================================================== */
+
+.usuario .divider {
+    background-color: var(--border-color); /*border-Items*/
+    height: 20px;
+    width: 1px;
+    margin: auto 14px;
+}
+
+.usuario .datos-Usuario {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+}
+
+.datos-Usuario > span {
+    text-align: start;
+}
+
 
 /* ==========================================================================
    MEDIA'S
    ========================================================================== */
 
-@media (min-width: 768px) and (max-width: 1023px){
-    .usuario, header button {
-        font-size: 14px;
+@container body-first (min-width: 768px) and (max-width: 1023px){
+    .usuario .datos-Usuario {
+        margin-left: 6px;
     }
 
-    .ttl-App {
-        font-size: 1.75rem;
-    }
-
-    .usuario {
-        margin-right: 15px;
+    .usuario .divider {
+        height: 25px;
+        margin: auto 16px;
     }
 }
 
-@media (min-width: 1024px){
+@container body-first (min-width: 1024px){
     header {
-        grid-template-columns: auto 1fr auto;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-        "btn-Menu ttl-App usuario";
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 34px;
     }
 
-    .usuario, header button {
-        font-size: 16px;
+    header .ttl-App { grid-area: ttl-App; }
+    header #btn-Menu { grid-area: btn-Menu; }
+    header .usuario { grid-area: usuario; }
+
+    .usuario .datos-Usuario {
+        margin-left: 8px;
     }
 
-    .usuario {
-        margin-right: 15px;
-    }
-
-    .ttl-App {
-        font-size: 2rem;
+    .usuario .divider {
+        height: 30px;
+        margin: auto 18px;
     }
 }
