@@ -19,9 +19,10 @@ import { crearTransaccion } from "../crearTransaccion/crearTransaccion.js";
 
 const listado_fechas = document.querySelector('.listado-fechas');
 
+const hoy = new Date();
+
 function generarTransaccion(event){
     event.preventDefault();
-    const hoy = new Date();
 
     const {
         siExiste,
@@ -39,6 +40,8 @@ function generarTransaccion(event){
         listado_fechas.prepend(nuevaFecha);
     }
 
+
+    hoy.setDate(hoy.getDate()+1);
     actualizarEstadisticas(valoresInputs.leerTipoTransc, valoresInputs.leerImporteTransc);
     actualizarCarteles(valoresInputs.leerTipoTransc, valoresInputs.leerImporteTransc);
 }

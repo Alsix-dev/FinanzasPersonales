@@ -268,7 +268,6 @@ main .mov-transacciones {
 
 .main-sidebar {
     min-width: 70px;
-    max-width: 200px;
     display: flex;
     flex-direction: column;
     margin: 0.25rem;
@@ -637,6 +636,7 @@ main .main-categorias {
     }
 
     .main-sidebar {
+        max-width: 200px;
         flex-direction: column;
         margin: 0.15rem;
         margin-top: 1.2rem;

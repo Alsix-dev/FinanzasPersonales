@@ -119,3 +119,5 @@ V ----------------> 37) Cuando el sidebar esta cerrado y se agrega una transacci
 
 V ----------------> 42) Los botones de los carteles deben pasar al mes siguiente y anterior, segun corresponda.
 			Solo dentro de ese mismo año.
+
+43) Completar filtrar, falta gestionar datos para poder filtrar los elementos con esos datos.
