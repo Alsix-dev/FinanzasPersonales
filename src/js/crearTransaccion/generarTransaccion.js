@@ -40,8 +40,6 @@ function generarTransaccion(event){
         listado_fechas.prepend(nuevaFecha);
     }
 
-
-    hoy.setDate(hoy.getDate()+1);
     actualizarEstadisticas(valoresInputs.leerTipoTransc, valoresInputs.leerImporteTransc);
     actualizarCarteles(valoresInputs.leerTipoTransc, valoresInputs.leerImporteTransc);
 }
