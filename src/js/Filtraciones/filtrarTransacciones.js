@@ -47,8 +47,8 @@ overlays.addEventListener('click', (event) => {
 /* ==========================================================================
    TIPO - CATEGORIA
    ========================================================================== */
-const tipo = document.getElementById("i-filtrar-transaccion");
-const categoria = document.getElementById("i-filtrar-categoria");
+const tipo = document.getElementsByName("tipo-transaccion")[1];
+const categoria = document.getElementsByName("tipo-categoria")[1];
 
 function esTipoCategoria(){
     categoria.innerHTML = "";

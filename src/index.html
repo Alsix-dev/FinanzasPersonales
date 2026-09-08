@@ -350,33 +350,36 @@
                             </button>
                         </div>
 
-                        <form action="#" id="f-añadir-transaccion">
+                        <form action="#" id="f-añadir-transaccion" data-form="f-añadir-transaccion">
                             <div class="divider"></div>
                             <div class="centro-transaccion">
                                 <div class="nombre-Transaccion">
                                     <h2>Nombre transaccion</h2>
                                     <input 
-                                        type="text" id="i-name-transaccion"
+                                        type="text" 
+                                        name="nombre-transaccion"
+                                        id="i-name-transaccion"
                                         placeholder="Ingresar nombre de transaccion">
                                 </div>
 
-                                <div class="tipo-transaccion">
+                                <div>
                                     <h2>Tipo transaccion</h2>
-                                    <select id="tipo-transaccion">
+                                    <select name="tipo-transaccion">
                                         <option value="ingreso">Ingreso</option>
                                         <option value="egreso">Egreso</option>
                                     </select>
                                 </div>
 
-                                <div class="tipo-categoria">
+                                <div>
                                     <h2>Categoria</h2>
-                                    <select id="tipo-categoria"></select>
+                                    <select name="tipo-categoria"></select>
                                 </div>
 
                                 <div class="importe">
                                     <h2>Importe</h2>
                                     <input 
                                         type="number"
+                                        name="importe-transaccion"
                                         id="i-importe-transaccion"
                                         placeholder="Ingresa un importe">
                                 </div>
@@ -396,26 +399,27 @@
                             </button>
                         </div>
 
-                        <form action="#" class="centro-filtrar" id="f-filtrar">
+                        <form action="#" class="centro-filtrar" id="f-filtrar" data-form="f-filtrar">
                             <div class="divider"></div>
 
-                            <div class="tipo-transaccion">
+                            <div>
                                 <h2>Tipo transaccion</h2>
-                                <select id="i-filtrar-transaccion">
+                                <select name="tipo-transaccion">
                                     <option value="ingreso">Ingreso</option>
                                     <option value="egreso">Egreso</option>
                                 </select>
                             </div>
 
-                            <div class="tipo-categoria">
+                            <div>
                                 <h2>Tipo categoria</h2>
-                                <select id="i-filtrar-categoria"></select>
+                                <select name="tipo-categoria"></select>
                             </div>
 
                             <div class="filtrar_fecha">
                                 <h2>Fecha</h2>
-                                <input 
+                                <input
                                     type="date"
+                                    name="fecha-transacciones"
                                     id="i-filtrar-importe">
                             </div>
 

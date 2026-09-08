@@ -14,3 +14,7 @@ export * from "../src/js/carteles/carteles.js";
 // EXPORTS - TRANSACCIONES
 export * from "../src/js/crearTransaccion/crearFecha.js";
 export * from "../src/js/crearTransaccion/crearTransaccion.js";
+export * from "../src/js/crearTransaccion/controlarTransaccion.js";
+
+// EXPORTS - FORMULARIOS
+export * from "./js/formularios/controlarForms.js"

@@ -4,7 +4,7 @@ import "../src/js/sidebar/sidebar.js";
 import "../src/js/sidebar/gestionDatosSidebar.js";
 
 import "../src/js/crearTransaccion/gestionTransaccion.js";
-import "../src/js/crearTransaccion/generarTransaccion.js";
+import "../src/js/crearTransaccion/controlarTransaccion.js";
 
 import "../src/js/carteles/carteles.js";
 import "../src/js/carteles/pasarMes.js";

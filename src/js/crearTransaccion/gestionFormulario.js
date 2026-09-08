@@ -296,8 +296,8 @@ const tipoCatTransc = {
 /* ==========================================================================
    SELECT - TIPO
    ========================================================================== */
-const tipo = document.getElementById("tipo-transaccion");
-const categoria = document.getElementById("tipo-categoria");
+const tipo = document.getElementsByName("tipo-transaccion")[0];
+const categoria = document.getElementsByName("tipo-categoria")[0];
 
 function esTipoCategoria(){
     categoria.innerHTML = "";
@@ -311,26 +311,6 @@ function esTipoCategoria(){
 
 tipo.addEventListener("change", esTipoCategoria);
 esTipoCategoria();
-
-/* ==========================================================================
-   LEER - FORMULARIO
-   ========================================================================== */
-const formConfTransccion = {
-    obtenerFormTransc: document.getElementById('f-añadir-transaccion'),
-    obtenerNameTransc: document.getElementById('i-name-transaccion'),
-    obtenerTipoTransc: document.getElementById("tipo-transaccion"),
-    obtenerTipoCatTransc: document.getElementById("tipo-categoria"),
-    obtenerImporteTransc: document.getElementById("i-importe-transaccion")
-}
-
-const leerFormTransaccion = () => {
-    return {
-        leerNameTransc: formConfTransccion.obtenerNameTransc.value.trim(),
-        leerTipoTransc: formConfTransccion.obtenerTipoTransc.value,
-        leerTipoCatTransc: formConfTransccion.obtenerTipoCatTransc.value,
-        leerImporteTransc: formConfTransccion.obtenerImporteTransc.value
-    }
-}
 
 /* ==========================================================================
    VERIFICAR - DATOS
@@ -378,7 +358,5 @@ export {
     buscarColorTransaccion,
     buscarCategoria,
     verificarExisteDia,
-    leerFormTransaccion,
-    formConfTransccion,
     tipoCatTransc
 }

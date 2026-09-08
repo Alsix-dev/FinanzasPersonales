@@ -5,10 +5,10 @@ import {
 } from "../crearTransaccion/gestionFormulario.js";
 
 export function crearTransaccion(items, hoy){
-    let name = capitalizarTexto(items.leerNameTransc);
-    let transaccion = items.leerTipoTransc;
-    let categoria = items.leerTipoCatTransc;
-    let importe = items.leerImporteTransc;
+    let name = capitalizarTexto(items.leerName);
+    let transaccion = items.leerTransc;
+    let categoria = items.leerCat;
+    let importe = items.leerImp;
     
     const colorTransaccion = buscarColorTransaccion(transaccion);
     const nuevaCategoria = buscarCategoria(transaccion, categoria);
