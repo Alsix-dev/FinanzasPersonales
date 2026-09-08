@@ -152,13 +152,13 @@
                                         <span class="material-symbols-outlined">search</span>
                                         <input type="text" class="text-Listado" id="src-mov-input" placeholder="Buscar">
                                     </label>
-                                    <button class="btn-filtrar">
+                                    <button class="btn-filtrar" data-boton-modal="filtrar">
                                         <span class="text-Listado">Filtrar</span>
                                         <span class="material-symbols-outlined">filter_alt</span>
                                     </button>
                                 </div>
 
-                                <button id="btn-Add">
+                                <button id="btn-Add" data-boton-modal="transaccion">
                                     <span class="material-symbols-outlined">add</span>
                                     <span class="text-Listado">Añadir transaccion</span>
                                 </button>
@@ -263,7 +263,7 @@
                             <div class="divider"></div>
 
                             <div class="cat-interaccion">
-                                <button class="btn-filtrar">
+                                <button class="btn-filtrar" data-boton-modal="filtrar">
                                     <span class="text-Listado">Filtrar</span>
                                     <span class="material-symbols-outlined">filter_alt</span>
                                 </button>
@@ -326,7 +326,7 @@
                             <div class="divider"></div>
 
                             <div class="cat-interaccion">
-                                <button class="btn-filtrar">
+                                <button class="btn-filtrar" data-boton-modal="filtrar">
                                     <span class="text-Listado">Filtrar</span>
                                     <span class="material-symbols-outlined">filter_alt</span>
                                 </button>
@@ -342,7 +342,7 @@
                 <footer>Hola</footer>
 
                 <section id="overlays" class="">
-                    <div class="modal-add-transaccion">
+                    <div class="modal modal-add-transaccion" data-tipo-modal="transaccion">
                         <div class="cabezal-transaccion">
                             <h1>Agregar nueva transaccion</h1>
                             <button class="btn-closet">
@@ -391,7 +391,7 @@
                         </form>
                     </div>
 
-                    <div class="modal-filtrar">
+                    <div class="modal modal-filtrar" data-tipo-modal="filtrar">
                         <div class="cabezal-filtrar">
                             <h1>Filtrar</h1>
                             <button class="btn-closet">
