@@ -121,3 +121,14 @@ V ----------------> 42) Los botones de los carteles deben pasar al mes siguiente
 			Solo dentro de ese mismo año.
 
 43) Completar filtrar, falta gestionar datos para poder filtrar los elementos con esos datos.
+
+V ----------------> 44) La funcion 'esTipoCategoria' en formFiltro.js y formCrear.js hacer la funcion generica.
+
+V ----------------> 45) El filtrar al apretar overlay no se cierra ahora.
+
+V ----------------> 46) Añadir transaccion no abre ahora.
+
+47) El abrir y cerrar overlay + modal: Crear algo que simplifique esto y evite codigo repetitivo.
+
+48) A futuro hacer un index.js donde haga los imports y barrel.js de cada carpeta para no tener
+	un solo archivo que haga todo esto.

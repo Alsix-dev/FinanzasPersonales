@@ -1,4 +1,4 @@
-import { tipoCatTransc } from "../crearTransaccion/gestionFormulario.js";
+import { tipoCatTransc } from "../../barrel.js";
 
 /* ==========================================================================
    GESTION FILTRACIONES

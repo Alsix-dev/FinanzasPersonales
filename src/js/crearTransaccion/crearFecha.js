@@ -1,4 +1,4 @@
-import { pasarMesATexto } from "../genericas.js";
+import { pasarMesATexto } from "../../barrel.js";
 
 export function crearFecha(nuevaTransaccion, hoy){
     const dd = hoy.getDate();

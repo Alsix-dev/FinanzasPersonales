@@ -1,4 +1,4 @@
-import { capitalizarTexto } from "../genericas.js";
+import { capitalizarTexto } from "../../barrel.js";
 import { 
     buscarCategoria,
     buscarColorTransaccion

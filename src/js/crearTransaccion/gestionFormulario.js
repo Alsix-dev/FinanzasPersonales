@@ -1,4 +1,4 @@
-import { pasarMesATexto } from "../genericas.js";
+import { pasarMesATexto } from "../../barrel.js";
 
 /* ==========================================================================
    GESTION TRANSACCION

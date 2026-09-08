@@ -1,6 +1,6 @@
 import { 
     convertirPrecioNumerico,
-} from "../genericas.js";
+} from "../../barrel.js";
 
 /* ==========================================================================
     SIDEBAR

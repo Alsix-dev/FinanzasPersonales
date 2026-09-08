@@ -2,10 +2,10 @@ import {
     formConfTransccion,
     leerFormTransaccion,
     verificarExisteDia
-} from "../crearTransaccion/gestionFormulario.js";
+} from "../../barrel.js";
 
-import { actualizarEstadisticas } from "../sidebar/gestionDatosSidebar.js";
-import { actualizarCarteles } from "../carteles/carteles.js";
+import { actualizarEstadisticas } from "../../barrel.js";
+import { actualizarCarteles } from "../../barrel.js";
 
 /* ==========================================================================
    AÑADIR TRANSACCION
@@ -14,8 +14,8 @@ import { actualizarCarteles } from "../carteles/carteles.js";
         • GESTIONAR - INPUTS
         • CREAR = TRANSACCION
    ========================================================================== */
-import { crearFecha } from "../crearTransaccion/crearFecha.js";
-import { crearTransaccion } from "../crearTransaccion/crearTransaccion.js";
+import { crearFecha } from "../../barrel.js";
+import { crearTransaccion } from "../../barrel.js";
 
 const listado_fechas = document.querySelector('.listado-fechas');
 

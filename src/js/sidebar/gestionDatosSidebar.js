@@ -2,7 +2,7 @@ import {
     recuperarElementos,
     abreviarDinero,
     sidebar
-} from "../sidebar/sidebar.js";
+} from "../../barrel.js";
 
 const ingresoAnual = document.getElementById('ingresoAnual');
 const EgresoAnual = document.getElementById('EgresoAnual');
