@@ -1,4 +1,4 @@
-import { tipoCatTransc } from "../../barrel.js";
+import { tipoCatTransc } from "../Objetos/tipoCategoria.js";
 
 /* ==========================================================================
    GESTION FILTRACIONES
