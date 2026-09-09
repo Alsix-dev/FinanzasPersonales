@@ -228,11 +228,15 @@ main .mov-transacciones {
 }
 
 .extras-transaccion .importe {
-    width: 0;
+    width: 100px;
     flex: 1;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.extras-transaccion .isHorario {
+    align-self: flex-end;
 }
 
 .main-movimientos .mov-expandir {

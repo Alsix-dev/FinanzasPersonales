@@ -140,4 +140,4 @@ V ----------------> 50) Hacer un reset de formularios.
 
 51) Agregar un "Seleccionar categoria" como valor inicial.
 
-52) Revisar que al achicar en el responsive, el importe desaparece de la lista. Puede haya sacado una clase u algo. Revisar.
+V ----------------> 52) Revisar que al achicar en el responsive, el importe desaparece de la lista. Puede haya sacado una clase u algo. Revisar.
