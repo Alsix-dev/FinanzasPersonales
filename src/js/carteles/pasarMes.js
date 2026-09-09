@@ -1,39 +1,24 @@
-const cambiar_mes = document.querySelectorAll('.cmbr-mes-Calculado');
+import { RetornarMes } from "../../barrel.js";
 
-function retornarMes(mes, accion){
-    const mesTexto = [
-        "enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"
-    ];
-
-    let retornar = "";
-
-    if(mesTexto.indexOf(mes) === 11 && accion > 0){
-        retornar = mesTexto[0];
+const CambiarMes = (boton, mesActual) => {
+    let mes = "";
+    if(boton.matches('.btn-back-Mes')){
+        mes = RetornarMes(mesActual, "anteriorMes");
+    } else if(boton.matches('.btn-next-Mes')){
+        mes = RetornarMes(mesActual, "siguienteMes");
     }
-    else if(mesTexto.indexOf(mes) === 0 && accion < 0){
-        retornar = mesTexto[11];
-    } else {
-        retornar = mesTexto[mesTexto.indexOf(mes) + accion];
-    }
-
-    return retornar;
+    return mes
 }
 
-cambiar_mes.forEach(cm => {
-    cm.addEventListener('click', (event) => {
-        if(!event.target.closest('button')) return
-        const mes = event.target.closest('.ftr-PIE').querySelector('.mes_cartel');
-        let nombreMes = mes.textContent.split(" ")[1];
-        let nuevoMes = "";
+document.addEventListener('click', (event) => {
+    const boton = event.target.closest('button');
+    if(!boton) return;
 
-        if(event.target.closest('.btn-back-Mes')){
-            nuevoMes = retornarMes(nombreMes, -1);
-        }
-
-        if(event.target.closest('.btn-next-Mes')){
-            nuevoMes = retornarMes(nombreMes, +1);
-        }
-        
-        mes.textContent = `en ${nuevoMes}`;
-    });
+    const contenedor = boton.closest('.cartel-PIE');
+    if(!contenedor) return;
+    const mes_cartel = contenedor.querySelector('.mes_cartel');
+    const mes = mes_cartel.textContent.split(" ")[1];
+    
+    let mes_retornar = CambiarMes(boton, mes);
+    mes_cartel.textContent = `en ${mes_retornar}`;
 });

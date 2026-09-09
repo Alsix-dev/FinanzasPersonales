@@ -5,7 +5,11 @@ export * from "../src/js/genericas.js";
 export * from "../src/js/sidebar/sidebar.js";
 export * from "../src/js/sidebar/gestionDatosSidebar.js";
 
-// EXPORTS - GESTION FORMULARIO
+// EXPORTS - FECHAS
+export * from "../src/js/fecha/meses.js";
+
+// EXPORTS - GESTION FORMULARIOS
+export * from "../src/js/formularios/controlsForms.js"
 export * from "../src/js/crearTransaccion/gestionFormulario.js";
 
 // EXPORTS - CARTELES ESTADISTICAS
@@ -17,6 +21,3 @@ export * from "../src/js/crearTransaccion/crearTransaccion.js";
 export * from "../src/js/crearTransaccion/controlarTransaccion.js";
 
 export * from "../src/js/Objetos/tipoCategoria.js";
-
-// EXPORTS - FORMULARIOS
-export * from "./js/formularios/controlarForms.js"
