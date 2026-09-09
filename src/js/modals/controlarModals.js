@@ -3,6 +3,15 @@ const overlays = document.getElementById('overlays');
 const abrirMenu = (modal) => {
     overlays.classList.add('active-overlay');
     modal.classList.add('active-modal');
+
+    modal.dispatchEvent(
+        new CustomEvent('modal:abierto', {
+            bubbles: true,
+            detail: {
+                modal            
+            }
+        })
+    );
 }
 
 document.addEventListener('click', (event) => {
@@ -10,7 +19,7 @@ document.addEventListener('click', (event) => {
     if(!boton) return;
     const tipoModal = boton.dataset.botonModal;
     const modal = overlays.querySelector(`[data-tipo-modal=${tipoModal}]`);
-    if(!modal);
+    if(!modal) return;
     abrirMenu(modal);
 });
 

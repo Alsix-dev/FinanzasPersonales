@@ -16,7 +16,7 @@ export * from "../src/js/crearTransaccion/crearFecha.js";
 export * from "../src/js/crearTransaccion/crearTransaccion.js";
 export * from "../src/js/crearTransaccion/controlarTransaccion.js";
 
-// export { tipoCatTransc } from "../src/js/Objetos/tipoCategoria.js";
+export * from "../src/js/Objetos/tipoCategoria.js";
 
 // EXPORTS - FORMULARIOS
 export * from "./js/formularios/controlarForms.js"

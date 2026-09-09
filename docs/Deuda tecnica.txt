@@ -128,7 +128,12 @@ V ----------------> 45) El filtrar al apretar overlay no se cierra ahora.
 
 V ----------------> 46) Añadir transaccion no abre ahora.
 
-47) El abrir y cerrar overlay + modal: Crear algo que simplifique esto y evite codigo repetitivo.
+V ----------------> 47) El abrir y cerrar overlay + modal: Crear algo que simplifique esto y evite codigo repetitivo.
 
 48) A futuro hacer un index.js donde haga los imports y barrel.js de cada carpeta para no tener
 	un solo archivo que haga todo esto.
+
+49) En estadisticas, en lugar de comprimir los numeros. Mejor dejar el icono y cuando se pase el mouse por encima
+	del icono muestre un cartel indicando nombre + importe.
+
+50) Hacer un reset de formularios.

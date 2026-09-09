@@ -1,8 +1,9 @@
 import { capitalizarTexto } from "../../barrel.js";
 import { 
-    buscarCategoria,
-    buscarColorTransaccion
-} from "../crearTransaccion/gestionFormulario.js";
+    ObtenerColorTransaccion,
+    ObtenerColorCategoria,
+    ObtenerIconoCategoria
+} from "../../barrel.js";
 
 export function crearTransaccion(items, hoy){
     let name = capitalizarTexto(items.leerName);
@@ -10,10 +11,9 @@ export function crearTransaccion(items, hoy){
     let categoria = items.leerCat;
     let importe = items.leerImp;
     
-    const colorTransaccion = buscarColorTransaccion(transaccion);
-    const nuevaCategoria = buscarCategoria(transaccion, categoria);
-    let icono = nuevaCategoria.icono;
-    let colorCategoria = nuevaCategoria.color;
+    const colorTransaccion = ObtenerColorTransaccion(transaccion);
+    let icono = ObtenerIconoCategoria(transaccion, categoria);
+    let colorCategoria = ObtenerColorCategoria(transaccion, categoria);
     
     const hh = hoy.getHours();
     const mm = hoy.getMinutes();

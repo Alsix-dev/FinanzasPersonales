@@ -1,4 +1,4 @@
-export const tipoCatTransc = {
+const categorias = {
     egreso: {
         color: "#FF0000",
         categoria: [
@@ -281,3 +281,40 @@ export const tipoCatTransc = {
         ]
     }
 };
+
+const ObtenerCategoria = (transaccion, categoria) => {
+    return categorias[transaccion].categoria.find(cat => cat.value === categoria);
+}
+
+const ObtenerColorTransaccion = (transaccion) => {
+    return categorias[transaccion].color;
+}
+
+const ObtenerColorCategoria = (transaccion, categoria) => {
+    const cat = ObtenerCategoria(transaccion, categoria);
+    return cat.color;
+}
+
+const ObtenerIconoCategoria = (transaccion, categoria) => {
+    const cat = ObtenerCategoria(transaccion, categoria);
+    return cat.icono;
+}
+
+function DesplegarCategorias(categoria, transaccion){
+    categoria.innerHTML = "";
+    categorias[transaccion].categoria.forEach(cat => {
+        const opcion = document.createElement('option');
+        opcion.value = cat.value;
+        opcion.textContent = cat.categoria;
+        categoria.appendChild(opcion);
+    });
+}
+
+export {
+    categorias,
+    ObtenerCategoria,
+    ObtenerColorTransaccion,
+    ObtenerColorCategoria,
+    ObtenerIconoCategoria,
+    DesplegarCategorias
+}

@@ -1,5 +1,4 @@
 import { pasarMesATexto } from "../../barrel.js";
-import { tipoCatTransc } from "../Objetos/tipoCategoria.js";
 
 /* ==========================================================================
    GESTION TRANSACCION
@@ -10,26 +9,6 @@ import { tipoCatTransc } from "../Objetos/tipoCategoria.js";
         • VERIFICAR - DATOS
         • BUSCAR - DATOS
    ========================================================================== */
-
-
-/* ==========================================================================
-   SELECT - TIPO
-   ========================================================================== */
-const tipo = document.getElementsByName("tipo-transaccion")[0];
-const categoria = document.getElementsByName("tipo-categoria")[0];
-
-function esTipoCategoria(){
-    categoria.innerHTML = "";
-    tipoCatTransc[tipo.value].categoria.forEach(cat => {
-        const nuevaOpcion = document.createElement('option');
-        nuevaOpcion.value = cat.value;
-        nuevaOpcion.textContent = cat.categoria;
-        categoria.appendChild(nuevaOpcion);
-    });
-}
-
-tipo.addEventListener("change", esTipoCategoria);
-esTipoCategoria();
 
 /* ==========================================================================
    VERIFICAR - DATOS
@@ -62,19 +41,6 @@ const verificarExisteDia = (hoy) => {
     return flag;
 }
 
-/* ==========================================================================
-   BUSCAR - DATOS
-   ========================================================================== */
-const buscarCategoria = (transaccion, categoria) => {
-    return tipoCatTransc[transaccion].categoria.find(cat => cat.value === categoria);
-}
-
-const buscarColorTransaccion = (transaccion) => {
-    return tipoCatTransc[transaccion].color;
-}
-
 export {
-    buscarColorTransaccion,
-    buscarCategoria,
     verificarExisteDia
 }
