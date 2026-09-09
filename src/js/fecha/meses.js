@@ -22,8 +22,8 @@ function RetornarMes(mes, direccion){
     // Si es 0 y direccion -1 --> Devuelve 11 (Diciembre).
     // Si es 11 y direccion +1 --> Devuelve 0 (Enero).
     const { 
-        mes:MesTextual, 
-        direccion:DesplazarMes 
+        mes:MesTextual,
+        direccion:DesplazarMes
     } = meses;
 
     const indice = MesTextual.indexOf(mes);
@@ -35,4 +35,5 @@ function RetornarMes(mes, direccion){
 
 export {
     RetornarMes,
+    pasarMesATexto
 }

@@ -1,6 +1,4 @@
-import { 
-    verificarExisteDia
-} from "../../barrel.js";
+import { ExisteFecha } from "../../barrel.js";
 import { actualizarEstadisticas } from "../../barrel.js";
 import { actualizarCarteles } from "../../barrel.js";
 import { crearFecha } from "../../barrel.js";
@@ -12,11 +10,11 @@ const listado_fechas = document.querySelector('.listado-fechas');
 const hoy = new Date();
 
 function controlarTransaccion(formulario){
-    const { siExiste, fecha } = verificarExisteDia(hoy);
+    const fecha = ExisteFecha();
     let valoresInputs = DatosFormulario(formulario);
     const nuevaTransaccion = crearTransaccion(valoresInputs, hoy);
     
-    if(siExiste){
+    if(fecha){
         const actualFecha = fecha.querySelector('.mov-en-fecha');
         actualFecha.prepend(nuevaTransaccion);
     } else {

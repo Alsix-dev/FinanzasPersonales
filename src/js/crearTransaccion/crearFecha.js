@@ -2,7 +2,7 @@ import { pasarMesATexto } from "../../barrel.js";
 
 export function crearFecha(nuevaTransaccion, hoy){
     const dd = hoy.getDate();
-    const mes = hoy.getMonth() + 1;
+    const mes = hoy.getMonth();
     const aa = hoy.getFullYear();
     let diaMes = dd + ' de ' + pasarMesATexto(mes);
 

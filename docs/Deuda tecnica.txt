@@ -68,7 +68,7 @@ V ----------------> 25) Pasar los meses de numeros a nombre. Para ello, debo mod
 V ----------------> 26) Gestionar que verifique si existe esos dias solo en ese mes, que no busque fuera de ese rango
 			asi evita cargar todos los li de la lista.
 
-27) Fusionar la rama de newUI con la main, ya los arreglos de UI fueron finalizados.
+V ----------------> 27) Fusionar la rama de newUI con la main, ya los arreglos de UI fueron finalizados.
 
 28) Optimizar codigo de crear transaccion y crear fecha
 
@@ -77,9 +77,9 @@ V ----------------> 29) Colores a ingreso (verde) y egreso (rojo)
 V ----------------> 30) Los ingresos y egresos deben acumularse en estadisticas. Lo mismo el movimiento que aumenta
 			cada vez que se ingresa una transaccion.
 
-31) Revisar si esTipoCategoria en gestionFormulario.js deberia ser directamente
-	quien devuelva la categoria. Lo mismo si creamos esTipoTransaccion para devolver
-	el color. Tal vez asi pueda simplificarse el codigo.
+V ----------------> 31) Revisar si esTipoCategoria en gestionFormulario.js deberia ser directamente
+			quien devuelva la categoria. Lo mismo si creamos esTipoTransaccion para devolver
+			el color. Tal vez asi pueda simplificarse el codigo.
 
 X ----------------> 32) Deberian cargarse los colores solo cuando se crean? O podria cargarlos cuando la pagina carga
 			Tal vez asi, pueda quitar esa dependencia del codigo crearTransaccion.
@@ -136,6 +136,8 @@ V ----------------> 47) El abrir y cerrar overlay + modal: Crear algo que simpli
 49) En estadisticas, en lugar de comprimir los numeros. Mejor dejar el icono y cuando se pase el mouse por encima
 	del icono muestre un cartel indicando nombre + importe.
 
-50) Hacer un reset de formularios.
+V ----------------> 50) Hacer un reset de formularios.
 
 51) Agregar un "Seleccionar categoria" como valor inicial.
+
+52) Revisar que al achicar en el responsive, el importe desaparece de la lista. Puede haya sacado una clase u algo. Revisar.

@@ -10,7 +10,7 @@ export function crearTransaccion(items, hoy){
     let transaccion = items.leerTransc;
     let categoria = items.leerCat;
     let importe = items.leerImp;
-    
+
     const colorTransaccion = ObtenerColorTransaccion(transaccion);
     let icono = ObtenerIconoCategoria(transaccion, categoria);
     let colorCategoria = ObtenerColorCategoria(transaccion, categoria);
@@ -28,8 +28,8 @@ export function crearTransaccion(items, hoy){
             <span class="text-Listado">${categoria}</span>
         </div>
         <div class="extras-transaccion">
-        <span class="text-Listado importe">$${importe}</span>
-        <span class="text-Listado">${horario}</span>
+            <span class="text-Listado importe">$${importe}</span>
+            <span class="text-Listado">${horario}</span>
         </div>
     `;
 
