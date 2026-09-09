@@ -137,3 +137,5 @@ V ----------------> 47) El abrir y cerrar overlay + modal: Crear algo que simpli
 	del icono muestre un cartel indicando nombre + importe.
 
 50) Hacer un reset de formularios.
+
+51) Agregar un "Seleccionar categoria" como valor inicial.

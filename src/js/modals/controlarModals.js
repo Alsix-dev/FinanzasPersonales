@@ -26,6 +26,15 @@ document.addEventListener('click', (event) => {
 const cerrarMenu = (modal) => {
     overlays.classList.remove('active-overlay');
     modal.classList.remove('active-modal');
+
+    modal.dispatchEvent(
+        new CustomEvent('modal:cerrar', {
+            bubbles: true,
+            detail: {
+                modal 
+            }
+        })
+    );
 }
 
 overlays.addEventListener('click', (event) => {

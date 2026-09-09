@@ -303,15 +303,25 @@ const ObtenerIconoCategoria = (transaccion, categoria) => {
 function DesplegarCategorias(categoria, transaccion){
     categoria.innerHTML = "";
     categorias[transaccion].categoria.forEach(cat => {
-        const opcion = document.createElement('option');
-        opcion.value = cat.value;
-        opcion.textContent = cat.categoria;
-        categoria.appendChild(opcion);
+        const option = document.createElement('option');
+        option.value = cat.value;
+        option.textContent = cat.categoria;
+        categoria.appendChild(option);
     });
+}
+
+function LimpiarCategoria(categoria){
+    if(!categoria) return;
+    categoria.innerHTML = "";
+    const option = document.createElement('option');
+    option.value = " ";
+    option.textContent = "Selecciona una categoria";
+    categoria.appendChild(option);
 }
 
 export {
     categorias,
+    LimpiarCategoria,
     ObtenerCategoria,
     ObtenerColorTransaccion,
     ObtenerColorCategoria,

@@ -1,6 +1,7 @@
 import { 
     controlarTransaccion, 
-    DesplegarCategorias
+    DesplegarCategorias,
+    LimpiarCategoria
 } from "../../barrel.js";
 
 const overlay = document.getElementById('overlays');
@@ -25,10 +26,14 @@ function DatosFormulario(formulario){
 const InicializarFormulario = (formulario) => {
     const transaccion = formulario.querySelector('[name="tipo-transaccion"]');
     const categoria = formulario.querySelector('[name="tipo-categoria"]');
-
     if(!transaccion || !categoria) return;
-
     DesplegarCategorias(categoria, transaccion.value);
+}
+
+const ResetearFormulario = (formulario) => {
+    formulario.reset();
+    const categoria = formulario.querySelector('[name="tipo-categoria"]');
+    LimpiarCategoria(categoria);
 }
 
 overlay.addEventListener('submit', (event) => {
@@ -56,6 +61,13 @@ overlay.addEventListener('modal:abierto', (event) => {
     const form = modal.querySelector('form');
     if(!form) return;
     InicializarFormulario(form);
+});
+
+overlay.addEventListener('modal:cerrar', (event) => {
+    const modal = event.detail.modal;
+    const form = modal.querySelector('form');
+    if(!form) return;
+    ResetearFormulario(form);
 });
 
 export {
