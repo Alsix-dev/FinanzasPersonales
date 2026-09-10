@@ -150,3 +150,6 @@ V ----------------> 55) Probar el archivo test.js (esta fuera del programa) para
 	que cumpla su funcion sin causar fallos (Debe seguir haciendo lo mismo que ya hace el sistema)
 
 56) Separar la estructura en componentes.
+
+
+V ----------------> 57) El color de importe y categoria estan invertidos.

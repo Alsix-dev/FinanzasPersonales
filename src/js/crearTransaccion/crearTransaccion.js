@@ -31,8 +31,8 @@ export function CrearTransaccion(inputs, horario){
         </div>
     `;
 
-    li.querySelector('.cat-transaccion').style.color = colorTransc;
-    li.querySelector('.importe').style.color = colorCat;
+    li.querySelector('.cat-transaccion').style.color = colorCat;
+    li.querySelector('.importe').style.color = colorTransc;
 
     return li;
 }
