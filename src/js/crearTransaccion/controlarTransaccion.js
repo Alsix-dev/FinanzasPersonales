@@ -1,31 +1,42 @@
-import { ExisteFecha } from "../../barrel.js";
-import { actualizarEstadisticas } from "../../barrel.js";
-import { actualizarCarteles } from "../../barrel.js";
-import { crearFecha } from "../../barrel.js";
-import { crearTransaccion } from "../../barrel.js";
+import { 
+    ExisteFecha,
+    actualizarEstadisticas,
+    actualizarCarteles,
+    DatosFormulario,
+    InyectarFechaCreada,
+    CrearTransaccion
+} from "../../barrel.js";
 
-import { DatosFormulario } from "../../barrel.js"
+function ContenedorMovimientos(){
+    const transacciones = document.querySelector('.mov-transacciones');
+    let ul = transacciones.querySelector('.listado-fechas');
+    if(ul) return;
 
-const listado_fechas = document.querySelector('.listado-fechas');
-const hoy = new Date();
+    ul = document.createElement('ul');
+    ul.className = "listado-fechas";
+    transacciones.appendChild(ul);
+    return ul;
+}
 
-function controlarTransaccion(formulario){
-    const fecha = ExisteFecha();
-    let valoresInputs = DatosFormulario(formulario);
-    const nuevaTransaccion = crearTransaccion(valoresInputs, hoy);
+function ControlarMovimientos(form){
+    ContenedorMovimientos();
+    const { fecha, datos, fechaParse, horaParse } = ExisteFecha();
+    const inputs = DatosFormulario(form);
+    const transcCreada = CrearTransaccion(inputs, horaParse);
+    const existeFecha = InyectarFechaCreada(fecha, datos, fechaParse);
+    let mov_en_fecha = null;
     
-    if(fecha){
-        const actualFecha = fecha.querySelector('.mov-en-fecha');
-        actualFecha.prepend(nuevaTransaccion);
+    if(existeFecha){
+        mov_en_fecha = existeFecha.querySelector('.mov-en-fecha');
     } else {
-        const nuevaFecha = crearFecha(nuevaTransaccion, hoy);
-        listado_fechas.prepend(nuevaFecha);
+        mov_en_fecha = fecha.querySelector('.mov-en-fecha');
     }
 
-    actualizarEstadisticas(valoresInputs.leerTransc, valoresInputs.leerImp);
-    actualizarCarteles(valoresInputs.leerTransc, valoresInputs.leerImp);
+    mov_en_fecha.appendChild(transcCreada);
+    actualizarEstadisticas(inputs.leerTransc, inputs.leerImp);
+    actualizarCarteles(inputs.leerTransc, inputs.leerImp);
 }
 
 export {
-    controlarTransaccion
+    ControlarMovimientos
 }

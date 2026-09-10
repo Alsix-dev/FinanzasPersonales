@@ -1,5 +1,5 @@
 import { 
-    controlarTransaccion, 
+    ControlarMovimientos, 
     DesplegarCategorias,
     LimpiarCategoria
 } from "../../barrel.js";
@@ -7,7 +7,7 @@ import {
 const overlay = document.getElementById('overlays');
 
 const formularios = {
-    'transaccion': controlarTransaccion
+    'transaccion': ControlarMovimientos
     // 'f-filtrar': filtrarMovimientos
 }
 

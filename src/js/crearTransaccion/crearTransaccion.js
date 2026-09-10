@@ -1,26 +1,24 @@
-import { capitalizarTexto } from "../../barrel.js";
 import { 
     ObtenerColorTransaccion,
     ObtenerColorCategoria,
     ObtenerIconoCategoria
 } from "../../barrel.js";
 
-export function crearTransaccion(items, hoy){
-    let name = capitalizarTexto(items.leerName);
-    let transaccion = items.leerTransc;
-    let categoria = items.leerCat;
-    let importe = items.leerImp;
+export function CrearTransaccion(inputs, horario){
+    const { 
+        leerName: name, 
+        leerTransc: transaccion,
+        leerCat: categoria, 
+        leerImp: importe
+    } = inputs;
 
-    const colorTransaccion = ObtenerColorTransaccion(transaccion);
-    let icono = ObtenerIconoCategoria(transaccion, categoria);
-    let colorCategoria = ObtenerColorCategoria(transaccion, categoria);
-    
-    const hh = hoy.getHours();
-    const mm = hoy.getMinutes();
-    let horario = hh + ':' + mm;
+    const colorTransc = ObtenerColorTransaccion(transaccion);
+    const colorCat = ObtenerColorCategoria(transaccion, categoria);
+    const icono = ObtenerIconoCategoria(transaccion, categoria);
 
     const li = document.createElement('li');
-    li.className = "isTransaccion";
+    li.className = 'isTransaccion';
+
     li.innerHTML = `
         <span class="text-Listado ttl-transaccion">${name}</span>
         <div class="cat-transaccion">
@@ -33,7 +31,8 @@ export function crearTransaccion(items, hoy){
         </div>
     `;
 
-    li.querySelector('.cat-transaccion').style.color = colorCategoria;
-    li.querySelector('.importe').style.color = colorTransaccion;
+    li.querySelector('.cat-transaccion').style.color = colorTransc;
+    li.querySelector('.importe').style.color = colorCat;
+
     return li;
 }

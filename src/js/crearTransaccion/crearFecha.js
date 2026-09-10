@@ -1,24 +1,26 @@
-import { pasarMesATexto } from "../../barrel.js";
+export function InyectarFechaCreada(fecha, datos, fechaParse){
+    const listado_fechas = document.querySelector('.listado-fechas');
 
-export function crearFecha(nuevaTransaccion, hoy){
-    const dd = hoy.getDate();
-    const mes = hoy.getMonth();
-    const aa = hoy.getFullYear();
-    let diaMes = dd + ' de ' + pasarMesATexto(mes);
+    if(!fecha){
+        const fechaCreada = CrearFecha(datos, fechaParse);
+        listado_fechas.appendChild(fechaCreada);
+        return fechaCreada;
+    }
 
+    return false;
+}
+
+function CrearFecha(datos, nuevaFecha){
     const li = document.createElement('li');
     li.className = 'fecha-transacciones';
-
     li.innerHTML = `
-        <h4>${diaMes}</h4>
+        <h4>${nuevaFecha}</h4>
         <ul class="mov-en-fecha"></ul>
         <div class="divider"></div>
     `;
 
-    li.querySelector('.mov-en-fecha').appendChild(nuevaTransaccion);
-    li.dataset.dia = String(dd);
-    li.dataset.mes = String(mes);
-    li.dataset.anio = String(aa);
-
+    li.dataset.dia = String(datos.dia);
+    li.dataset.mes = String(datos.mes);
+    li.dataset.anio = String(datos.anio);
     return li;
 }

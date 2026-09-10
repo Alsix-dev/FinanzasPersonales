@@ -141,3 +141,12 @@ V ----------------> 50) Hacer un reset de formularios.
 51) Agregar un "Seleccionar categoria" como valor inicial.
 
 V ----------------> 52) Revisar que al achicar en el responsive, el importe desaparece de la lista. Puede haya sacado una clase u algo. Revisar.
+
+V ----------------> 53) Optimizar y separar logica en /crearTransacciones
+
+54) Optimizar BuscarFecha.
+
+V ----------------> 55) Probar el archivo test.js (esta fuera del programa) para crear los nuevos .js de crearTransaccion y verificar
+	que cumpla su funcion sin causar fallos (Debe seguir haciendo lo mismo que ya hace el sistema)
+
+56) Separar la estructura en componentes.

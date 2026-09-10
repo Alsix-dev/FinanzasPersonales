@@ -1,16 +1,30 @@
 import { pasarMesATexto } from "../../barrel.js";
 
-const CrearFecha = () => {
-    const datos = new Date();
-    return {
-        dia: datos.getDate(),
-        mes: datos.getMonth(),
-        anio: datos.getFullYear()
-    }
-}
-
 const FormatoFecha = (dia, mes) => {
     return `${dia} de ${pasarMesATexto(mes)}`
+}
+
+const FormatoHora = (min, hora) => {
+    return `${hora}:${min}`;
+}
+
+const CrearFecha = () => {
+    const fecha = new Date();
+    const datos = {
+        min: fecha.getMinutes(),
+        hora: fecha.getHours(),
+        dia: fecha.getDate(),
+        mes: fecha.getMonth(),
+        anio: fecha.getFullYear(),
+    }
+
+    return {
+        datos, 
+        mods: {
+            fechaParse: FormatoFecha(datos.dia, datos.mes),
+            horaParse: FormatoHora(datos.min, datos.hora)
+        }
+    }
 }
 
 const buscarFecha = (nuevaFecha, listado) => {
@@ -21,16 +35,21 @@ const buscarFecha = (nuevaFecha, listado) => {
 }
 
 function ExisteFecha(){
-    const { dia, mes, anio } = CrearFecha();
-    const nuevaFecha = FormatoFecha(dia, mes);
+    const fechaCreada  = CrearFecha();
+    const { datos, mods } = fechaCreada;
     
     const listado = document.querySelectorAll(`
-        .fecha-transacciones[data-mes="${mes}"][data-anio="${anio}"]
+        .fecha-transacciones[data-mes="${datos.mes}"][data-anio="${datos.anio}"]
     `);
 
-    const fecha = buscarFecha(nuevaFecha, listado);
+    const fecha = buscarFecha(mods.fechaParse, listado);
     
-    return fecha;
+    return {
+        fecha,
+        datos,
+        fechaParse: mods.fechaParse,
+        horaParse: mods.horaParse
+    };
 }
 
 export {
