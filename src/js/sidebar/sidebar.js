@@ -1,18 +1,6 @@
-import { 
-    convertirPrecioNumerico,
-} from "../../barrel.js";
+import { convertirPrecioNumerico } from "../genericas.js";
 
-/* ==========================================================================
-    SIDEBAR
-   ========================================================================== 
-   • [!] CAPAS:
-        . FUNCIONES - DESHABILITAR
-        . FUNCIONES - HABILITAR
-        . FUNCIONES
-        . EVENTOS
-   ========================================================================== */
 const show_sidebar_main = document.getElementById('show-sidebar-main');
-
 
 /* ==========================================================================
     FUNCIONES - DESHABILITAR

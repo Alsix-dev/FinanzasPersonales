@@ -2,13 +2,13 @@ import {
     ObtenerColorTransaccion,
     ObtenerColorCategoria,
     ObtenerIconoCategoria
-} from "../../barrel.js";
+} from "../../js/categorias/barrel_categorias.js";
 
 export function CrearTransaccion(inputs, horario){
     const { 
-        leerName: name, 
+        leerName: name,
         leerTransc: transaccion,
-        leerCat: categoria, 
+        leerCat: categoria,
         leerImp: importe
     } = inputs;
 

@@ -1,11 +1,9 @@
-import { 
-    ExisteFecha,
-    actualizarEstadisticas,
-    actualizarCarteles,
-    DatosFormulario,
-    InyectarFechaCreada,
-    CrearTransaccion
-} from "../../barrel.js";
+import { CrearTransaccion } from '../../componentes/crearTransaccion/barrel_ctransc.js';
+import { InyectarFechaCreada } from '../../componentes/crearFecha/barrel_cFecha.js';
+import { actualizarCarteles } from '../carteles/barrel_carteles.js';
+import { actualizarEstadisticas } from '../sidebar/barrel_sidebar.js';
+import { ExisteFecha } from '../fecha/barrel_fecha.js';
+import { DatosFormulario } from '../formularios/barrel_form.js';
 
 function ContenedorMovimientos(){
     const transacciones = document.querySelector('.mov-transacciones');
@@ -18,7 +16,7 @@ function ContenedorMovimientos(){
     return ul;
 }
 
-function ControlarMovimientos(form){
+export function ControlarMovimientos(form){
     ContenedorMovimientos();
     const { fecha, datos, fechaParse, horaParse } = ExisteFecha();
     const inputs = DatosFormulario(form);
@@ -35,8 +33,4 @@ function ControlarMovimientos(form){
     mov_en_fecha.appendChild(transcCreada);
     actualizarEstadisticas(inputs.leerTransc, inputs.leerImp);
     actualizarCarteles(inputs.leerTransc, inputs.leerImp);
-}
-
-export {
-    ControlarMovimientos
 }

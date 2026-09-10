@@ -2,7 +2,7 @@ import {
     expandirSidebar,
     comprimirSidebar,
     recuperarEstado
-} from "../js/sidebar/sidebar.js"
+} from "../sidebar/barrel_sidebar.js";
 
 const header = document.querySelector('header');
 

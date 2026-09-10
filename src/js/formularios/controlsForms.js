@@ -1,8 +1,9 @@
+import { ControlarMovimientos } from '../movimientos/barrel_movimientos.js';
+
 import { 
-    ControlarMovimientos, 
     DesplegarCategorias,
     LimpiarCategoria
-} from "../../barrel.js";
+} from '../categorias/barrel_categorias.js';
 
 const overlay = document.getElementById('overlays');
 

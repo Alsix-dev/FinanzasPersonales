@@ -149,7 +149,14 @@ V ----------------> 53) Optimizar y separar logica en /crearTransacciones
 V ----------------> 55) Probar el archivo test.js (esta fuera del programa) para crear los nuevos .js de crearTransaccion y verificar
 	que cumpla su funcion sin causar fallos (Debe seguir haciendo lo mismo que ya hace el sistema)
 
-56) Separar la estructura en componentes.
+V ----------------> 56) Separar la estructura en componentes y hacer una mejor estructura.
 
 
 V ----------------> 57) El color de importe y categoria estan invertidos.
+
+58) Capitalizar los movimientos ingresados.
+
+59) Optimizar y separar logica en menu.js
+60) Optimizar y separar logica en /sidebar
+61) Verificar si en index.js hace falta importar todo o solo una unica linea, ya que todo podria estar importado entre
+		archivos

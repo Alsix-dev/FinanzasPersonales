@@ -1,4 +1,4 @@
-import { pasarMesATexto } from "../../barrel.js";
+import { pasarMesATexto } from "./barrel_fecha.js";
 
 const FormatoFecha = (dia, mes) => {
     return `${dia} de ${pasarMesATexto(mes)}`
