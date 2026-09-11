@@ -156,7 +156,7 @@ V ----------------> 57) El color de importe y categoria estan invertidos.
 
 58) Capitalizar los movimientos ingresados.
 
-59) Optimizar y separar logica en menu.js
+V ----------------> 59) Optimizar y separar logica en menu.js
 60) Optimizar y separar logica en /sidebar
 61) Verificar si en index.js hace falta importar todo o solo una unica linea, ya que todo podria estar importado entre
 		archivos
