@@ -4,6 +4,8 @@ import {
     ObtenerIconoCategoria
 } from "../../js/categorias/barrel_categorias.js";
 
+import { capitalizarTexto } from "../../../src/js/genericas.js";
+
 export function CrearTransaccion(inputs, horario){
     const { 
         leerName: name,
@@ -20,7 +22,7 @@ export function CrearTransaccion(inputs, horario){
     li.className = 'isTransaccion';
 
     li.innerHTML = `
-        <span class="text-Listado ttl-transaccion">${name}</span>
+        <span class="text-Listado ttl-transaccion">${capitalizarTexto(name)}</span>
         <div class="cat-transaccion">
             <span class="material-symbols-outlined">${icono}</span>
             <span class="text-Listado">${categoria}</span>
