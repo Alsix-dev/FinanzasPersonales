@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finanzas personales</title>
 
-    <link rel="stylesheet" href="../src/css/app.css">
-    <link rel="stylesheet" href="../src/css/header.css">
-    <link rel="stylesheet" href="../src/css/menu.css">
-    <link rel="stylesheet" href="../src/css/main.css">
-    <link rel="stylesheet" href="../src/css/modals.css">
+    <link rel="stylesheet" href="../styles/app.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/modals.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
@@ -152,13 +152,13 @@
                                         <span class="material-symbols-outlined">search</span>
                                         <input type="text" class="text-Listado" id="src-mov-input" placeholder="Buscar">
                                     </label>
-                                    <button class="btn-filtrar">
+                                    <button class="btn-filtrar" data-boton-modal="filtrar">
                                         <span class="text-Listado">Filtrar</span>
                                         <span class="material-symbols-outlined">filter_alt</span>
                                     </button>
                                 </div>
 
-                                <button id="btn-Add">
+                                <button id="btn-Add" data-boton-modal="transaccion">
                                     <span class="material-symbols-outlined">add</span>
                                     <span class="text-Listado">Añadir transaccion</span>
                                 </button>
@@ -166,8 +166,8 @@
                         </div>
                         
                         <div class="mov-transacciones">
-                            <ul class="listado-fechas">
-                            </ul>
+                            <!-- <ul class="listado-fechas">
+                            </ul> -->
                         </div>
 
                         <div class="mov-expandir">
@@ -263,7 +263,7 @@
                             <div class="divider"></div>
 
                             <div class="cat-interaccion">
-                                <button class="btn-filtrar">
+                                <button class="btn-filtrar" data-boton-modal="filtrar">
                                     <span class="text-Listado">Filtrar</span>
                                     <span class="material-symbols-outlined">filter_alt</span>
                                 </button>
@@ -326,7 +326,7 @@
                             <div class="divider"></div>
 
                             <div class="cat-interaccion">
-                                <button class="btn-filtrar">
+                                <button class="btn-filtrar" data-boton-modal="filtrar">
                                     <span class="text-Listado">Filtrar</span>
                                     <span class="material-symbols-outlined">filter_alt</span>
                                 </button>
@@ -342,7 +342,7 @@
                 <footer>Hola</footer>
 
                 <section id="overlays" class="">
-                    <div class="modal-add-transaccion">
+                    <div class="modal modal-add-transaccion" data-tipo-modal="transaccion">
                         <div class="cabezal-transaccion">
                             <h1>Agregar nueva transaccion</h1>
                             <button class="btn-closet">
@@ -350,33 +350,36 @@
                             </button>
                         </div>
 
-                        <form action="#" id="f-añadir-transaccion">
+                        <form action="#" id="f-añadir-transaccion" data-form="transaccion">
                             <div class="divider"></div>
                             <div class="centro-transaccion">
                                 <div class="nombre-Transaccion">
                                     <h2>Nombre transaccion</h2>
                                     <input 
-                                        type="text" id="i-name-transaccion"
+                                        type="text" 
+                                        name="nombre-transaccion"
+                                        id="i-name-transaccion"
                                         placeholder="Ingresar nombre de transaccion">
                                 </div>
 
-                                <div class="tipo-transaccion">
+                                <div>
                                     <h2>Tipo transaccion</h2>
-                                    <select id="tipo-transaccion">
+                                    <select name="tipo-transaccion">
                                         <option value="ingreso">Ingreso</option>
                                         <option value="egreso">Egreso</option>
                                     </select>
                                 </div>
 
-                                <div class="tipo-categoria">
+                                <div>
                                     <h2>Categoria</h2>
-                                    <select id="tipo-categoria"></select>
+                                    <select name="tipo-categoria"></select>
                                 </div>
 
                                 <div class="importe">
                                     <h2>Importe</h2>
                                     <input 
                                         type="number"
+                                        name="importe-transaccion"
                                         id="i-importe-transaccion"
                                         placeholder="Ingresa un importe">
                                 </div>
@@ -388,7 +391,7 @@
                         </form>
                     </div>
 
-                    <div class="modal-filtrar">
+                    <div class="modal modal-filtrar" data-tipo-modal="filtrar">
                         <div class="cabezal-filtrar">
                             <h1>Filtrar</h1>
                             <button class="btn-closet">
@@ -396,26 +399,27 @@
                             </button>
                         </div>
 
-                        <form action="#" class="centro-filtrar" id="f-filtrar">
+                        <form action="#" class="centro-filtrar" id="f-filtrar" data-form="filtrar">
                             <div class="divider"></div>
 
-                            <div class="tipo-transaccion">
+                            <div>
                                 <h2>Tipo transaccion</h2>
-                                <select id="i-filtrar-transaccion">
+                                <select name="tipo-transaccion">
                                     <option value="ingreso">Ingreso</option>
                                     <option value="egreso">Egreso</option>
                                 </select>
                             </div>
 
-                            <div class="tipo-categoria">
+                            <div>
                                 <h2>Tipo categoria</h2>
-                                <select id="i-filtrar-categoria"></select>
+                                <select name="tipo-categoria"></select>
                             </div>
 
                             <div class="filtrar_fecha">
                                 <h2>Fecha</h2>
-                                <input 
+                                <input
                                     type="date"
+                                    name="fecha-transacciones"
                                     id="i-filtrar-importe">
                             </div>
 
@@ -429,17 +433,6 @@
         </div>
     </div>
 
-    <script type="module" src="../src/js/menu.js"></script>
-
-    <script type="module" src="../src/js/sidebar/sidebar.js"></script>
-    <script type="module" src="../src/js/sidebar/gestionDatosSidebar.js"></script>
-
-    <script type="module" src="../src/js/crearTransaccion/gestionTransaccion.js"></script>
-    <script type="module" src="../src/js/crearTransaccion/generarTransaccion.js"></script>
-
-    <script type="module" src="../src/js/carteles/carteles.js"></script>
-    <script type="module" src="../src/js/carteles/pasarMes.js"></script>
-
-    <script type="module" src="../src/js/Filtraciones/filtrarTransacciones.js"></script>
+    <script type="module" src="../index.js"></script>
 </body>
 </html>

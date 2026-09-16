@@ -1,15 +1,4 @@
-import { pasarMesATexto } from "../genericas.js";
-
-/* ==========================================================================
-   GESTION TRANSACCION
-   ==========================================================================
-   • [!] CAPAS:
-        • SELECT - TIPO
-        • LEER - FORMULARIO
-        • VERIFICAR - DATOS
-        • BUSCAR - DATOS
-   ========================================================================== */
-const tipoCatTransc = {
+const categorias = {
     egreso: {
         color: "#FF0000",
         categoria: [
@@ -291,94 +280,51 @@ const tipoCatTransc = {
             }
         ]
     }
-}; 
+};
 
-/* ==========================================================================
-   SELECT - TIPO
-   ========================================================================== */
-const tipo = document.getElementById("tipo-transaccion");
-const categoria = document.getElementById("tipo-categoria");
+const ObtenerCategoria = (transaccion, categoria) => {
+    return categorias[transaccion].categoria.find(cat => cat.value === categoria);
+}
 
-function esTipoCategoria(){
+const ObtenerColorTransaccion = (transaccion) => {
+    return categorias[transaccion].color;
+}
+
+const ObtenerColorCategoria = (transaccion, categoria) => {
+    const cat = ObtenerCategoria(transaccion, categoria);
+    return cat.color;
+}
+
+const ObtenerIconoCategoria = (transaccion, categoria) => {
+    const cat = ObtenerCategoria(transaccion, categoria);
+    return cat.icono;
+}
+
+function DesplegarCategorias(categoria, transaccion){
     categoria.innerHTML = "";
-    tipoCatTransc[tipo.value].categoria.forEach(cat => {
-        const nuevaOpcion = document.createElement('option');
-        nuevaOpcion.value = cat.value;
-        nuevaOpcion.textContent = cat.categoria;
-        categoria.appendChild(nuevaOpcion);
+    categorias[transaccion].categoria.forEach(cat => {
+        const option = document.createElement('option');
+        option.value = cat.value;
+        option.textContent = cat.categoria;
+        categoria.appendChild(option);
     });
 }
 
-tipo.addEventListener("change", esTipoCategoria);
-esTipoCategoria();
-
-/* ==========================================================================
-   LEER - FORMULARIO
-   ========================================================================== */
-const formConfTransccion = {
-    obtenerFormTransc: document.getElementById('f-añadir-transaccion'),
-    obtenerNameTransc: document.getElementById('i-name-transaccion'),
-    obtenerTipoTransc: document.getElementById("tipo-transaccion"),
-    obtenerTipoCatTransc: document.getElementById("tipo-categoria"),
-    obtenerImporteTransc: document.getElementById("i-importe-transaccion")
-}
-
-const leerFormTransaccion = () => {
-    return {
-        leerNameTransc: formConfTransccion.obtenerNameTransc.value.trim(),
-        leerTipoTransc: formConfTransccion.obtenerTipoTransc.value,
-        leerTipoCatTransc: formConfTransccion.obtenerTipoCatTransc.value,
-        leerImporteTransc: formConfTransccion.obtenerImporteTransc.value
-    }
-}
-
-/* ==========================================================================
-   VERIFICAR - DATOS
-   ========================================================================== */
-const verificarExisteDia = (hoy) => {
-    const diaActual = hoy.getDate();
-    const mesActual = hoy.getMonth() + 1;
-    const anio = hoy.getFullYear();
-    let fechaActual = diaActual + ' de ' + pasarMesATexto(mesActual);
-
-    const listado = document.querySelectorAll(`
-        .fecha-transacciones[data-mes="${mesActual}"][data-anio="${anio}"]
-    `);
-    const flag = {
-        siExiste: false,
-        fecha: null
-    };
-
-    [...listado].find(fecha => { 
-        let diaEnLista = fecha.querySelector('h4').textContent;
-        if(fechaActual === diaEnLista){
-            flag.siExiste = true;
-            flag.fecha = fecha;
-            return true;
-        }
-
-        return false;
-    });
-
-    return flag;
-}
-
-/* ==========================================================================
-   BUSCAR - DATOS
-   ========================================================================== */
-const buscarCategoria = (transaccion, categoria) => {
-    return tipoCatTransc[transaccion].categoria.find(cat => cat.value === categoria);
-}
-
-const buscarColorTransaccion = (transaccion) => {
-    return tipoCatTransc[transaccion].color;
+function LimpiarCategoria(categoria){
+    if(!categoria) return;
+    categoria.innerHTML = "";
+    const option = document.createElement('option');
+    option.value = " ";
+    option.textContent = "Selecciona una categoria";
+    categoria.appendChild(option);
 }
 
 export {
-    buscarColorTransaccion,
-    buscarCategoria,
-    verificarExisteDia,
-    leerFormTransaccion,
-    formConfTransccion,
-    tipoCatTransc
+    categorias,
+    LimpiarCategoria,
+    ObtenerCategoria,
+    ObtenerColorTransaccion,
+    ObtenerColorCategoria,
+    ObtenerIconoCategoria,
+    DesplegarCategorias
 }
