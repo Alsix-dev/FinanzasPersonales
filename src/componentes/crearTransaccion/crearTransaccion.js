@@ -18,11 +18,13 @@ export function CrearTransaccion(inputs, horario){
     const colorCat = ObtenerColorCategoria(transaccion, categoria);
     const icono = ObtenerIconoCategoria(transaccion, categoria);
 
+    let nameCap = capitalizarTexto(name);
+
     const li = document.createElement('li');
     li.className = 'isTransaccion';
 
     li.innerHTML = `
-        <span class="text-Listado ttl-transaccion">${capitalizarTexto(name)}</span>
+        <span class="text-Listado ttl-transaccion">${nameCap}</span>
         <div class="cat-transaccion">
             <span class="material-symbols-outlined">${icono}</span>
             <span class="text-Listado">${categoria}</span>

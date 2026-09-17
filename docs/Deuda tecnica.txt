@@ -130,7 +130,7 @@ V ----------------> 46) Añadir transaccion no abre ahora.
 
 V ----------------> 47) El abrir y cerrar overlay + modal: Crear algo que simplifique esto y evite codigo repetitivo.
 
-48) A futuro hacer un index.js donde haga los imports y barrel.js de cada carpeta para no tener
+V ----------------> 48) A futuro hacer un index.js donde haga los imports y barrel.js de cada carpeta para no tener
 	un solo archivo que haga todo esto.
 
 49) En estadisticas, en lugar de comprimir los numeros. Mejor dejar el icono y cuando se pase el mouse por encima
@@ -144,7 +144,7 @@ V ----------------> 52) Revisar que al achicar en el responsive, el importe desa
 
 V ----------------> 53) Optimizar y separar logica en /crearTransacciones
 
-54) Optimizar BuscarFecha.
+V ----------------> 54) Optimizar BuscarFecha.
 
 V ----------------> 55) Probar el archivo test.js (esta fuera del programa) para crear los nuevos .js de crearTransaccion y verificar
 	que cumpla su funcion sin causar fallos (Debe seguir haciendo lo mismo que ya hace el sistema)
@@ -159,3 +159,6 @@ V ----------------> 58) Capitalizar los movimientos ingresados.
 V ----------------> 59) Optimizar y separar logica en menu.js
 
 V ----------------> 60) Optimizar y separar logica en /sidebar
+
+61) Rediseñar y retocar correctamente el uso de clases y ids. No hacer una clase o id por todo, hay
+	otros atributos. Y podemos gestionar un div que sea especifico y luego escalar con eventos.

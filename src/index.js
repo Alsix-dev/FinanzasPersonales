@@ -13,3 +13,6 @@ import "./js/menu/menu.js";
 
     // IMPORTS DE CARTELES
 import "./js/carteles/pasarMes.js";
+
+    // IMPORTS DE FILTROS
+import "./js/filtros/filtrarInput.js";
