@@ -160,3 +160,94 @@
     border-radius: var(--border-Radius-Items);
     padding: 0.5rem;
 }
+
+/* ==========================================================================
+   MODAL - MOVIMIENTOS
+   ========================================================================== */
+
+#overlays .modal-movimientos {
+    display: none;
+}
+
+#overlays .modal-movimientos.active-modal {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: white;
+    border: none;
+    border-radius: var(--border-Radius-Items);
+}
+
+.modal-movimientos .main-movimientos{
+    width: 100%;
+}
+
+.modal-movimientos .mov-interaccion {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 15px;
+}
+
+#overlays .main-movimientos .mov-interaccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+#overlays .mov-interaccion .btn-closet {
+    align-items: flex-start;
+}
+
+#overlays .mov-transacciones .listado-fechas {
+    min-height: 0;
+    max-height: 400px;
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body:has(section.active-overlay) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   MODAL - MEDIAS
+   ========================================================================== */
+
+@container body-first (min-width: 480px) and (max-width: 767px) {
+    .modal-movimientos .main-movimientos {
+        padding: 8px 24px;
+    }
+}
+
+@container body-first (min-width: 768px) and (max-width: 1023px) {
+    .modal-movimientos .main-movimientos {
+        padding: 8px 24px;
+    }
+
+    #overlays .mov-sup-Buscar {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+    }
+}
+
+@container body-first (min-width: 1023px){
+    .modal-movimientos .main-movimientos {
+        min-width: 800px;
+        align-self: flex-start;
+        padding: 8px 30px 12px 30px;
+    }
+
+    #overlays .mov-sup-Buscar {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+    }    
+}

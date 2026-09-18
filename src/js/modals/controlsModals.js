@@ -1,5 +1,13 @@
 const overlays = document.getElementById('overlays');
 
+function ExpandirMovimientos(contenedor, activador){
+    const tituloPoner = activador.closest('.contenedor_mov')
+        .querySelector('.titulo-expandirMov')
+        .textContent;
+    contenedor.querySelector('.titulo-modal-expandir')
+        .textContent = tituloPoner;
+}
+
 const abrirMenu = (modal) => {
     overlays.classList.add('active-overlay');
     modal.classList.add('active-modal');
@@ -17,10 +25,14 @@ const abrirMenu = (modal) => {
 document.addEventListener('click', (event) => {
     const boton = event.target.closest('[data-boton-modal]');
     if(!boton) return;
+
     const tipoModal = boton.dataset.botonModal;
     const modal = overlays.querySelector(`[data-tipo-modal=${tipoModal}]`);
     if(!modal) return;
     abrirMenu(modal);
+
+    if(!modal.dataset.tipoModal === "movimientos") return;
+    ExpandirMovimientos(modal, boton);
 });
 
 const cerrarMenu = (modal) => {

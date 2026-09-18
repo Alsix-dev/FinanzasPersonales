@@ -30,7 +30,7 @@ export function ControlarMovimientos(form){
         mov_en_fecha = fecha.querySelector('.mov-en-fecha');
     }
 
-    mov_en_fecha.appendChild(transcCreada);
+    mov_en_fecha.prepend(transcCreada);
     actualizarEstadisticas(inputs.leerTransc, inputs.leerImp);
     actualizarCarteles(inputs.leerTransc, inputs.leerImp);
 }

@@ -5,7 +5,7 @@ export function InyectarFechaCreada(fecha, datos, fechaParse){
 
     if(!fecha){
         const fechaCreada = CrearFecha(datos, fechaParse);
-        listado_fechas.appendChild(fechaCreada);
+        listado_fechas.prepend(fechaCreada);
         return fechaCreada;
     }
 

@@ -17,10 +17,10 @@ V ----------------> 110) Hacer que al apretar el boton de estadisticas, se compr
 			 solamente los numeros. Ver si poner iconos que lo representen
 			 Y esto debe dar mas espacio al main.
 
-11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro, los movimientos en general.
+V ----------------> 11) Hacer que el boton 'expandir movimientos' muestre, segun su cuadro, los movimientos en general.
 	Crear un modal para esto.
 
-12) Mejorar el diseño de ser posible o efectos.
+V ----------------> 12) Mejorar el diseño de ser posible o efectos.
 V ----------------> 13) Revisar que al agregar un titulo muuy largo en lista-movimientos
 			este empuja en algun momento, estirando incluso toda la pagina
 			ensanchando al main .mov-transacciones
@@ -42,7 +42,7 @@ V ----------------> 16) En el tamaño de 768 a 1023, al abrir el menu, debe abri
 	solo visuales al achicar el menu.
 
 V ----------------> 18) Hacer el menu horizontal antes de habilitar el desplazamiento de sidebar cuando se abre/cierra
-	No hace falta usar js, puede hacerse con solo css.
+			No hace falta usar js, puede hacerse con solo css.
 
 V ----------------> 19) Quitar el margin-bottom de header y ponerlo en main como top.
 			Quitar el gap de filas de contenedor al ser mayor de 767px.
@@ -70,7 +70,7 @@ V ----------------> 26) Gestionar que verifique si existe esos dias solo en ese 
 
 V ----------------> 27) Fusionar la rama de newUI con la main, ya los arreglos de UI fueron finalizados.
 
-28) Optimizar codigo de crear transaccion y crear fecha
+V ----------------> 28) Optimizar codigo de crear transaccion y crear fecha
 
 V ----------------> 29) Colores a ingreso (verde) y egreso (rojo)
 
@@ -103,8 +103,8 @@ V ----------------> 37) Cuando el sidebar esta cerrado y se agrega una transacci
 
 38) En el menu o en alguna parte, agregar el boton para agregar presupuesto.
 
-39) El buscador debe buscar por nombre, categoria, fecha. Y se puede hacer una combinacion
-	Por ej: "mercado IAN 7 agosto". Inicialmente hacer por nombre.
+X -------Basta solo sea por titulo---------> 39) El buscador debe buscar por nombre, categoria, fecha. Y se puede hacer una combinacion
+							Por ej: "mercado IAN 7 agosto". Inicialmente hacer por nombre.
 
 40) El boton filtrar en movimientos recientes debe filtrar por categoria, por tipo de transaccion y por mes.
 	Ver si en lugar de mes, poner el año, es decir dd/mm/aa, si no se pone aa que ponga
@@ -120,7 +120,7 @@ V ----------------> 37) Cuando el sidebar esta cerrado y se agrega una transacci
 V ----------------> 42) Los botones de los carteles deben pasar al mes siguiente y anterior, segun corresponda.
 			Solo dentro de ese mismo año.
 
-43) Completar filtrar, falta gestionar datos para poder filtrar los elementos con esos datos.
+V ----------------> 43) Completar filtrar, falta gestionar datos para poder filtrar los elementos con esos datos.
 
 V ----------------> 44) La funcion 'esTipoCategoria' en formFiltro.js y formCrear.js hacer la funcion generica.
 
@@ -131,7 +131,7 @@ V ----------------> 46) Añadir transaccion no abre ahora.
 V ----------------> 47) El abrir y cerrar overlay + modal: Crear algo que simplifique esto y evite codigo repetitivo.
 
 V ----------------> 48) A futuro hacer un index.js donde haga los imports y barrel.js de cada carpeta para no tener
-	un solo archivo que haga todo esto.
+			un solo archivo que haga todo esto.
 
 49) En estadisticas, en lugar de comprimir los numeros. Mejor dejar el icono y cuando se pase el mouse por encima
 	del icono muestre un cartel indicando nombre + importe.
@@ -147,10 +147,9 @@ V ----------------> 53) Optimizar y separar logica en /crearTransacciones
 V ----------------> 54) Optimizar BuscarFecha.
 
 V ----------------> 55) Probar el archivo test.js (esta fuera del programa) para crear los nuevos .js de crearTransaccion y verificar
-	que cumpla su funcion sin causar fallos (Debe seguir haciendo lo mismo que ya hace el sistema)
+			que cumpla su funcion sin causar fallos (Debe seguir haciendo lo mismo que ya hace el sistema)
 
 V ----------------> 56) Separar la estructura en componentes y hacer una mejor estructura.
-
 
 V ----------------> 57) El color de importe y categoria estan invertidos.
 
@@ -162,3 +161,12 @@ V ----------------> 60) Optimizar y separar logica en /sidebar
 
 61) Rediseñar y retocar correctamente el uso de clases y ids. No hacer una clase o id por todo, hay
 	otros atributos. Y podemos gestionar un div que sea especifico y luego escalar con eventos.
+
+62) Hacer el control de ingresos/egresos por categoria. Ya tenemos que se gestiona el titulo, ahora falta
+	que se gestione los datos de cada tipo. Si es movimientos entonces muestra las transacciones
+	pero si es ingresos  por categorias muestra la grafica + datos  y lo mismo con egresos.
+	Hacerlo en un archivo aparte para no mezclar con el manejo de modals.
+
+63) Hacer la grafica y asignar el acumulativo de gastos por categoria y sacar el porcentaje.
+
+64) Darle funcionalidad al boton filtrar.

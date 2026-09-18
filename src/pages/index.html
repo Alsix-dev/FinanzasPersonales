@@ -143,14 +143,14 @@
                         </div>
                     </div>
 
-                    <div class="main-movimientos">
+                    <div class="main-movimientos contenedor_mov">
                         <div class="mov-interaccion">
-                            <h2>Movimientos recientes</h2>
+                            <h2 class="titulo-expandirMov">Movimientos recientes</h2>
                             <div class="mov-sup-Controles">
                                 <div class="mov-sup-Buscar">
                                     <label>
                                         <span class="material-symbols-outlined">search</span>
-                                        <input type="text" class="text-Listado" id="src-mov-input" placeholder="Buscar">
+                                        <input type="text" class="text-Listado search-transac" id="src-mov-input" placeholder="Buscar">
                                     </label>
                                     <button class="btn-filtrar" data-boton-modal="filtrar">
                                         <span class="text-Listado">Filtrar</span>
@@ -166,10 +166,591 @@
                         </div>
                         
                         <div class="mov-transacciones">
+                            <ul class="listado-fechas">
+                                <li class="fecha-transacciones" data-dia="17" data-mes="8" data-anio="2026">
+                                    <h4>17 de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Supermercado</span>
+                                            <div class="cat-transaccion" style="color: #4CAF50;">
+                                                <span class="material-symbols-outlined">shopping_cart</span>
+                                                <span class="text-Listado">Alimentos</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$25.500</span>
+                                                <span class="text-Listado isHorario">10:30</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Sueldo</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">payments</span>
+                                                <span class="text-Listado">Trabajo</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$850.000</span>
+                                                <span class="text-Listado isHorario">12:00</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Nafta</span>
+                                            <div class="cat-transaccion" style="color: #FF9800;">
+                                                <span class="material-symbols-outlined">local_gas_station</span>
+                                                <span class="text-Listado">Transporte</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$18.000</span>
+                                                <span class="text-Listado isHorario">15:45</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Netflix</span>
+                                            <div class="cat-transaccion" style="color: #9C27B0;">
+                                                <span class="material-symbols-outlined">movie</span>
+                                                <span class="text-Listado">Entretenimiento</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$12.000</span>
+                                                <span class="text-Listado isHorario">21:10</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+
+                                <li class="fecha-transacciones" data-dia="16" data-mes="8" data-anio="2026">
+                                    <h4>16 de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Almuerzo</span>
+                                            <div class="cat-transaccion" style="color: #4CAF50;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$8.500</span>
+                                                <span class="text-Listado isHorario">13:20</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Transferencia recibida</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">account_balance</span>
+                                                <span class="text-Listado">Ingresos</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$120.000</span>
+                                                <span class="text-Listado isHorario">14:05</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Remis</span>
+                                            <div class="cat-transaccion" style="color: #FF9800;">
+                                                <span class="material-symbols-outlined">directions_car</span>
+                                                <span class="text-Listado">Transporte</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$7.200</span>
+                                                <span class="text-Listado isHorario">18:30</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Farmacia</span>
+                                            <div class="cat-transaccion" style="color: #E91E63;">
+                                                <span class="material-symbols-outlined">local_pharmacy</span>
+                                                <span class="text-Listado">Salud</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$15.800</span>
+                                                <span class="text-Listado isHorario">19:15</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+
+                                <li class="fecha-transacciones" data-dia="15" data-mes="8" data-anio="2026">
+                                    <h4>15 de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Café</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">coffee</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$4.500</span>
+                                                <span class="text-Listado isHorario">08:15</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Freelance</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">work</span>
+                                                <span class="text-Listado">Trabajo</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$95.000</span>
+                                                <span class="text-Listado isHorario">11:40</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Internet</span>
+                                            <div class="cat-transaccion" style="color: #3F51B5;">
+                                                <span class="material-symbols-outlined">wifi</span>
+                                                <span class="text-Listado">Servicios</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$22.000</span>
+                                                <span class="text-Listado isHorario">16:00</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Videojuego</span>
+                                            <div class="cat-transaccion" style="color: #9C27B0;">
+                                                <span class="material-symbols-outlined">sports_esports</span>
+                                                <span class="text-Listado">Entretenimiento</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$9.500</span>
+                                                <span class="text-Listado isHorario">22:30</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+
+                                <li class="fecha-transacciones" data-dia="14" data-mes="8" data-anio="2026">
+                                    <h4>14 de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Librería</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">menu_book</span>
+                                                <span class="text-Listado">Educación</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$11.500</span>
+                                                <span class="text-Listado isHorario">09:30</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Venta de monitor</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">sell</span>
+                                                <span class="text-Listado">Ventas</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$180.000</span>
+                                                <span class="text-Listado isHorario">12:15</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Supermercado</span>
+                                            <div class="cat-transaccion" style="color: #4CAF50;">
+                                                <span class="material-symbols-outlined">shopping_cart</span>
+                                                <span class="text-Listado">Alimentos</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$31.200</span>
+                                                <span class="text-Listado isHorario">17:20</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Luz</span>
+                                            <div class="cat-transaccion" style="color: #FFC107;">
+                                                <span class="material-symbols-outlined">lightbulb</span>
+                                                <span class="text-Listado">Servicios</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$19.700</span>
+                                                <span class="text-Listado isHorario">20:00</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+
+                                <li class="fecha-transacciones" data-dia="13" data-mes="8" data-anio="2026">
+                                    <h4>13 de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                <span class="text-Listado isHorario">08:45</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">payments</span>
+                                                <span class="text-Listado">Trabajo</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                <span class="text-Listado isHorario">10:00</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                            <div class="cat-transaccion" style="color: #FF9800;">
+                                                <span class="material-symbols-outlined">directions_bus</span>
+                                                <span class="text-Listado">Transporte</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                <span class="text-Listado isHorario">14:25</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Cena</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                <span class="text-Listado isHorario">21:00</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+
+                                <li class="fecha-transacciones" data-dia="12" data-mes="8" data-anio="2026">
+                                    <h4>12de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                <span class="text-Listado isHorario">08:45</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">payments</span>
+                                                <span class="text-Listado">Trabajo</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                <span class="text-Listado isHorario">10:00</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                            <div class="cat-transaccion" style="color: #FF9800;">
+                                                <span class="material-symbols-outlined">directions_bus</span>
+                                                <span class="text-Listado">Transporte</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                <span class="text-Listado isHorario">14:25</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Cena</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                <span class="text-Listado isHorario">21:00</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+
+                                <li class="fecha-transacciones" data-dia="11" data-mes="8" data-anio="2026">
+                                    <h4>11 de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                <span class="text-Listado isHorario">08:45</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">payments</span>
+                                                <span class="text-Listado">Trabajo</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                <span class="text-Listado isHorario">10:00</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                            <div class="cat-transaccion" style="color: #FF9800;">
+                                                <span class="material-symbols-outlined">directions_bus</span>
+                                                <span class="text-Listado">Transporte</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                <span class="text-Listado isHorario">14:25</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Cena</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                <span class="text-Listado isHorario">21:00</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+
+                                <li class="fecha-transacciones" data-dia="10" data-mes="8" data-anio="2026">
+                                    <h4>10 de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                <span class="text-Listado isHorario">08:45</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">payments</span>
+                                                <span class="text-Listado">Trabajo</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                <span class="text-Listado isHorario">10:00</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                            <div class="cat-transaccion" style="color: #FF9800;">
+                                                <span class="material-symbols-outlined">directions_bus</span>
+                                                <span class="text-Listado">Transporte</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                <span class="text-Listado isHorario">14:25</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Cena</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                <span class="text-Listado isHorario">21:00</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+
+                                <li class="fecha-transacciones" data-dia="9" data-mes="8" data-anio="2026">
+                                    <h4>9 de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                <span class="text-Listado isHorario">08:45</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">payments</span>
+                                                <span class="text-Listado">Trabajo</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                <span class="text-Listado isHorario">10:00</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                            <div class="cat-transaccion" style="color: #FF9800;">
+                                                <span class="material-symbols-outlined">directions_bus</span>
+                                                <span class="text-Listado">Transporte</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                <span class="text-Listado isHorario">14:25</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Cena</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                <span class="text-Listado isHorario">21:00</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+
+                                <li class="fecha-transacciones" data-dia="8" data-mes="8" data-anio="2026">
+                                    <h4>8 de septiembre</h4>
+
+                                    <ul class="mov-en-fecha">
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                <span class="text-Listado isHorario">08:45</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                            <div class="cat-transaccion" style="color: #2196F3;">
+                                                <span class="material-symbols-outlined">payments</span>
+                                                <span class="text-Listado">Trabajo</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                <span class="text-Listado isHorario">10:00</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                            <div class="cat-transaccion" style="color: #FF9800;">
+                                                <span class="material-symbols-outlined">directions_bus</span>
+                                                <span class="text-Listado">Transporte</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                <span class="text-Listado isHorario">14:25</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="isTransaccion">
+                                            <span class="text-Listado ttl-transaccion">Cena</span>
+                                            <div class="cat-transaccion" style="color: #795548;">
+                                                <span class="material-symbols-outlined">restaurant</span>
+                                                <span class="text-Listado">Comida</span>
+                                            </div>
+                                            <div class="extras-transaccion">
+                                                <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                <span class="text-Listado isHorario">21:00</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="divider"></div>
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="mov-expandir">
-                            <button class="btn-inf-movimientos">
+                            <button class="btn-inf-movimientos" data-boton-modal="movimientos">
                                 <span class="text-Listado">Expandir movimientos</span>
                                 <span class="material-symbols-outlined">expand_content</span>
                             </button>
@@ -209,9 +790,9 @@
                     </aside>
 
                     <section class="main-categorias">
-                        <div class="cartel-categoria cartel-cat-ingresos">
+                        <div class="contenedor_mov cartel-categoria cartel-cat-ingresos">
                             <div class="cartel-sup-cat">
-                                <h2>Ingresos por categoria</h2>
+                                <h2 class="titulo-expandirMov">Ingresos por categoria</h2>
                                 <span class="text-Normal">en agosto</span>
                             </div>
 
@@ -265,16 +846,16 @@
                                     <span class="text-Listado">Filtrar</span>
                                     <span class="material-symbols-outlined">filter_alt</span>
                                 </button>
-                                <button class="btn-inf-movimientos">
+                                <button class="btn-inf-movimientos" data-boton-modal="movimientos">
                                     <span class="text-Listado">Expandir movimientos</span>
                                     <span class="material-symbols-outlined">expand_content</span>
                                 </button>
                             </div>
                         </div>
 
-                        <div class="cartel-categoria cartel-cat-egresos">
+                        <div class="contenedor_mov cartel-categoria cartel-cat-egresos">
                             <div class="cartel-sup-cat">
-                                <h2>Egresos por categoria</h2>
+                                <h2 class="titulo-expandirMov">Egresos por categoria</h2>
                                 <span class="text-Normal">en agosto</span>
                             </div>
 
@@ -328,7 +909,7 @@
                                     <span class="text-Listado">Filtrar</span>
                                     <span class="material-symbols-outlined">filter_alt</span>
                                 </button>
-                                <button class="btn-inf-movimientos">
+                                <button class="btn-inf-movimientos" data-boton-modal="movimientos">
                                     <span class="text-Listado">Expandir movimientos</span>
                                     <span class="material-symbols-outlined">expand_content</span>
                                 </button>
@@ -339,7 +920,7 @@
 
                 <footer>Hola</footer>
 
-                <section id="overlays" class="">
+                <section id="overlays">
                     <div class="modal modal-add-transaccion" data-tipo-modal="transaccion">
                         <div class="cabezal-transaccion">
                             <h1>Agregar nueva transaccion</h1>
@@ -425,6 +1006,612 @@
                                 <button type="submit" id="i-btn-filtrar">Filtrar</button>
                             </div>
                         </form>
+                    </div>
+
+                    <div class="modal modal-movimientos" data-tipo-modal="movimientos">
+                        <div class="main-movimientos">
+                            <div class="mov-interaccion">
+                                <h1 class="titulo-modal-expandir">Movimientos recientes</h1>
+                                <div class="mov-sup-Controles">
+                                    <div class="mov-sup-Buscar">
+                                        <label>
+                                            <span class="material-symbols-outlined">search</span>
+                                            <input type="text" class="text-Listado search-transac" id="src-mov-input" placeholder="Buscar">
+                                        </label>
+                                        <button class="btn-filtrar" data-boton-modal="filtrar">
+                                            <span class="text-Listado">Filtrar</span>
+                                            <span class="material-symbols-outlined">filter_alt</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <button class="btn-closet">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                            </div>
+
+                            <div class="mov-transacciones">
+                                <ul class="listado-fechas">
+                                    <li class="fecha-transacciones" data-dia="17" data-mes="8" data-anio="2026">
+                                        <h4>17 de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Supermercado</span>
+                                                <div class="cat-transaccion" style="color: #4CAF50;">
+                                                    <span class="material-symbols-outlined">shopping_cart</span>
+                                                    <span class="text-Listado">Alimentos</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$25.500</span>
+                                                    <span class="text-Listado isHorario">10:30</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Sueldo</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">payments</span>
+                                                    <span class="text-Listado">Trabajo</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$850.000</span>
+                                                    <span class="text-Listado isHorario">12:00</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Nafta</span>
+                                                <div class="cat-transaccion" style="color: #FF9800;">
+                                                    <span class="material-symbols-outlined">local_gas_station</span>
+                                                    <span class="text-Listado">Transporte</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$18.000</span>
+                                                    <span class="text-Listado isHorario">15:45</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Netflix</span>
+                                                <div class="cat-transaccion" style="color: #9C27B0;">
+                                                    <span class="material-symbols-outlined">movie</span>
+                                                    <span class="text-Listado">Entretenimiento</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$12.000</span>
+                                                    <span class="text-Listado isHorario">21:10</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="divider"></div>
+                                    </li>
+
+                                    <li class="fecha-transacciones" data-dia="16" data-mes="8" data-anio="2026">
+                                        <h4>16 de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Almuerzo</span>
+                                                <div class="cat-transaccion" style="color: #4CAF50;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$8.500</span>
+                                                    <span class="text-Listado isHorario">13:20</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Transferencia recibida</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">account_balance</span>
+                                                    <span class="text-Listado">Ingresos</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$120.000</span>
+                                                    <span class="text-Listado isHorario">14:05</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Remis</span>
+                                                <div class="cat-transaccion" style="color: #FF9800;">
+                                                    <span class="material-symbols-outlined">directions_car</span>
+                                                    <span class="text-Listado">Transporte</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$7.200</span>
+                                                    <span class="text-Listado isHorario">18:30</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Farmacia</span>
+                                                <div class="cat-transaccion" style="color: #E91E63;">
+                                                    <span class="material-symbols-outlined">local_pharmacy</span>
+                                                    <span class="text-Listado">Salud</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$15.800</span>
+                                                    <span class="text-Listado isHorario">19:15</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="divider"></div>
+                                    </li>
+
+                                    <li class="fecha-transacciones" data-dia="15" data-mes="8" data-anio="2026">
+                                        <h4>15 de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Café</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">coffee</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$4.500</span>
+                                                    <span class="text-Listado isHorario">08:15</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Freelance</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">work</span>
+                                                    <span class="text-Listado">Trabajo</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$95.000</span>
+                                                    <span class="text-Listado isHorario">11:40</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Internet</span>
+                                                <div class="cat-transaccion" style="color: #3F51B5;">
+                                                    <span class="material-symbols-outlined">wifi</span>
+                                                    <span class="text-Listado">Servicios</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$22.000</span>
+                                                    <span class="text-Listado isHorario">16:00</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Videojuego</span>
+                                                <div class="cat-transaccion" style="color: #9C27B0;">
+                                                    <span class="material-symbols-outlined">sports_esports</span>
+                                                    <span class="text-Listado">Entretenimiento</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$9.500</span>
+                                                    <span class="text-Listado isHorario">22:30</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="divider"></div>
+                                    </li>
+
+                                    <li class="fecha-transacciones" data-dia="14" data-mes="8" data-anio="2026">
+                                        <h4>14 de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Librería</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">menu_book</span>
+                                                    <span class="text-Listado">Educación</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$11.500</span>
+                                                    <span class="text-Listado isHorario">09:30</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Venta de monitor</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">sell</span>
+                                                    <span class="text-Listado">Ventas</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$180.000</span>
+                                                    <span class="text-Listado isHorario">12:15</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Supermercado</span>
+                                                <div class="cat-transaccion" style="color: #4CAF50;">
+                                                    <span class="material-symbols-outlined">shopping_cart</span>
+                                                    <span class="text-Listado">Alimentos</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$31.200</span>
+                                                    <span class="text-Listado isHorario">17:20</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Luz</span>
+                                                <div class="cat-transaccion" style="color: #FFC107;">
+                                                    <span class="material-symbols-outlined">lightbulb</span>
+                                                    <span class="text-Listado">Servicios</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$19.700</span>
+                                                    <span class="text-Listado isHorario">20:00</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="divider"></div>
+                                    </li>
+
+                                    <li class="fecha-transacciones" data-dia="13" data-mes="8" data-anio="2026">
+                                        <h4>13 de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                    <span class="text-Listado isHorario">08:45</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">payments</span>
+                                                    <span class="text-Listado">Trabajo</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                    <span class="text-Listado isHorario">10:00</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                                <div class="cat-transaccion" style="color: #FF9800;">
+                                                    <span class="material-symbols-outlined">directions_bus</span>
+                                                    <span class="text-Listado">Transporte</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                    <span class="text-Listado isHorario">14:25</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Cena</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                    <span class="text-Listado isHorario">21:00</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="divider"></div>
+                                    </li>
+
+                                    <li class="fecha-transacciones" data-dia="12" data-mes="8" data-anio="2026">
+                                        <h4>12de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                    <span class="text-Listado isHorario">08:45</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">payments</span>
+                                                    <span class="text-Listado">Trabajo</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                    <span class="text-Listado isHorario">10:00</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                                <div class="cat-transaccion" style="color: #FF9800;">
+                                                    <span class="material-symbols-outlined">directions_bus</span>
+                                                    <span class="text-Listado">Transporte</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                    <span class="text-Listado isHorario">14:25</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Cena</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                    <span class="text-Listado isHorario">21:00</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="divider"></div>
+                                    </li>
+
+                                    <li class="fecha-transacciones" data-dia="11" data-mes="8" data-anio="2026">
+                                        <h4>11 de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                    <span class="text-Listado isHorario">08:45</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">payments</span>
+                                                    <span class="text-Listado">Trabajo</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                    <span class="text-Listado isHorario">10:00</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                                <div class="cat-transaccion" style="color: #FF9800;">
+                                                    <span class="material-symbols-outlined">directions_bus</span>
+                                                    <span class="text-Listado">Transporte</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                    <span class="text-Listado isHorario">14:25</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Cena</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                    <span class="text-Listado isHorario">21:00</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="divider"></div>
+                                    </li>
+
+                                    <li class="fecha-transacciones" data-dia="10" data-mes="8" data-anio="2026">
+                                        <h4>10 de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                    <span class="text-Listado isHorario">08:45</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">payments</span>
+                                                    <span class="text-Listado">Trabajo</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                    <span class="text-Listado isHorario">10:00</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                                <div class="cat-transaccion" style="color: #FF9800;">
+                                                    <span class="material-symbols-outlined">directions_bus</span>
+                                                    <span class="text-Listado">Transporte</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                    <span class="text-Listado isHorario">14:25</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Cena</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                    <span class="text-Listado isHorario">21:00</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="divider"></div>
+                                    </li>
+
+                                    <li class="fecha-transacciones" data-dia="9" data-mes="8" data-anio="2026">
+                                        <h4>9 de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                    <span class="text-Listado isHorario">08:45</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">payments</span>
+                                                    <span class="text-Listado">Trabajo</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                    <span class="text-Listado isHorario">10:00</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                                <div class="cat-transaccion" style="color: #FF9800;">
+                                                    <span class="material-symbols-outlined">directions_bus</span>
+                                                    <span class="text-Listado">Transporte</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                    <span class="text-Listado isHorario">14:25</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Cena</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                    <span class="text-Listado isHorario">21:00</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="divider"></div>
+                                    </li>
+
+                                    <li class="fecha-transacciones" data-dia="8" data-mes="8" data-anio="2026">
+                                        <h4>8 de septiembre</h4>
+
+                                        <ul class="mov-en-fecha">
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Desayuno</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$6.300</span>
+                                                    <span class="text-Listado isHorario">08:45</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Pago proyecto</span>
+                                                <div class="cat-transaccion" style="color: #2196F3;">
+                                                    <span class="material-symbols-outlined">payments</span>
+                                                    <span class="text-Listado">Trabajo</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #4CAF50;">$250.000</span>
+                                                    <span class="text-Listado isHorario">10:00</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Colectivo</span>
+                                                <div class="cat-transaccion" style="color: #FF9800;">
+                                                    <span class="material-symbols-outlined">directions_bus</span>
+                                                    <span class="text-Listado">Transporte</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$2.500</span>
+                                                    <span class="text-Listado isHorario">14:25</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="isTransaccion">
+                                                <span class="text-Listado ttl-transaccion">Cena</span>
+                                                <div class="cat-transaccion" style="color: #795548;">
+                                                    <span class="material-symbols-outlined">restaurant</span>
+                                                    <span class="text-Listado">Comida</span>
+                                                </div>
+                                                <div class="extras-transaccion">
+                                                    <span class="text-Listado importe" style="color: #F44336;">$14.800</span>
+                                                    <span class="text-Listado isHorario">21:00</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

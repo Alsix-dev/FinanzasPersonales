@@ -90,7 +90,7 @@ main .main-movimientos {
       -10px -10px 22px var(--shadow-light);
 }
 
-.main-movimientos .mov-interaccion {
+main .main-movimientos .mov-interaccion {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid var(--border-color);
@@ -102,7 +102,7 @@ main .main-movimientos {
     margin: 8px 1px 12px 1px;
 }
 
-.mov-interaccion .mov-sup-Controles {
+main .mov-interaccion .mov-sup-Controles {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -118,7 +118,7 @@ main .main-movimientos {
     border-radius: var(--border-Radius-Items);
 }
 
-.mov-sup-Controles .mov-sup-Buscar {
+main .mov-sup-Controles .mov-sup-Buscar {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -172,11 +172,11 @@ main .mov-transacciones {
     gap: 8px;
 }
 
-.mov-transacciones .listado-fechas {
+main .mov-transacciones .listado-fechas {
     min-height: 0;
     max-height: 520px;
     overflow-y: auto;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .listado-fechas .divider {
@@ -478,7 +478,6 @@ main .main-categorias {
 }
 
 @container body-first (min-width: 768px) and (max-width: 1023px) {
-
     main {
         display: grid;
         grid-template-columns: auto 1fr;

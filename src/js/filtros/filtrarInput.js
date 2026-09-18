@@ -1,7 +1,10 @@
-const input_buscar = document.getElementById('src-mov-input');
+// const input_buscar = document.getElementById('src-mov-input');
 
-input_buscar.addEventListener('input', (event) => {
-    const div_movimientos = input_buscar.closest('.main-movimientos');
+document.addEventListener('input', (event) => {
+    const input = event.target.closest('.search-transac');
+    if(!input) return;
+    
+    const div_movimientos = input.closest('.main-movimientos');
     const li_transacciones = div_movimientos.querySelectorAll('.isTransaccion');
 
     const datos = event.target.value.trim().toLowerCase();
