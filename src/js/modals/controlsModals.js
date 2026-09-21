@@ -31,7 +31,7 @@ document.addEventListener('click', (event) => {
     if(!modal) return;
     abrirMenu(modal);
 
-    if(!modal.dataset.tipoModal === "movimientos") return;
+    if(modal.dataset.tipoModal !== "movimientos") return;
     ExpandirMovimientos(modal, boton);
 });
 

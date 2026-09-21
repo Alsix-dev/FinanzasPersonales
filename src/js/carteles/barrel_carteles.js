@@ -1,1 +1,1 @@
-export { actualizarCarteles } from './carteles.js';
+export * from './carteles.js';

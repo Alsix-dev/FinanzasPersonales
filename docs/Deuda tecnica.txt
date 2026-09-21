@@ -106,9 +106,9 @@ V ----------------> 37) Cuando el sidebar esta cerrado y se agrega una transacci
 X -------Basta solo sea por titulo---------> 39) El buscador debe buscar por nombre, categoria, fecha. Y se puede hacer una combinacion
 							Por ej: "mercado IAN 7 agosto". Inicialmente hacer por nombre.
 
-40) El boton filtrar en movimientos recientes debe filtrar por categoria, por tipo de transaccion y por mes.
-	Ver si en lugar de mes, poner el año, es decir dd/mm/aa, si no se pone aa que ponga
-	todas las transacciones del mes de ese año.
+V ---Innecesario---------> 40) El boton filtrar en movimientos recientes debe filtrar por categoria, por tipo de transaccion y por mes.
+Basta solo con el nombre 		Ver si en lugar de mes, poner el año, es decir dd/mm/aa, si no se pone aa que ponga
+					todas las transacciones del mes de ese año.
 
 41) El boton filtrar en ingresos/egresos por categoria deben filtrar por mes
 	(solamente elegir un mes) y por tipo de categoria 
@@ -170,3 +170,40 @@ V ----------------> 60) Optimizar y separar logica en /sidebar
 63) Hacer la grafica y asignar el acumulativo de gastos por categoria y sacar el porcentaje.
 
 64) Darle funcionalidad al boton filtrar.
+
+65) Agregar a cada movimiento/transaccion un name="nombreCategoria" (Asi cada transaccion tiene un name asociado
+		a su categoria).
+
+66) Hay muchos objetos para lo mismo. Hacer un objeto para cada punto para dividir tareas:
+	i) Listado de años con los totales por cada mes. Debe ser:
+const años = {
+    2026: {
+        total: {
+            ingreso: 2550000,
+            egreso: 510000
+        },
+
+        meses: {
+            0: {
+                ingreso: 850000,
+                egreso: 120000
+            },
+            1: {
+                ingreso: 920000,
+                egreso: 180000
+            },
+            2: {
+                ingreso: 780000,
+                egreso: 210000
+            }
+        }
+    },
+
+
+Asi evitamos tener que estar creando varios objetos para lo mismo y queda todo bajo contro en un mismo .js
+	Esto hasta que en algun momento se aplique la DB.
+
+
+
+
+			

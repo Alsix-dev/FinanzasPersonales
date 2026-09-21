@@ -283,7 +283,7 @@ const categorias = {
 };
 
 const ObtenerCategoria = (transaccion, categoria) => {
-    return categorias[transaccion].categoria.find(cat => cat.value === categoria);
+    return categorias[transaccion].categoria.find(cat => cat.categoria === categoria);
 }
 
 const ObtenerColorTransaccion = (transaccion) => {
