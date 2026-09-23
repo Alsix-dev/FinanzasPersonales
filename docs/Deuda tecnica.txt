@@ -162,7 +162,8 @@ V ----------------> 60) Optimizar y separar logica en /sidebar
 61) Rediseñar y retocar correctamente el uso de clases y ids. No hacer una clase o id por todo, hay
 	otros atributos. Y podemos gestionar un div que sea especifico y luego escalar con eventos.
 
-62) Hacer el control de ingresos/egresos por categoria. Ya tenemos que se gestiona el titulo, ahora falta
+
+V ----------------> 62) Hacer el control de ingresos/egresos por categoria. Ya tenemos que se gestiona el titulo, ahora falta
 	que se gestione los datos de cada tipo. Si es movimientos entonces muestra las transacciones
 	pero si es ingresos  por categorias muestra la grafica + datos  y lo mismo con egresos.
 	Hacerlo en un archivo aparte para no mezclar con el manejo de modals.
@@ -205,5 +206,6 @@ Asi evitamos tener que estar creando varios objetos para lo mismo y queda todo b
 
 
 
-
+67) En expandir movimientos, se debera hacer un .innerHTML para inyectar el del cartel correspondiente.
+	Ya sea movimientos, ingresos, egresos.
 			

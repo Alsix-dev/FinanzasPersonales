@@ -220,22 +220,40 @@ function CrearCategoriaPorcentual(categoria, datos){
     return li;
 }
 
+function CrearGrafica(grafica, listado){
+    grafica.style.background =
+        `conic-gradient(${listado.join(', ')})`;
+}
+
 function CargarPorcentajesCategorias(tipo){
     const graficos = document.querySelector(`[data-tipo-grafico=${tipo}]`);
     if(!graficos) return;
     const ul = graficos.querySelector('.items-cat');
+    const graf = graficos.querySelector('.grafica-cat');
 
     const listado = PrincipalesCategorias(tipo);
+    const segmentos = [];
+    let inicio = 0;
+    let total = 0;
 
     listado.forEach(([cat, datos]) => {
         if(datos.Total > 0){
             const listado_cat = ObtenerCategoria(tipo, cat);
             const item = CrearCategoriaPorcentual(listado_cat, datos);
             ul.appendChild(item);
+
+            const porcentaje = datos.Porcentaje;
+            const fin = inicio + porcentaje;
+            segmentos.push(`${listado_cat.color} ${inicio}% ${fin}%`);
+            inicio = fin;
         }
     });
-}
 
+    total = 100 - inicio;
+    const otros = '#BDBDBD';
+    segmentos.push(`${otros} ${inicio}% 100%`);
+    CrearGrafica(graf, segmentos);
+}
 
 const CalcularPorcentaje = (tipo) => {
     const total = RecuperarEstadisticas(tipo);
