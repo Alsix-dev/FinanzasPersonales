@@ -415,7 +415,16 @@ main .main-categorias {
     height: clamp(100px, 30vw, 140px);
     width: clamp(100px, 30vw, 140px);
     margin: 0.2rem 0 0.5rem 0.2rem;
-    background-color: #ffd43b;
+    border-radius: 50%;
+    position: relative;
+}
+
+.datos-cat .grafica-cat::after {
+    content: "";
+    position: absolute;
+    inset: 25%;
+    background-color: white;
+    border-radius: 50%;
 }
 
 .cartel-categoria .divider {

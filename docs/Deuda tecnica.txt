@@ -164,11 +164,11 @@ V ----------------> 60) Optimizar y separar logica en /sidebar
 
 
 V ----------------> 62) Hacer el control de ingresos/egresos por categoria. Ya tenemos que se gestiona el titulo, ahora falta
-	que se gestione los datos de cada tipo. Si es movimientos entonces muestra las transacciones
-	pero si es ingresos  por categorias muestra la grafica + datos  y lo mismo con egresos.
-	Hacerlo en un archivo aparte para no mezclar con el manejo de modals.
+			que se gestione los datos de cada tipo. Si es movimientos entonces muestra las transacciones
+			pero si es ingresos  por categorias muestra la grafica + datos  y lo mismo con egresos.
+			Hacerlo en un archivo aparte para no mezclar con el manejo de modals.
 
-63) Hacer la grafica y asignar el acumulativo de gastos por categoria y sacar el porcentaje.
+V ----------------> 63) Hacer la grafica y asignar el acumulativo de gastos por categoria y sacar el porcentaje.
 
 64) Darle funcionalidad al boton filtrar.
 
