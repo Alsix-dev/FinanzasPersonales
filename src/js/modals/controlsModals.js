@@ -1,11 +1,18 @@
 const overlays = document.getElementById('overlays');
 
 function ExpandirMovimientos(contenedor, activador){
-    const tituloPoner = activador.closest('.contenedor_mov')
-        .querySelector('.titulo-expandirMov')
-        .textContent;
-    contenedor.querySelector('.titulo-modal-expandir')
-        .textContent = tituloPoner;
+    const origen = activador.closest('.contenedor_mov');
+    const cartelActivo = activador.closest('.cartel-categoria');
+    const copia = origen.cloneNode(true);
+
+    copia.querySelectorAll('.cartel-categoria').forEach(cartel => {
+        if (cartel.dataset.tipoGrafico !== cartelActivo.dataset.tipoGrafico) {
+            cartel.remove();
+        }
+    });
+
+    copia.querySelector('.mov-expandir')?.remove();
+    contenedor.innerHTML = copia.innerHTML;
 }
 
 const abrirMenu = (modal) => {
@@ -31,7 +38,7 @@ document.addEventListener('click', (event) => {
     if(!modal) return;
     abrirMenu(modal);
 
-    if(modal.dataset.tipoModal !== "movimientos") return;
+    if(modal.dataset.tipoModal !== "expandir") return;
     ExpandirMovimientos(modal, boton);
 });
 

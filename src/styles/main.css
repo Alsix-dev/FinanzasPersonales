@@ -239,10 +239,10 @@ main .mov-transacciones .listado-fechas {
     align-self: flex-end;
 }
 
-.main-movimientos .mov-expandir {
+.mov-expandir {
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 0.5rem;
     padding: 10px 4px 4px 4px;
     border-top: 1px solid var(--border-color);
@@ -404,12 +404,12 @@ main .main-categorias {
     flex-wrap: wrap;
 }
 
-.cartel-categoria .cat-interaccion {
+/* .cartel-categoria .cat-interaccion {
     display: flex;
     justify-content: space-between;
     padding: 6px 2px;
     gap: 6px;
-}
+} */
 
 .datos-cat .grafica-cat {
     height: clamp(100px, 30vw, 140px);

@@ -220,7 +220,7 @@ body:has(section.active-overlay) {
    MODAL - MEDIAS
    ========================================================================== */
 
-@container body-first (min-width: 480px) and (max-width: 767px) {
+/* @container body-first (min-width: 480px) and (max-width: 767px) {
     .modal-movimientos .main-movimientos {
         padding: 8px 24px;
     }
@@ -250,4 +250,4 @@ body:has(section.active-overlay) {
         display: flex;
         gap: 8px;
     }    
-}
+} */
