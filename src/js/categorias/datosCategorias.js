@@ -227,10 +227,12 @@ function CrearGrafica(grafica, listado){
 
 function CargarPorcentajesCategorias(tipo){
     const graficos = document.querySelector(`[data-tipo-grafico=${tipo}]`);
+
     if(!graficos) return;
     const ul = graficos.querySelector('.items-cat');
     const graf = graficos.querySelector('.grafica-cat');
 
+    ul.replaceChildren();
     const listado = PrincipalesCategorias(tipo);
     const segmentos = [];
     let inicio = 0;
@@ -261,47 +263,25 @@ const CalcularPorcentaje = (tipo) => {
 
     const transaccion = categorias_datos[tipo];
     Object.values(transaccion).forEach(categoria => {
-        categoria.Porcentaje = (categoria.Total*100)/total; 
+        categoria.Porcentaje = (categoria.Total*100)/total;
     });
 }
 
-const SumarPorCategoria = (contenedor, tipo, categoria) => {
-    let importe = contenedor.closest('.isTransaccion')
-        .querySelector('.importe')
-        .textContent;
-
+const SumarPorCategoria = (importe, transaccion, categoria) => {
     const importeNuevo = Number(importe.substring(1).replaceAll('.', ''));
-    categorias_datos[tipo][categoria].Total += importeNuevo;
-    actualizarCarteles(tipo, importeNuevo);
+    categorias_datos[transaccion][categoria].Total += importeNuevo;
+    actualizarCarteles(transaccion, importeNuevo);
 }
 
-function RegistrarMovimientosEstaticos(){
-    // Recordar quitar esta funcion luego, quedan las llamadas para crearTransaccion.js
-    const listado_fechas = document.querySelector('.listado-fechas');
-    const isTransaccion = listado_fechas.querySelectorAll('.cat-transaccion > span[name]');
-    isTransaccion.forEach(item => {
-        const categoria = item.textContent;
-        const tipo = item.classList[1];
-        SumarPorCategoria(item, tipo, categoria);
-    });
-
-    CalcularPorcentaje("egreso");
-    CalcularPorcentaje("ingreso");
-
-    CargarPorcentajesCategorias("egreso");
-    CargarPorcentajesCategorias("ingreso");
+function RegistrarMovimientos(importe, transaccion, categoria){
+    SumarPorCategoria(importe, transaccion, categoria);
+    CalcularPorcentaje(transaccion);
+    CargarPorcentajesCategorias(transaccion);
 }
-
-// Esto es util mientras exista una lista estatica.
-document.addEventListener('DOMContentLoaded', () => {
-    RegistrarMovimientosEstaticos();
-});
 
 export {
-    CalcularPorcentaje,
-    SumarPorCategoria
+    RegistrarMovimientos
 }
-
 
 //.. notas:
 /* 
@@ -310,16 +290,6 @@ export {
      ---- 3.- Sumar la cantidad y actualizar porcentajes de los ingresados dinamicamente.
     ✓ ---- 4.- Calcular las 5 categorias que mas ingresos/egresos tienen o porcentajes.
     ✓ ---- 5.- Asignar las 5 categorias mas consumidas con su nombre y porcentaje en los carteles.
-     ---- 6.- Crear el grafico.
+    ✓ ---- 6.- Crear el grafico.
      ---- 7.- Recalcando el (3.-) hacer que se actualice por cada creacion las 5 principales categorias.
 */
-
-
-    // console.log(tipo)
-    // console.log(categorias_datos[tipo][ttl_categoria])
-    // console.log(categorias_datos[tipo][ttl_categoria].Total)
-
-        // console.log(tipo)
-        // console.log('T: ', total)
-        // console.log("I: ", categoria.Total)
-        // console.log("P: ", categoria.Porcentaje)

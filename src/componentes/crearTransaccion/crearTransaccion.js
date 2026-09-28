@@ -1,7 +1,8 @@
 import { 
     ObtenerColorTransaccion,
     ObtenerColorCategoria,
-    ObtenerIconoCategoria
+    ObtenerIconoCategoria,
+    RegistrarMovimientos
 } from "../../js/categorias/barrel_categorias.js";
 
 import { capitalizarTexto } from "../../../src/js/genericas.js";
@@ -38,5 +39,6 @@ export function CrearTransaccion(inputs, horario){
     li.querySelector('.cat-transaccion').style.color = colorCat;
     li.querySelector('.importe').style.color = colorTransc;
 
+    RegistrarMovimientos(importe, transaccion, categoria);
     return li;
 }

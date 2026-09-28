@@ -208,4 +208,17 @@ Asi evitamos tener que estar creando varios objetos para lo mismo y queda todo b
 
 V ----------------> 67) En expandir movimientos, se debera hacer un .innerHTML para inyectar el del cartel correspondiente.
 			Ya sea movimientos, ingresos, egresos.
+
+68) Revisar que ingreso y egreso no coincide en sidebar y en carteles.
+		Arreglr usando la D.T (66)
+
+V ----------------> 69) Los ingresos/egresos por categoria crea nuevamente la categoria en lugar de acumularla.
+V ----------------> 70) Los ingresos/egresos por categoria sobrepasa el limite de 5.
+
+	Para el 69 y 70 hacer una funcion que actualice los estados (los valores)
+	asi por un lado esta el "crear" y por otro el "actualizar" y cuando  se crea, se actualiza.
+	Tenemos un desacoplado.
 			
+71) Hacer una precarga de los elementos html (preload).
+72) Averigurar que podria ponerse cuando no hay datos. Por ej.: La grafica sea completamente gris con un 0%.
+73) Aplicar un grafico de barras para categorias.

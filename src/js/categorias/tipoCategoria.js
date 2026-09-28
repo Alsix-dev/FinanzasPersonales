@@ -3,7 +3,7 @@ const categorias = {
         color: "#FF0000",
         categoria: [
             {
-                value: "Alimentacion",
+                value: "Alimentación",
                 categoria: "Alimentación",
                 icono: "restaurant",
                 color: "#FF7043"
