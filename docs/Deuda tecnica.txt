@@ -219,6 +219,8 @@ V ----------------> 70) Los ingresos/egresos por categoria sobrepasa el limite d
 	asi por un lado esta el "crear" y por otro el "actualizar" y cuando  se crea, se actualiza.
 	Tenemos un desacoplado.
 			
-71) Hacer una precarga de los elementos html (preload).
+V ----------------> 71) Hacer una precarga de los elementos html (preload).
 72) Averigurar que podria ponerse cuando no hay datos. Por ej.: La grafica sea completamente gris con un 0%.
 73) Aplicar un grafico de barras para categorias.
+
+74) Aplicar react
