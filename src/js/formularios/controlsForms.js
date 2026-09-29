@@ -17,8 +17,8 @@ function DatosFormulario(formulario){
 
     return {
         leerName: datos.get('nombre-transaccion').trim(),
-        leerTransc: datos.get('tipo-transaccion'),
-        leerCat: datos.get('tipo-categoria'),
+        leerTransc: datos.get('tipo-transaccion') || null,
+        leerCat: datos.get('tipo-categoria') || null,
         leerImp: datos.get('importe-transaccion'),
         leerFecha: datos.get('fecha-transacciones')
     }
@@ -28,6 +28,11 @@ const InicializarFormulario = (formulario) => {
     const transaccion = formulario.querySelector('[name="tipo-transaccion"]');
     const categoria = formulario.querySelector('[name="tipo-categoria"]');
     if(!transaccion || !categoria) return;
+
+    if(!transaccion.value){
+        LimpiarCategoria(categoria);
+        return;
+    }
     DesplegarCategorias(categoria, transaccion.value);
 }
 

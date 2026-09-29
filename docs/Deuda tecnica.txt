@@ -138,7 +138,7 @@ V ----------------> 48) A futuro hacer un index.js donde haga los imports y barr
 
 V ----------------> 50) Hacer un reset de formularios.
 
-51) Agregar un "Seleccionar categoria" como valor inicial.
+V ----------------> 51) Agregar un "Seleccionar tal" como valor inicial a cada select en los forms.
 
 V ----------------> 52) Revisar que al achicar en el responsive, el importe desaparece de la lista. Puede haya sacado una clase u algo. Revisar.
 
@@ -224,3 +224,7 @@ V ----------------> 71) Hacer una precarga de los elementos html (preload).
 73) Aplicar un grafico de barras para categorias.
 
 74) Aplicar react
+
+75) El filtrar debe ajustarse para que no haya opciones de entrada (sea null) asi se puede filtrar por cada opcion
+	por separado, ej: filtrar solo por tipo de transaccion o solo por categoria o solo por fecha. Luego
+	ya se pueden combinar
